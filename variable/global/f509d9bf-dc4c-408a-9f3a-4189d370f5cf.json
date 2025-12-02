@@ -1,0 +1,32 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-08-22T11:05:23.705Z",
+  "updatedAt": "2025-08-22T11:05:23.705Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "f509d9bf-dc4c-408a-9f3a-4189d370f5cf",
+  "name": "Dates",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "2025-08-11",
+    "2025-08-12",
+    "2025-08-14",
+    "2025-08-13"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

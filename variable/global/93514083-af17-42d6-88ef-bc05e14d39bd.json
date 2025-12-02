@@ -1,0 +1,31 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-09-26T06:49:31.924Z",
+  "updatedAt": "2025-09-26T06:49:31.925Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "93514083-af17-42d6-88ef-bc05e14d39bd",
+  "name": "HomogenoousList",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "Raizada",
+    123,
+    "2025-11-19"
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

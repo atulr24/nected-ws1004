@@ -1,0 +1,27 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-08-22T09:45:32.854Z",
+  "updatedAt": "2025-08-22T09:45:32.854Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "f88ca53a-67cc-4cdc-b5bb-2e34bb86faa9",
+  "name": "Six",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "numeric",
+  "value": {
+   "data": 6,
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

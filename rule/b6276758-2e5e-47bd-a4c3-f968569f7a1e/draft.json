@@ -1,0 +1,192 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2025-09-09T08:14:03.074Z",
+  "updatedAt": "2025-12-02T08:19:34.235335Z",
+  "isDeleted": false,
+  "testedAt": "2025-12-02T08:19:34.234Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "b6276758-2e5e-47bd-a4c3-f968569f7a1e",
+  "name": "RuleInAction2",
+  "commitId": "commit-b9e255a0-594b-4c89-abd0-85129f2a1150",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-09-09 08:14:03",
+   "timeStamp": "2025-09-09T08:14:03.074887223Z"
+  },
+  "customInput": null,
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "key_name_1": {
+ "name": "key_name_1",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Value",
+ "attribute": "regex",
+ "source": "globalVar",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     "actionData_1": {
+ "name": "action_1",
+ "connectorId": "",
+ "entity": "rule",
+ "entityId": "37c11c20-b073-40bc-8ed9-a0895c1209b1",
+ "config": {
+  "query": ""
+ },
+ "input": null,
+ "next": ""
+}
+    },
+    "firstOutputData": "key_name_1",
+    "firstActionNode": "actionData_1"
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "globalVar",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "regex",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "Name",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "",
+  "version": "draft",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "2025-09-09T00:00:00+05:30",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-b9e255a0-594b-4c89-abd0-85129f2a1150",
+   "entityType": "rule",
+   "entityId": "b6276758-2e5e-47bd-a4c3-f968569f7a1e",
+   "entityVersion": "draft",
+   "entityNodeId": "regex",
+   "dependencyType": "variable",
+   "dependencyId": "fa2b5f85-4457-401f-8c90-cd1611c50d12",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-09T08:14:03.086028Z",
+   "updatedAt": "2025-09-09T08:14:03.086028Z"
+  },
+  {
+   "entityCommitId": "commit-b9e255a0-594b-4c89-abd0-85129f2a1150",
+   "entityType": "rule",
+   "entityId": "b6276758-2e5e-47bd-a4c3-f968569f7a1e",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_1",
+   "dependencyType": "rule",
+   "dependencyId": "37c11c20-b073-40bc-8ed9-a0895c1209b1",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-09-09T08:14:03.084075Z",
+   "updatedAt": "2025-09-09T08:14:03.084075Z"
+  }
+ ]
+}

@@ -1,0 +1,394 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2025-09-26T09:37:42.958Z",
+  "updatedAt": "2025-09-26T11:56:12.884065Z",
+  "isDeleted": false,
+  "testedAt": "2025-09-26T11:56:12.883Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+  "name": "sr1",
+  "commitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-09-26 09:37:42",
+   "timeStamp": "2025-09-26T09:37:42.958390735Z"
+  },
+  "customInput": {
+   "Lists": {
+ "name": "Lists",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": [
+  1,
+  2,
+  3
+ ],
+ "config": {
+  
+ },
+ "next": "",
+ "previous": "ipNUmeric1",
+ "schemaId": "02cb259b-a131-49f1-b677-08c5687613e1"
+},
+   "ip1String": {
+ "name": "ip1String",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Atul",
+ "config": {
+  
+ },
+ "next": "ip2String",
+ "previous": "",
+ "schemaId": ""
+},
+   "ip2String": {
+ "name": "ip2String",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Atul2",
+ "config": {
+  
+ },
+ "next": "ipNUmeric1",
+ "previous": "ip1String",
+ "schemaId": ""
+},
+   "ipNUmeric1": {
+ "name": "ipNUmeric1",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 24,
+ "config": {
+  
+ },
+ "next": "Lists",
+ "previous": "ip2String",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": {
+     "key_name_1": {
+ "name": "key_name_1",
+ "dataType": "list",
+ "returnType": "",
+ "value": null,
+ "next": "key_name_2",
+ "executedValue": null,
+ "attribute": "validJson2.List",
+ "source": "globalVar",
+ "schemaId": ""
+},
+     "key_name_2": {
+ "name": "key_name_2",
+ "dataType": "list",
+ "returnType": "",
+ "value": "[\"{{.customInput.ip1String}}\",\"{{.customInput.ip2String}}\",\"{{.globalVar.ListOfDateTime[0]}}\"]",
+ "next": "key_name_3",
+ "executedValue": {
+  "executionTime": "105ms",
+  "result": [
+ "Atul",
+ "Atul2",
+ "2025-11-28T14:30:45Z"
+]
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "key_name_3": {
+ "name": "key_name_3",
+ "dataType": "list",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": null,
+ "attribute": "Lists",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "key_name_1",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_2kjcbc": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "in",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_kKpifB"
+ ],
+ "rightNode": [
+  "rhs_nOOKh9"
+ ],
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "c_OIKbAZ": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "in",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_Msa04T"
+ ],
+ "rightNode": [
+  "rhs_bYu7Mh"
+ ],
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "lhs_Msa04T": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "ip1String",
+ "query": "",
+ "parent": "c_OIKbAZ",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "lhs_kKpifB": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "ipNUmeric1",
+ "query": "",
+ "parent": "c_2kjcbc",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "rhs_bYu7Mh": {
+ "value": "",
+ "sourceType": "globalVar",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "params",
+ "attribute": "HomogenoousList",
+ "query": "",
+ "parent": "c_OIKbAZ",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "rhs_nOOKh9": {
+ "value": null,
+ "sourceType": "globalVar",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "params",
+ "attribute": "ListOfDates",
+ "query": "",
+ "parent": "c_2kjcbc",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_OIKbAZ",
+  "c_2kjcbc"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "ip1String",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "",
+  "version": "draft",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+   "entityType": "rule",
+   "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+   "entityVersion": "draft",
+   "entityNodeId": "ListOfDates",
+   "dependencyType": "variable",
+   "dependencyId": "f098d6e4-9b25-40b8-895e-5869f9e52eb2",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T11:56:06.820888Z",
+   "updatedAt": "2025-09-26T11:56:06.820888Z"
+  },
+  {
+   "entityCommitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+   "entityType": "rule",
+   "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+   "entityVersion": "draft",
+   "entityNodeId": "HomogenoousList",
+   "dependencyType": "variable",
+   "dependencyId": "93514083-af17-42d6-88ef-bc05e14d39bd",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T11:53:35.978268Z",
+   "updatedAt": "2025-09-26T11:56:06.824178Z"
+  },
+  {
+   "entityCommitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+   "entityType": "rule",
+   "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+   "entityVersion": "draft",
+   "entityNodeId": "ci-Lists",
+   "dependencyType": "module_schema",
+   "dependencyId": "02cb259b-a131-49f1-b677-08c5687613e1",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T10:18:46.913829Z",
+   "updatedAt": "2025-09-26T11:56:06.825132Z"
+  },
+  {
+   "entityCommitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+   "entityType": "rule",
+   "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+   "entityVersion": "draft",
+   "entityNodeId": "ListOfDateTime",
+   "dependencyType": "variable",
+   "dependencyId": "31c8b603-2598-49dd-bfb5-4b317e140581",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T09:42:57.094719Z",
+   "updatedAt": "2025-09-26T11:56:06.823139Z"
+  },
+  {
+   "entityCommitId": "commit-3ab5eb42-b672-47fe-9bb7-edadd35da282",
+   "entityType": "rule",
+   "entityId": "dcc63c37-6db4-4833-a1e3-a41fc8d83d4e",
+   "entityVersion": "draft",
+   "entityNodeId": "validJson2",
+   "dependencyType": "variable",
+   "dependencyId": "2c144c91-c234-4a93-84eb-5e8073e03772",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T09:39:04.482928Z",
+   "updatedAt": "2025-09-26T11:56:06.822062Z"
+  }
+ ]
+}

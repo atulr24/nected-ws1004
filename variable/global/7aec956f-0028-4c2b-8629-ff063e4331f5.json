@@ -1,0 +1,54 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-08-21T06:57:38.9Z",
+  "updatedAt": "2025-08-21T06:57:38.9Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "7aec956f-0028-4c2b-8629-ff063e4331f5",
+  "name": "Input",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "json",
+  "value": {
+   "data": {
+    "age": 29,
+    "contact": {
+ "email": "alice@example.com",
+ "phone": "+1-202-555-0188"
+},
+    "id": 101,
+    "isActive": true,
+    "name": "Alice Johnson",
+    "preferences": {
+ "newsletter": false,
+ "theme": "dark"
+},
+    "salary": 55000.75,
+    "scores": [
+ 95,
+ 88,
+ 76,
+ 100,
+ 82
+],
+    "skills": [
+ "Java",
+ "Selenium",
+ "SQL",
+ "Git"
+]
+   },
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

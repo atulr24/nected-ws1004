@@ -1,0 +1,1778 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "testedAt": "2025-12-02T06:05:24.466Z",
+  "publishedAt": "2025-09-18T11:07:24.686Z",
+  "createdAt": "2025-09-18T10:18:32.817Z",
+  "updatedAt": "2025-12-02T06:05:24.467623Z",
+  "isDeleted": false,
+  "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+  "name": "Test",
+  "commitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+  "status": "draft",
+  "lastVersion": "0.20",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.20",
+   "timeStamp": "2025-09-18T11:18:39.666549536Z"
+  },
+  "startNode": "n_gARQX9",
+  "version": "draft",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "Lists": {
+ "value": null,
+ "executedValue": [
+  "Atul",
+  "Raizada",
+  "Kumar"
+ ],
+ "name": "Lists",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "02cb259b-a131-49f1-b677-08c5687613e1"
+},
+      "Name": {
+ "value": null,
+ "executedValue": "Atul",
+ "name": "Name",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "NameV2": {
+ "value": null,
+ "executedValue": "",
+ "name": "NameV2",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "hj": {
+ "value": null,
+ "executedValue": "",
+ "name": "hj",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "14e60fff-e480-4137-8ddb-9d637203884d"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "Lists": [
+ "Atul",
+ "Raizada",
+ "Kumar"
+],
+      "Name": "Atul",
+      "NameV2": "",
+      "hj": ""
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_Zv9Dfy",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1305
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_KVyrjL",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "res": {
+ "value": "v2",
+ "executedValue": "v2",
+ "name": "res",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "res": "v2"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "n_KVyrjL",
+     "status": "success",
+     "name": "Response",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_1uUkdx",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_n5MFDh",
+    "type": "gSheetNode",
+    "data": {
+     "input": {
+      "actionMethod": {
+ "value": "lookup",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "columnData": {
+ "value": {
+  "A": {
+ "columnName": "RuleType",
+ "dataType": "string",
+ "headerColumnName": "RuleType",
+ "order": 0
+},
+  "B": {
+ "columnName": "RuleId",
+ "dataType": "string",
+ "headerColumnName": "RuleId",
+ "order": 1
+},
+  "C": {
+ "columnName": "ExpectedResult",
+ "dataType": "boolean",
+ "headerColumnName": "ExpectedResult",
+ "order": 2
+}
+ },
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "columnMatch": {
+ "value": null,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "file": {
+ "value": {
+  "label": "AutomationSheet",
+  "value": "10uXtljj7Ly_nn43NQ1Tw5uT-XQC1DWRsA-_DE1vu7ds"
+ },
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "filterConditions": {
+ "value": {
+  "conditions": [
+ {
+  "columnName": "RuleType",
+  "dataType": "string",
+  "operator": "eq",
+  "value": "DT"
+ }
+],
+  "operator": "and"
+ },
+ "executedValue": {
+  "conditions": [
+ {
+  "columnName": "RuleType",
+  "dataType": "string",
+  "operator": "eq",
+  "value": "DT"
+ }
+],
+  "operator": "and"
+ },
+ "name": "",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "filterList": {
+ "value": null,
+ "executedValue": null,
+ "name": "",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "hasHeader": {
+ "value": "yes",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "mappingMethod": {
+ "value": "automatic",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "policy": {
+ "value": null,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "sheet": {
+ "value": {
+  "label": "Sheet1",
+  "value": 0
+ },
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "fields": {
+ "ExpectedResult": {
+ "columnName": "C",
+ "datatype": "boolean",
+ "executedValue": true,
+ "order": 3
+},
+ "RuleId": {
+ "columnName": "B",
+ "datatype": "string",
+ "executedValue": "DT1",
+ "order": 2
+},
+ "RuleType": {
+ "columnName": "A",
+ "datatype": "string",
+ "executedValue": "DT",
+ "order": 1
+}
+},
+ "rows": [
+ {
+  "ExpectedResult": true,
+  "RuleId": "DT1",
+  "RuleType": "DT"
+ },
+ {
+  "ExpectedResult": false,
+  "RuleId": "DT1",
+  "RuleType": "DT"
+ },
+ {
+  "ExpectedResult": false,
+  "RuleId": "DT1",
+  "RuleType": "DT"
+ },
+ {
+  "ExpectedResult": true,
+  "RuleId": "DT1",
+  "RuleType": "DT"
+ }
+]
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "gSheetNode",
+     "entity": "connector",
+     "entityId": "a383951f-1507-4890-8ad9-401f59f154fc",
+     "status": "success",
+     "name": "gsheet",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": {
+      "nodes": {
+ "c_EmDgf4": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_v0vPmT"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "g_VJHjqZ",
+ "rightNode": [
+ "rhs_y62A9n"
+]
+},
+ "g_VJHjqZ": {
+ "children": [
+ "c_EmDgf4"
+],
+ "nodeType": "group",
+ "operator": "and",
+ "parent": ""
+},
+ "lhs_v0vPmT": {
+ "attribute": "RuleType",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "c_EmDgf4",
+ "sourceType": "columnName",
+ "value": null
+},
+ "rhs_y62A9n": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "DT",
+ "nodeType": "constant",
+ "parent": "c_EmDgf4",
+ "source": null,
+ "sourceType": null,
+ "value": "DT"
+}
+}
+     },
+     "blockName": "gsheet",
+     "testedAt": "2025-12-02T06:05:24.466Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_QSa0Qt",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_dTiVQM",
+    "type": "loopNode",
+    "data": {
+     "input": {
+      "chunkSize": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "concurrency": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "inputValue": {
+ "value": null,
+ "executedValue": null,
+ "name": "",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "loopNode",
+     "entity": "loop",
+     "entityId": "n_dTiVQM",
+     "status": "",
+     "name": "LoopBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "loopBlock",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 445.60186767578125,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_jlyB38",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_dTiVQM",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_j03o1Z",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "loopDoneNode",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "loopDoneNode",
+     "rootId": "n_dTiVQM",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 675.6018676757812,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_3O5UPD",
+    "type": "arrowNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "reverseArrowNode",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_dTiVQM",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 445.60186767578125,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_UKY3eD",
+    "type": "rule",
+    "data": {
+     "input": {
+      "cart": {
+ "value": null,
+ "executedValue": null,
+ "name": "cart",
+ "dataType": "list",
+ "source": "LoopBlock",
+ "attribute": "currentItem",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": null,
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "18565145-71f2-4a5d-9a98-603dfbd18a57",
+     "status": "",
+     "name": "RuleSet2",
+     "rootId": "n_dTiVQM",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 445.60186767578125,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_dpkOmZ",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_dTiVQM",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_wEuJj9",
+    "type": "restApiNode",
+    "data": {
+     "input": {
+      "authentication": {
+ "value": "None",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "baseUrl": {
+ "value": "https://reqres.in",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "contentType": {
+ "value": "",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "headers": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "method": {
+ "value": "GET",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "path": {
+ "value": "{{.globalVar.SecretAge}}",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "queryParams": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "response statuscode 404, response: <!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <!-- Google Tag Manager -->\n        <script>\n            ;(function (w, d, s, l, i) {\n                w[l] = w[l] || []\n                w[l].push({\n                    'gtm.start': new Date().getTime(),\n                    event: 'gtm.js',\n                })\n                var f = d.getElementsByTagName(s)[0],\n                    j = d.createElement(s),\n                    dl = l != 'dataLayer' ? '&l=' + l : ''\n                j.async = true\n                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl\n                f.parentNode.insertBefore(j, f)\n            })(window, document, 'script', 'dataLayer', 'GTM-KB622KF')\n        </script>\n        <!-- End Google Tag Manager -->\n        <script src=\"https://js.stripe.com/v3/\"></script>\n        <meta charset=\"utf-8\" />\n        <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\"\n        />\n        <meta\n            name=\"description\"\n            content=\"A hosted REST-API ready to respond to your AJAX requests\"\n        />\n        <title>\n            Reqres - A hosted REST-API ready to respond to your AJAX requests\n        </title>\n        <link\n            href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\"\n            rel=\"stylesheet\"\n        />\n        <link\n            rel=\"icon\"\n            type=\"image/png\"\n            href=\"/img/logo-dark.jpg\"\n            alt=\"ReqRes Logo\"\n        />\n        <link rel=\"canonical\" href=\"https://reqres.in/\" />\n        <meta property=\"og:title\" content=\"\" />\n        <meta property=\"og:description\" content=\"\" />\n        <meta property=\"og:image\" content=\"/img/logo-dark.jpg\" />\n        <meta property=\"og:url\" content=\"https://reqres.in/\" />\n        <meta property=\"og:type\" content=\"website\" />\n        <meta name=\"twitter:card\" content=\"summary_large_image\" />\n        <meta name=\"twitter:title\" content=\"\" />\n        <meta name=\"twitter:description\" content=\"\" />\n        <meta name=\"twitter:image\" content=\"/img/logo-dark.jpg\" />\n        <meta name=\"theme-color\" content=\"#4f46e5\" />\n        <link rel=\"stylesheet\" href=\"/css/app.css\" />\n        <!-- Tailwind CDN for landing refactor -->\n        <script src=\"https://cdn.tailwindcss.com\"></script>\n        <script>\n            tailwind.config = {\n                theme: {\n                    extend: {\n                        container: {\n                            center: true,\n                            screens: {\n                                lg: '1200px',\n                                xl: '1360px',\n                                '2xl': '1440px',\n                            },\n                        },\n                        fontFamily: {\n                            sans: [\n                                'Inter',\n                                'ui-sans-serif',\n                                'system-ui',\n                                'Segoe UI',\n                                'Roboto',\n                                'Helvetica Neue',\n                                'Arial',\n                            ],\n                        },\n                        colors: {\n                            base: '#0B0B10',\n                            ink: '#EAECF0',\n                            mute: '#9BA3AF',\n                            brand: {\n                                50: '#EEF2FF',\n                                100: '#E0E7FF',\n                                200: '#C7D2FE',\n                                300: '#A5B4FC',\n                                400: '#818CF8',\n                                500: '#6366F1',\n                                600: '#5458DF',\n                                700: '#4338CA',\n                                800: '#3730A3',\n                                900: '#312E81',\n                            },\n                            iris: {\n                                400: '#8B5CF6',\n                                500: '#7C3AED',\n                                600: '#6D28D9',\n                            },\n                        },\n                        boxShadow: {\n                            card:\n                                '0 1px 2px rgba(0,0,0,.2), 0 8px 40px -12px rgba(0,0,0,.35)',\n                        },\n                        borderRadius: { xl: '0.875rem', '2xl': '1.25rem' },\n                    },\n                },\n                darkMode: 'class',\n            }\n        </script>\n        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n        <link\n            href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap\"\n            rel=\"stylesheet\"\n        />\n        <link rel=\"stylesheet\" href=\"/css/design.css\" />\n    </head>\n    <body class=\"dark-site bg-black text-white\">\n        <div class=\"header-content\">\n            <header class=\"main-header\">\n                <section class=\"wrap\">\n                    <div class=\"header-top\">\n                        <h1 class=\"logo\">\n                            <a href=\"/\"><img src=\"/img/logo.png\" alt=\"\" /></a>\n                        </h1>\n                        <button\n                            class=\"mobile-menu-toggle\"\n                            onclick=\"toggleMobileMenu()\"\n                        >\n                            <span></span>\n                            <span></span>\n                            <span></span>\n                        </button>\n                    </div>\n                    <h2 class=\"tagline\">\n                            Mock less. Ship more. Realistic APIs on demand.\n                    </h2>\n                    <nav class=\"header-nav\">\n                        <a href=\"https://app.reqres.in\" class=\"dashboard-link\">\n                            🚀 Dashboard\n                        </a>\n                        <a href=\"/signup\" class=\"signup-link\">\n                            Get Free API Key\n                        </a>\n                        <a\n                            href=\"https://app.reqres.in/upgrade\"\n                            class=\"upgrade-link\"\n                        >\n                            Upgrade to Pro\n                        </a>\n                        <a href=\"/api-docs\" class=\"docs-link\"> API Docs </a>\n                    </nav>\n                </section>\n            </header>\n        </div>\n        <main class=\"wrap home-content\" role=\"main\">404</main>\n        <footer>\n            <div class=\"wrap\">\n                <hr class=\"dark\" />\n                <p class=\"t-center\">\n                    Made for developers and designers by\n                    <a href=\"https://benhowdle.im\">Ben Howdle</a>\n                </p>\n            </div>\n        </footer>\n        <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js\"></script>\n        <script src=\"/js/app.js\"></script>\n        <!-- Global site tag (gtag.js) - Google Analytics -->\n        <script\n            async\n            src=\"https://www.googletagmanager.com/gtag/js?id=UA-174008107-1\"\n        ></script>\n        <script>\n            window.dataLayer = window.dataLayer || []\n            function gtag() {\n                dataLayer.push(arguments)\n            }\n            gtag('js', new Date())\n\n            gtag('config', 'UA-174008107-1')\n        </script>\n        <script>\n            ;(function (i, s, o, g, r, a, m) {\n                i['GoogleAnalyticsObject'] = r\n                ;(i[r] =\n                    i[r] ||\n                    function () {\n                        ;(i[r].q = i[r].q || []).push(arguments)\n                    }),\n                    (i[r].l = 1 * new Date())\n                ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])\n                a.async = 1\n                a.src = g\n                m.parentNode.insertBefore(a, m)\n            })(\n                window,\n                document,\n                'script',\n                '//www.google-analytics.com/analytics.js',\n                'ga'\n            )\n\n            ga('create', 'UA-55888877-1', 'auto')\n            ga('send', 'pageview')\n        </script>\n    </body>\n</html>\n",
+      "output": null
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "restApiNode",
+     "entity": "connector",
+     "entityId": "966e83e2-194d-4c21-ac14-d6014a114bf8",
+     "status": "error",
+     "name": "restAPI",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "restAPI",
+     "testedAt": "2025-12-02T06:05:24.466Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_FZ0I8o",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_gARQX9",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "key_0": {
+ "value": null,
+ "executedValue": 0,
+ "name": "key_0",
+ "dataType": "numeric",
+ "source": "globalVar",
+ "attribute": "List123456[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "key_1": {
+ "value": null,
+ "executedValue": "2025-09-26T12:16:44+05:30",
+ "name": "key_1",
+ "dataType": "dateTime",
+ "source": "globalVar",
+ "attribute": "ListOfDateTime2[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "key_2": {
+ "value": null,
+ "executedValue": "2025-09-26",
+ "name": "key_2",
+ "dataType": "date",
+ "source": "globalVar",
+ "attribute": "ListOfDates[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "key_3": {
+ "value": null,
+ "executedValue": [
+  "Atul",
+  "Raizada",
+  "Kumar"
+ ],
+ "name": "key_3",
+ "dataType": "list",
+ "source": "Trigger",
+ "attribute": "Lists",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "key_0": 1,
+ "key_1": "2025-08-18T11:30:45Z",
+ "key_2": "2025-11-10",
+ "key_3": [
+ "Atul",
+ "Raizada",
+ "Kumar"
+]
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "n_gARQX9",
+     "status": "success",
+     "name": "SetVariable",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "2025-12-02T06:05:24.466Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_opw6X2",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_mcsahp",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "n_Zv9Dfy",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_zewTJW",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_KVyrjL",
+    "target": "n_1uUkdx",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_SSUuPf",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_n5MFDh",
+    "target": "n_QSa0Qt",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_W4BJmB",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_j03o1Z",
+    "target": "n_KVyrjL",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_5FhmGa",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_dTiVQM",
+    "target": "n_jlyB38",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_h5PblH",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_dTiVQM",
+    "target": "n_3O5UPD",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_ww6SWz",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_3O5UPD",
+    "target": "n_j03o1Z",
+    "data": {
+     "edgeType": "ignore",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_FjsN7s",
+    "markerEnd": "",
+    "label": "Loop Done",
+    "source": "n_dpkOmZ",
+    "target": "n_j03o1Z",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_TgflAO",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_UKY3eD",
+    "target": "n_dpkOmZ",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_beXnFa",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_jlyB38",
+    "target": "n_UKY3eD",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_twxvfO",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_FZ0I8o",
+    "target": "n_dTiVQM",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_AbumQu",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_wEuJj9",
+    "target": "n_FZ0I8o",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_LmEPxL",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_QSa0Qt",
+    "target": "n_wEuJj9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_h1xC5s",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_opw6X2",
+    "target": "n_n5MFDh",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Cf1u11",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_gARQX9",
+    "target": "n_opw6X2",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_aD5Vth",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_Zv9Dfy",
+    "target": "n_gARQX9",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "14e60fff-e480-4137-8ddb-9d637203884d",
+   "dependencyType": "module_schema",
+   "dependencyId": "14e60fff-e480-4137-8ddb-9d637203884d",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T09:35:23.112064Z",
+   "updatedAt": "2025-09-26T09:37:26.466333Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "02cb259b-a131-49f1-b677-08c5687613e1",
+   "dependencyType": "module_schema",
+   "dependencyId": "02cb259b-a131-49f1-b677-08c5687613e1",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T09:31:15.722792Z",
+   "updatedAt": "2025-09-26T09:37:26.467234Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "ListOfDates",
+   "dependencyType": "variable",
+   "dependencyId": "f098d6e4-9b25-40b8-895e-5869f9e52eb2",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T06:48:03.411007Z",
+   "updatedAt": "2025-09-26T09:37:26.465413Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "ListOfDateTime2",
+   "dependencyType": "variable",
+   "dependencyId": "309c5048-7b10-4479-9208-7c0a868c61ae",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T06:46:50.891882Z",
+   "updatedAt": "2025-09-26T09:37:26.464564Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "List123456",
+   "dependencyType": "variable",
+   "dependencyId": "ae6a71ae-ae15-4630-9c1d-3826b9c2df65",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-26T06:46:29.604472Z",
+   "updatedAt": "2025-09-26T09:37:26.463489Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "SecretAge",
+   "dependencyType": "variable",
+   "dependencyId": "fca4c371-48b2-4b2a-972d-228b2f7522bc",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-25T13:39:52.500156Z",
+   "updatedAt": "2025-09-26T09:37:26.462438Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "n_wEuJj9",
+   "dependencyType": "connector",
+   "dependencyId": "966e83e2-194d-4c21-ac14-d6014a114bf8",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-25T13:39:52.497903Z",
+   "updatedAt": "2025-09-26T09:37:26.460541Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "n_UKY3eD",
+   "dependencyType": "rule",
+   "dependencyId": "18565145-71f2-4a5d-9a98-603dfbd18a57",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-09-22T05:54:49.186084Z",
+   "updatedAt": "2025-09-26T09:37:26.461477Z"
+  },
+  {
+   "entityCommitId": "commit-b9a74c0b-8d9e-4be8-95ff-c56e7c3aa0fa",
+   "entityType": "workflow",
+   "entityId": "d17c9df2-2f22-4cf7-bd0d-9c5a8c13245d",
+   "entityVersion": "draft",
+   "entityNodeId": "n_n5MFDh",
+   "dependencyType": "connector",
+   "dependencyId": "a383951f-1507-4890-8ad9-401f59f154fc",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-09-22T05:33:05.858986Z",
+   "updatedAt": "2025-09-26T09:37:26.459516Z"
+  }
+ ]
+}

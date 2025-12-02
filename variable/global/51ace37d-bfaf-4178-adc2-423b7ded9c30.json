@@ -1,0 +1,27 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-10-17T05:57:01.819Z",
+  "updatedAt": "2025-10-17T05:57:01.819Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "51ace37d-bfaf-4178-adc2-423b7ded9c30",
+  "name": "dropboxPdfUrl",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "https://www.dropbox.com/scl/fi/jfaiuiora4oujgm87okp3/random_data_report.pdf?rlkey=v5gwimpf92ydio6rjye0y6vsa&st=sk5l26yc&raw=1",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

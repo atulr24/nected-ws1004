@@ -1,0 +1,241 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2025-09-18T10:57:00.343Z",
+  "updatedAt": "2025-09-18T10:57:31.310314Z",
+  "isDeleted": false,
+  "testedAt": "2025-09-18T10:57:31.309Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "cdf2ccca-4090-417c-b11a-3bec9dc10645",
+  "name": "AutomationRules",
+  "commitId": "commit-a4f55c79-0331-4524-84bc-9ad307ed9cd3",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-09-18 10:57:00",
+   "timeStamp": "2025-09-18T10:57:00.34307815Z"
+  },
+  "customInput": {
+   "Age": {
+ "name": "Age",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 29,
+ "config": {
+  
+ },
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+},
+   "cart": {
+ "name": "cart",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": [
+  {
+   "currency": "USD",
+   "list": [
+ 12,
+ 7,
+ 23,
+ 5
+],
+   "name": "Wireless Mouse",
+   "price": 25.99,
+   "productId": "prod001",
+   "quantity": 3
+  },
+  {
+   "currency": "USD",
+   "list": [
+ 8,
+ 14,
+ 3,
+ 19
+],
+   "name": "Wireless Mouse",
+   "price": 25.99,
+   "productId": "prod001",
+   "quantity": 1
+  },
+  {
+   "currency": "USD",
+   "list": [
+ 4,
+ 16,
+ 11,
+ 27
+],
+   "name": "Mechanical Keyboard",
+   "price": 89.99,
+   "productId": "prod002",
+   "quantity": 2
+  },
+  {
+   "currency": "USD",
+   "list": [
+ 6,
+ 9,
+ 10,
+ 22
+],
+   "name": "USB-C Hub",
+   "price": 34.5,
+   "productId": "prod003",
+   "quantity": 4
+  },
+  {
+   "currency": "USD",
+   "list": [
+ 1,
+ 18,
+ 12,
+ 15
+],
+   "name": "USB-C Hub",
+   "price": 34.5,
+   "productId": "prod003",
+   "quantity": 2
+  },
+  {
+   "currency": "USD",
+   "list": [
+ 33,
+ 2,
+ 29,
+ 13
+],
+   "name": "Noise Cancelling Headphones",
+   "price": 199.99,
+   "productId": "prod006",
+   "quantity": 5
+  }
+ ],
+ "config": {
+  
+ },
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "0e00fd28-4554-470f-9b0f-f4f0558a69ee": {
+ "prevRuleId": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
+ "nextRuleId": "",
+ "isEnabled": true
+},
+   "8b103d8e-1e8f-45cc-8669-db588d8fe031": {
+ "prevRuleId": "",
+ "nextRuleId": "0e00fd28-4554-470f-9b0f-f4f0558a69ee",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
+  "ruleSetPolicy": "first",
+  "description": "",
+  "policy": "",
+  "version": "draft",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "8b103d8e-1e8f-45cc-8669-db588d8fe031",
+   "0e00fd28-4554-470f-9b0f-f4f0558a69ee"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-a4f55c79-0331-4524-84bc-9ad307ed9cd3",
+   "entityType": "rule",
+   "entityId": "cdf2ccca-4090-417c-b11a-3bec9dc10645",
+   "entityVersion": "draft",
+   "entityNodeId": "0e00fd28-4554-470f-9b0f-f4f0558a69ee",
+   "dependencyType": "rule",
+   "dependencyId": "0e00fd28-4554-470f-9b0f-f4f0558a69ee",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-09-18T10:57:21.572234Z",
+   "updatedAt": "2025-09-18T10:57:21.572234Z"
+  },
+  {
+   "entityCommitId": "commit-a4f55c79-0331-4524-84bc-9ad307ed9cd3",
+   "entityType": "rule",
+   "entityId": "cdf2ccca-4090-417c-b11a-3bec9dc10645",
+   "entityVersion": "draft",
+   "entityNodeId": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
+   "dependencyType": "rule",
+   "dependencyId": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-09-18T10:57:10.917067Z",
+   "updatedAt": "2025-09-18T10:57:21.571034Z"
+  }
+ ]
+}

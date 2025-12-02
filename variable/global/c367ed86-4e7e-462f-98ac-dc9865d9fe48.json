@@ -1,0 +1,29 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-09-25T13:09:33.148Z",
+  "updatedAt": "2025-09-25T13:09:33.148Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "c367ed86-4e7e-462f-98ac-dc9865d9fe48",
+  "name": "bnb",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": {
+    
+   },
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-09-25T13:42:37.301Z",
+  "updatedAt": "2025-09-25T13:42:37.301Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "bc163ebe-81a1-410e-8eb8-927ea5e093e9",
+  "name": "json",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "json",
+  "value": {
+   "data": {
+    
+   },
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

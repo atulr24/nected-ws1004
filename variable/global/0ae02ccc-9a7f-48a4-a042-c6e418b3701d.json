@@ -1,0 +1,33 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-09-25T10:31:04.532Z",
+  "updatedAt": "2025-09-25T10:31:04.532Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "0ae02ccc-9a7f-48a4-a042-c6e418b3701d",
+  "name": "List4",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "Atul",
+    "Raizada",
+    1,
+    2,
+    3
+   ],
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

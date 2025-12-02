@@ -1,0 +1,29 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-09-26T06:16:38.908Z",
+  "updatedAt": "2025-09-26T06:16:38.908Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "d70e2da3-1c59-4290-b238-c53d98baff02",
+  "name": "LIstmm",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": {
+    
+   },
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}
