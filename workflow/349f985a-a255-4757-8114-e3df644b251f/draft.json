@@ -1,15 +1,16 @@
 {
  "entityType": "workflow",
  "data": {
+  "createdAt": "2025-12-02T06:05:54.665Z",
+  "updatedAt": "2025-12-08T10:16:43.465138Z",
+  "isDeleted": false,
   "testedAt": "2025-12-02T06:38:55.323Z",
   "publishedAt": "0001-01-01T00:00:00Z",
-  "createdAt": "2025-12-02T06:05:54.665Z",
-  "updatedAt": "2025-12-02T06:38:55.324964Z",
-  "isDeleted": false,
   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
+  "version": "draft",
   "name": "Test2",
   "commitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
-  "status": "tested",
+  "status": "draft",
   "lastVersion": "",
   "isLive": false,
   "commitInfo": {
@@ -17,7 +18,6 @@
    "timeStamp": "2025-12-02T06:05:54.665298715Z"
   },
   "startNode": "n_NC40Wg",
-  "version": "draft",
   "description": "",
   "trigger": {
    "apiNode": "1",
@@ -26,7 +26,7 @@
   "nodes": [
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 0
     },
     "style": null,
@@ -90,7 +90,7 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 130
     },
     "style": null,
@@ -126,7 +126,7 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 205
     },
     "style": null,
@@ -321,13 +321,13 @@
      "switcher": null,
      "conditions": null,
      "blockName": "decisionTable",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 335
     },
     "style": null,
@@ -363,7 +363,7 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 410
     },
     "style": null,
@@ -437,13 +437,13 @@
      "switcher": null,
      "conditions": null,
      "blockName": "code",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 540
     },
     "style": null,
@@ -479,279 +479,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 615
-    },
-    "style": null,
-    "sourcePosition": "bottom",
-    "targetPosition": "top",
-    "id": "n_34mYYR",
-    "type": "restApiNode",
-    "data": {
-     "input": {
-      "authentication": {
- "value": "None",
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "baseUrl": {
- "value": "https://reqres.in",
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "contentType": {
- "value": "",
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "headers": {
- "value": [
-  {
-   "key": "x-api-key",
-   "value": "reqres-free-v1"
-  }
- ],
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "method": {
- "value": "GET",
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "path": {
- "value": "/api/users/2",
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-},
-      "queryParams": {
- "value": [],
- "executedValue": null,
- "name": "",
- "dataType": "",
- "source": "",
- "attribute": "",
- "keySource": "",
- "keyAttribute": "",
- "mapping": false,
- "isOptional": false,
- "isNullable": false,
- "isCaseSensitive": false,
- "sendNull": false,
- "notSend": false,
- "order": 0,
- "schemaId": ""
-}
-     },
-     "output": null,
-     "executedValue": {
-      "error": "",
-      "output": {
- "Body": {
- "_meta": {
- "docs_url": "https://reqres.in",
- "features": [
- "30 Second Backend Templates",
- "Custom API Endpoints",
- "Data Persistence",
- "Real-time Analytics"
-],
- "message": "This API is powered by ReqRes. Deploy your own backend in 30 seconds!",
- "powered_by": "🚀 ReqRes - Deploy backends in 30 seconds",
- "template_gallery": "https://app.reqres.in/templates",
- "upgrade_cta": "Upgrade to Pro for unlimited requests, custom endpoints, and data persistence",
- "upgrade_url": "https://app.reqres.in/upgrade"
-},
- "data": {
- "avatar": "https://reqres.in/img/faces/2-image.jpg",
- "email": "janet.weaver@reqres.in",
- "first_name": "Janet",
- "id": 2,
- "last_name": "Weaver"
-},
- "support": {
- "text": "Tired of writing endless social media content? Let Content Caddy generate it for you.",
- "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral"
-}
-},
- "Headers": {
- "Access-Control-Allow-Credentials": "true",
- "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key",
- "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
- "Access-Control-Allow-Origin": "http://localhost:5173",
- "Age": "2124",
- "Cache-Control": "max-age=14400",
- "Cf-Cache-Status": "HIT",
- "Cf-Ray": "9a78d2f77e0425cd-DEL",
- "Content-Type": "application/json; charset=utf-8",
- "Date": "Tue, 02 Dec 2025 06:38:54 GMT",
- "Etag": "W/\"334-l4nkyILfvcYPQGUAclAvJEuZIac\"",
- "Nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
- "Referrer-Policy": "strict-origin-when-cross-origin",
- "Report-To": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=1S%2FcXO3pEvMlunRBe%2B8zGmVvFfPWypPndburD8nCxTk%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1764655410\"}],\"max_age\":3600}",
- "Reporting-Endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=1S%2FcXO3pEvMlunRBe%2B8zGmVvFfPWypPndburD8nCxTk%3D&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&ts=1764655410\"",
- "Server": "cloudflare",
- "Vary": "Origin, accept-encoding",
- "Via": "1.1 heroku-router",
- "X-Content-Type-Options": "nosniff",
- "X-Frame-Options": "DENY",
- "X-Ratelimit-Limit": "100",
- "X-Ratelimit-Remaining": "99",
- "X-Ratelimit-Reset": "1764655471",
- "X-Request-Id": "53655a8b-475d-14d4-94ef-dda66a5e354a",
- "X-Xss-Protection": "1; mode=block"
-},
- "StatusCode": 200
-}
-     },
-     "settings": {
-      "cacheEnabled": false,
-      "cacheKeys": "",
-      "durationUnit": "d",
-      "durationValue": 0,
-      "errorContinue": false,
-      "timeout": 10,
-      "timeoutAsync": 20
-     },
-     "nodeType": "restApiNode",
-     "entity": "connector",
-     "entityId": "966e83e2-194d-4c21-ac14-d6014a114bf8",
-     "status": "success",
-     "name": "restAPI",
-     "rootId": "",
-     "sourceId": null,
-     "isMergeNode": false,
-     "runInLoop": {
-      "status": false,
-      "source": "",
-      "attribute": "",
-      "value": null
-     },
-     "switcher": null,
-     "conditions": null,
-     "blockName": "restAPI",
-     "testedAt": "2025-12-02T06:38:55.323Z"
-    },
-    "draggable": false
-   },
-   {
-    "position": {
-     "x": 560.6018676757812,
-     "y": 745
-    },
-    "style": null,
-    "sourcePosition": "bottom",
-    "targetPosition": "top",
-    "id": "n_owhgRa",
-    "type": "addNode",
-    "data": {
-     "input": null,
-     "output": null,
-     "executedValue": null,
-     "settings": null,
-     "nodeType": "addNodeMd",
-     "entity": "",
-     "entityId": "",
-     "status": "",
-     "name": "",
-     "rootId": "",
-     "sourceId": null,
-     "isMergeNode": false,
-     "runInLoop": {
-      "status": false,
-      "source": "",
-      "attribute": "",
-      "value": null
-     },
-     "switcher": null,
-     "conditions": null,
-     "blockName": "",
-     "testedAt": "0001-01-01T00:00:00Z"
-    },
-    "draggable": false
-   },
-   {
-    "position": {
-     "x": 560.6018676757812,
-     "y": 820
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -760,10 +489,10 @@
     "type": "setVarNode",
     "data": {
      "input": {
-      "var1": {
+      "var12": {
  "value": "atul1",
  "executedValue": "atul1",
- "name": "var1",
+ "name": "var12",
  "dataType": "string",
  "source": "",
  "attribute": "",
@@ -780,22 +509,14 @@
 }
      },
      "output": null,
-     "executedValue": {
-      "error": "",
-      "output": {
- "var1": "atul1"
-},
-      "resetOutput": {
- 
-}
-     },
+     "executedValue": null,
      "settings": {
       "errorContinue": false
      },
      "nodeType": "setVarNode",
      "entity": "setVariableNode",
      "entityId": "n_Ontq0x",
-     "status": "success",
+     "status": "",
      "name": "SetVariable",
      "rootId": "",
      "sourceId": null,
@@ -809,14 +530,14 @@
      "switcher": null,
      "conditions": null,
      "blockName": "setVariable",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 950
+     "x": 700.796875,
+     "y": 745
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -851,8 +572,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 1025
+     "x": 700.796875,
+     "y": 820
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1307,14 +1028,14 @@
      "switcher": null,
      "conditions": null,
      "blockName": "loopBlock",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 445.60186767578125,
-     "y": 1155
+     "x": 585.796875,
+     "y": 950
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1349,8 +1070,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 1435
+     "x": 700.796875,
+     "y": 1230
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1385,8 +1106,8 @@
    },
    {
     "position": {
-     "x": 675.6018676757812,
-     "y": 1360
+     "x": 815.796875,
+     "y": 1155
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1421,8 +1142,8 @@
    },
    {
     "position": {
-     "x": 445.60186767578125,
-     "y": 1230
+     "x": 585.796875,
+     "y": 1025
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1673,14 +1394,14 @@
      "switcher": null,
      "conditions": null,
      "blockName": "decisionTable",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 445.60186767578125,
-     "y": 1360
+     "x": 585.796875,
+     "y": 1155
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1715,8 +1436,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 1510
+     "x": 700.796875,
+     "y": 1305
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1863,14 +1584,14 @@
 }
      },
      "blockName": "switchBlock",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 215.60186767578125,
-     "y": 1640
+     "x": 355.796875,
+     "y": 1435
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1905,8 +1626,8 @@
    },
    {
     "position": {
-     "x": 445.60186767578125,
-     "y": 1845
+     "x": 585.796875,
+     "y": 1640
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1941,8 +1662,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 1920
+     "x": 700.796875,
+     "y": 1715
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -1977,8 +1698,8 @@
    },
    {
     "position": {
-     "x": 675.6018676757812,
-     "y": 1845
+     "x": 815.796875,
+     "y": 1640
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2013,8 +1734,8 @@
    },
    {
     "position": {
-     "x": 905.6018676757812,
-     "y": 1845
+     "x": 1045.796875,
+     "y": 1640
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2049,8 +1770,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 1995
+     "x": 700.796875,
+     "y": 1790
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2107,14 +1828,14 @@
      "switcher": null,
      "conditions": null,
      "blockName": "response",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 2125
+     "x": 700.796875,
+     "y": 1920
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2149,8 +1870,8 @@
    },
    {
     "position": {
-     "x": 215.60186767578125,
-     "y": 1715
+     "x": 355.796875,
+     "y": 1510
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2243,14 +1964,14 @@
      "switcher": null,
      "conditions": null,
      "blockName": "decisionTable",
-     "testedAt": "2025-12-02T06:38:55.323Z"
+     "testedAt": "0001-01-01T00:00:00Z"
     },
     "draggable": false
    },
    {
     "position": {
-     "x": 215.60186767578125,
-     "y": 1845
+     "x": 355.796875,
+     "y": 1640
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -2380,29 +2101,11 @@
      "stroke": "gray",
      "strokeWidth": 1
     },
-    "id": "e_IDf8ta",
-    "markerEnd": "",
-    "label": "",
-    "source": "n_34mYYR",
-    "target": "n_owhgRa",
-    "data": {
-     "edgeType": "then",
-     "pathId": ""
-    },
-    "type": "smoothEdge",
-    "sourceHandle": "",
-    "animated": false
-   },
-   {
-    "style": {
-     "stroke": "gray",
-     "strokeWidth": 1
-    },
     "id": "e_0LqHSp",
     "markerEnd": "",
     "label": "",
     "source": "n_kppO4R",
-    "target": "n_34mYYR",
+    "target": "n_Ontq0x",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -2421,24 +2124,6 @@
     "label": "",
     "source": "n_Ontq0x",
     "target": "n_15ffWt",
-    "data": {
-     "edgeType": "then",
-     "pathId": ""
-    },
-    "type": "smoothEdge",
-    "sourceHandle": "",
-    "animated": false
-   },
-   {
-    "style": {
-     "stroke": "gray",
-     "strokeWidth": 1
-    },
-    "id": "e_ux5Idw",
-    "markerEnd": "",
-    "label": "",
-    "source": "n_owhgRa",
-    "target": "n_Ontq0x",
     "data": {
      "edgeType": "then",
      "pathId": ""
@@ -2821,58 +2506,9 @@
  },
  "dependencies": [
   {
-   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
-   "entityType": "workflow",
-   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
-   "entityVersion": "draft",
-   "entityNodeId": "n_iVcp4C",
-   "dependencyType": "rule",
-   "dependencyId": "d6bb3d6c-0dfa-4813-9740-f140388e492c",
-   "dependencyVersion": "draft",
    "isDeleted": false,
-   "createdAt": "2025-12-02T06:38:33.674772Z",
-   "updatedAt": "2025-12-02T06:38:45.859313Z"
-  },
-  {
-   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
-   "entityType": "workflow",
-   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
-   "entityVersion": "draft",
-   "entityNodeId": "n_TYFvGX",
-   "dependencyType": "rule",
-   "dependencyId": "e07e8cb5-b907-43b8-970a-105300f48169",
-   "dependencyVersion": "draft",
-   "isDeleted": false,
-   "createdAt": "2025-12-02T06:14:11.942865Z",
-   "updatedAt": "2025-12-02T06:38:45.861604Z"
-  },
-  {
-   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
-   "entityType": "workflow",
-   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
-   "entityVersion": "draft",
-   "entityNodeId": "n_34mYYR",
-   "dependencyType": "connector",
-   "dependencyId": "966e83e2-194d-4c21-ac14-d6014a114bf8",
-   "dependencyVersion": "live",
-   "isDeleted": false,
-   "createdAt": "2025-12-02T06:10:08.408797Z",
-   "updatedAt": "2025-12-02T06:38:45.856373Z"
-  },
-  {
-   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
-   "entityType": "workflow",
-   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
-   "entityVersion": "draft",
-   "entityNodeId": "validJson2",
-   "dependencyType": "variable",
-   "dependencyId": "2c144c91-c234-4a93-84eb-5e8073e03772",
-   "dependencyVersion": "live",
-   "isDeleted": false,
-   "createdAt": "2025-12-02T06:09:26.961462Z",
-   "updatedAt": "2025-12-02T06:38:45.866261Z"
-  },
-  {
+   "createdAt": "2025-12-02T06:09:14.469749Z",
+   "updatedAt": "2025-12-08T10:16:43.489126Z",
    "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
    "entityType": "workflow",
    "entityId": "349f985a-a255-4757-8114-e3df644b251f",
@@ -2880,10 +2516,46 @@
    "entityNodeId": "n_NC40Wg",
    "dependencyType": "rule",
    "dependencyId": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
-   "dependencyVersion": "draft",
+   "dependencyVersion": "draft"
+  },
+  {
    "isDeleted": false,
-   "createdAt": "2025-12-02T06:09:14.469749Z",
-   "updatedAt": "2025-12-02T06:38:45.863871Z"
+   "createdAt": "2025-12-02T06:09:26.961462Z",
+   "updatedAt": "2025-12-08T10:16:43.496116Z",
+   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
+   "entityType": "workflow",
+   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
+   "entityVersion": "draft",
+   "entityNodeId": "validJson2",
+   "dependencyType": "variable",
+   "dependencyId": "2c144c91-c234-4a93-84eb-5e8073e03772",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-02T06:14:11.942865Z",
+   "updatedAt": "2025-12-08T10:16:43.491436Z",
+   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
+   "entityType": "workflow",
+   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
+   "entityVersion": "draft",
+   "entityNodeId": "n_TYFvGX",
+   "dependencyType": "rule",
+   "dependencyId": "e07e8cb5-b907-43b8-970a-105300f48169",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-02T06:38:33.674772Z",
+   "updatedAt": "2025-12-08T10:16:43.493911Z",
+   "entityCommitId": "commit-71bd7979-ca3f-4a84-828a-6217ea78e245",
+   "entityType": "workflow",
+   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
+   "entityVersion": "draft",
+   "entityNodeId": "n_iVcp4C",
+   "dependencyType": "rule",
+   "dependencyId": "d6bb3d6c-0dfa-4813-9740-f140388e492c",
+   "dependencyVersion": "draft"
   }
  ]
 }
