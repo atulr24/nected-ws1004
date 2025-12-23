@@ -1,0 +1,12 @@
+{
+ "entityType": "tag",
+ "data": {
+  "createdAt": "2025-12-23T11:22:28.742Z",
+  "updatedAt": "2025-12-23T11:22:28.742Z",
+  "isDeleted": false,
+  "entityId": "4717f74f-45ab-4da2-83fe-68624bc12ea1",
+  "name": "My Workspace",
+  "color": "#99CCFF",
+  "type": "Teams"
+ }
+}
