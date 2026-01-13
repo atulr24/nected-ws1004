@@ -1,0 +1,12 @@
+{
+ "entityType": "tag",
+ "data": {
+  "createdAt": "2025-12-19T06:43:13.917Z",
+  "updatedAt": "2025-12-19T06:43:13.917Z",
+  "isDeleted": false,
+  "entityId": "1f2b7fd1-a191-4b06-b591-eb6dc583fb69",
+  "name": "Finance Dept",
+  "color": "#FFCC99",
+  "type": "new 123"
+ }
+}

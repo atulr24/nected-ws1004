@@ -1,0 +1,120 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-12T06:29:06.243Z",
+  "updatedAt": "2026-01-12T09:35:26.58073Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-12T09:35:26.58Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "f3531c77-273a-4f04-babe-7f9826b6466b",
+  "version": "draft",
+  "name": "pg1",
+  "commitId": "commit-5c0def2f-6d52-4fa1-9f88-cc5edcfb4aee",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-12 06:29:06",
+   "timeStamp": "2026-01-12T06:29:06.243068001Z"
+  },
+  "fields": {
+   "city": {
+ "ColumnName": "city",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "Bengaluru"
+},
+   "country_code": {
+ "ColumnName": "country_code",
+ "DataType": "string",
+ "Order": 7,
+ "ExecutedValue": "IN"
+},
+   "created_at": {
+ "ColumnName": "created_at",
+ "DataType": "date",
+ "Order": 2,
+ "ExecutedValue": "2026-01-12"
+},
+   "credit_limit": {
+ "ColumnName": "credit_limit",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 8000
+},
+   "customer_score": {
+ "ColumnName": "customer_score",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": 92
+},
+   "customer_segment": {
+ "ColumnName": "customer_segment",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": "Gold"
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "UPDATE ecomm.customers SET email=updated.email@example.coml WHERE id=147"
+},
+   "gender": {
+ "ColumnName": "gender",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": "Female"
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 9,
+ "ExecutedValue": 152
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 10,
+ "ExecutedValue": "Jane Smith"
+},
+   "state": {
+ "ColumnName": "state",
+ "DataType": "string",
+ "Order": 11,
+ "ExecutedValue": "KA"
+}
+  },
+  "description": "",
+  "query": "SELECT * from ecomm.customers order by id desc",
+  "params": {
+   
+  },
+  "connectorId": "318d43e2-5db9-4340-98f1-ace5ff82aca1",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": false,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-12T06:29:06.252652Z",
+   "updatedAt": "2026-01-12T09:35:24.114767Z",
+   "entityCommitId": "commit-5c0def2f-6d52-4fa1-9f88-cc5edcfb4aee",
+   "entityType": "dataSet",
+   "entityId": "f3531c77-273a-4f04-babe-7f9826b6466b",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "318d43e2-5db9-4340-98f1-ace5ff82aca1",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-12-12T13:27:30.018Z",
+  "updatedAt": "2025-12-19T06:37:44.874408Z",
+  "isDeleted": false,
+  "testedAt": "2025-12-19T06:36:04.348Z",
+  "publishedAt": "2025-12-12T13:27:40.077Z",
+  "entityId": "a612aef5-48eb-48e8-9002-7c627ee18dec",
+  "version": "draft",
+  "name": "RuleA",
+  "commitId": "commit-40971204-d81e-4da1-901f-0a791308590e",
+  "status": "draft",
+  "lastVersion": "0.10",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "timeStamp": "2025-12-12T13:29:05.856533278Z"
+  },
+  "customInput": {
+   
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "",
+ "prevId": "",
+ "firstOutputData": "",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     
+    },
+    "actionNode": {
+     "actionData_qwr": {
+ "name": "qwr",
+ "connectorId": "",
+ "entity": "rule",
+ "entityId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+ "config": {
+  "query": ""
+ },
+ "input": {
+  "mhj": {
+ "name": "mhj",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "value": "",
+ "sendNull": false,
+ "notSend": false
+}
+ },
+ "next": ""
+}
+    },
+    "firstOutputData": "",
+    "firstActionNode": "actionData_qwr"
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-19T06:37:44.887971Z",
+   "updatedAt": "2025-12-19T06:37:44.887971Z",
+   "entityCommitId": "commit-40971204-d81e-4da1-901f-0a791308590e",
+   "entityType": "rule",
+   "entityId": "a612aef5-48eb-48e8-9002-7c627ee18dec",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_qwr",
+   "dependencyType": "rule",
+   "dependencyId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+   "dependencyVersion": "draft"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-19T06:44:32.532301Z",
+   "updatedAt": "2025-12-19T06:44:32.532301Z",
+   "entityType": "rule",
+   "entityId": "a612aef5-48eb-48e8-9002-7c627ee18dec",
+   "tagId": "286ff4ea-d13c-4d9a-946e-15beb506b038"
+  }
+ ]
+}

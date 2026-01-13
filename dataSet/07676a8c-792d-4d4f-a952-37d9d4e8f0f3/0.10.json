@@ -1,0 +1,71 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2026-01-13T06:43:09.104Z",
+  "updatedAt": "2026-01-13T06:43:25.53Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T06:43:21.65Z",
+  "publishedAt": "2026-01-13T06:43:25.494Z",
+  "entityId": "07676a8c-792d-4d4f-a952-37d9d4e8f0f3",
+  "version": "0.10",
+  "name": "ds00",
+  "commitId": "commit-c5cda07c-01cb-4777-9e88-4bb3de54aad3",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2026-01-13 06:43:09",
+   "description": "cv",
+   "timeStamp": "2026-01-13T06:43:25.485Z"
+  },
+  "fields": {
+   "Case": {
+ "ColumnName": "A",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "TC1"
+}
+  },
+  "description": "",
+  "query": "",
+  "params": {
+   "file": {
+ "label": "Employees",
+ "value": "1lI5G1xHg18JwP04ibnkQPT0pCYgPE6r68B3URMfrc98"
+},
+   "hasHeader": true,
+   "isShared": true,
+   "sheet": {
+ "label": "TCs",
+ "value": 1179478777
+}
+  },
+  "connectorId": "f80bab4b-b4eb-4ea5-a065-f770063c8267",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T06:43:09.118566Z",
+   "updatedAt": "2026-01-13T06:43:25.521742Z",
+   "entityCommitId": "commit-c5cda07c-01cb-4777-9e88-4bb3de54aad3",
+   "entityType": "dataSet",
+   "entityId": "07676a8c-792d-4d4f-a952-37d9d4e8f0f3",
+   "entityVersion": "0.10",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "f80bab4b-b4eb-4ea5-a065-f770063c8267",
+   "dependencyVersion": "live"
+  }
+ ]
+}

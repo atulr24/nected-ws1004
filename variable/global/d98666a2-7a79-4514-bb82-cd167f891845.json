@@ -1,16 +1,16 @@
 {
  "entityType": "variable",
  "data": {
-  "createdAt": "2025-09-25T10:05:50.998Z",
-  "updatedAt": "2026-01-12T12:14:16.226496Z",
+  "createdAt": "2026-01-12T13:42:06.483Z",
+  "updatedAt": "2026-01-12T13:45:39.482628Z",
   "isDeleted": false,
-  "entityId": "ea76967e-0fac-4d4f-bb02-5bd29d98f10b",
-  "name": "Name",
+  "entityId": "d98666a2-7a79-4514-bb82-cd167f891845",
+  "name": "counter",
   "category": "globalVar",
   "scope": "workspace",
-  "dataType": "string",
+  "dataType": "numeric",
   "value": {
-   "data": "Atul   ",
+   "data": 20,
    "isSecret": false,
    "canReset": true
   },
