@@ -1,0 +1,24 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.934Z",
+  "updatedAt": "2026-01-15T10:38:22.934Z",
+  "isDeleted": false,
+  "entityId": "728bd2b1-777d-4ddf-84c3-e3c2192d88e0",
+  "name": "final_decision",
+  "moduleId": "46577a8b-ca9a-49bd-bbd3-38a92bf6e445",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Approve"
+   },
+   {
+    "value": "Reject"
+   },
+   {
+    "value": "Manual Review"
+   }
+  ]
+ }
+}

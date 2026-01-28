@@ -1,0 +1,1811 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.941Z",
+  "updatedAt": "2026-01-15T10:38:22.941Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "d8544672-280c-4b88-b510-1d0e496580eb",
+  "version": "draft",
+  "name": "approvedLoanCalculation",
+  "commitId": "commit-28bb9912-f68c-43d0-a65f-b972a74cd692",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-15 10:38:22",
+   "timeStamp": "2026-01-15T10:38:22.941610615Z"
+  },
+  "startNode": "n_EgrvPO",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "approverId": {
+ "value": null,
+ "executedValue": 1,
+ "name": "approverId",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "approverName": {
+ "value": null,
+ "executedValue": "John Doe",
+ "name": "approverName",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": true,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "avgBankBalance": {
+ "value": null,
+ "executedValue": 78965,
+ "name": "avgBankBalance",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "bankb": {
+ "value": null,
+ "executedValue": 23,
+ "name": "bankb",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "creditScore": {
+ "value": null,
+ "executedValue": 753,
+ "name": "creditScore",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "customerId": {
+ "value": null,
+ "executedValue": 1,
+ "name": "customerId",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enquiriesInLast6m": {
+ "value": null,
+ "executedValue": 10,
+ "name": "enquiriesInLast6m",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "foirPercent": {
+ "value": null,
+ "executedValue": 25,
+ "name": "foirPercent",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthlyIncome": {
+ "value": null,
+ "executedValue": 12365,
+ "name": "monthlyIncome",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "proposedEmi": {
+ "value": null,
+ "executedValue": 3000,
+ "name": "proposedEmi",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "rowID": {
+ "value": null,
+ "executedValue": 1,
+ "name": "rowID",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "approverId": 1,
+      "approverName": "John Doe",
+      "avgBankBalance": 78965,
+      "bankb": 23,
+      "creditScore": 753,
+      "customerId": 1,
+      "enquiriesInLast6m": 10,
+      "foirPercent": 25,
+      "monthlyIncome": 12365,
+      "proposedEmi": 3000,
+      "rowID": 1
+     },
+     "settings": {
+      "authType": "none",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdvwxghzvu4hydq2uq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzfikmusf6hzcomwc",
+    "type": "rule",
+    "data": {
+     "input": {
+      "avg_bank_balance": {
+ "value": null,
+ "executedValue": null,
+ "name": "avg_bank_balance",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "avgBankBalance",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "c4433c44-8aa6-48dc-b1e6-c28712c75b81"
+},
+      "credit_score": {
+ "value": null,
+ "executedValue": null,
+ "name": "credit_score",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "creditScore",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "4fa5c041-7148-494a-ac45-77709060cae6"
+},
+      "enquiries_in_last6m": {
+ "value": null,
+ "executedValue": null,
+ "name": "enquiries_in_last6m",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "enquiriesInLast6m",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": [
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "points": 15,
+  "rowError": null,
+  "rowId": 4
+ }
+],
+  "ruleId": "9852ce3f-ee5f-4a41-815c-c4ab116599f2",
+  "warnings": []
+ },
+ {
+  "action": null,
+  "errors": "missing required params key OrgId",
+  "output": [],
+  "ruleId": "0ddda035-7be4-4344-a2dc-55a290974873",
+  "warnings": null
+ },
+ {
+  "action": null,
+  "additionalOutput": {
+ 
+},
+  "errors": "",
+  "output": [
+ {
+  "defaultOutputData": true,
+  "points": 35,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+  "ruleId": "f2170e49-6403-4239-8ab9-8e3f5642c281",
+  "warnings": []
+ }
+]
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "ruleSetNode",
+     "entity": "rule",
+     "entityId": "745c16a8-a2c5-40cd-ae5f-333478112944",
+     "pluginName": "",
+     "status": "",
+     "name": "ScoreBandCalculation",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "ruleSet",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzfikmuztb56ai8l",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbeqq6pspscufnyjhmr",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "updatedScore": {
+ "value": "SUM_LIST(list={{.ScoreBandCalculation.output}}, keyName='output[0].points')",
+ "executedValue": 80,
+ "name": "updatedScore",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "updatedScore": 50
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_mbeqq6pspscufnyjhmr",
+     "pluginName": "",
+     "status": "",
+     "name": "UpdatedScoreBand",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbeqq6psq8d5mzp0rf",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mber6qs13787bryung8",
+    "type": "rule",
+    "data": {
+     "input": {
+      "points": {
+ "value": null,
+ "executedValue": null,
+ "name": "points",
+ "dataType": "numeric",
+ "source": "UpdatedScoreBand",
+ "attribute": "output.updatedScore",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "d2f74f65-d9b7-41e1-a333-fc0498513644"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "points": 50,
+  "risk_band": "R5",
+  "rowError": null,
+  "rowId": 5
+ }
+],
+      "ruleId": "c70c9821-968a-40dd-b9ed-f7d0ae085864",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "b173f754-9536-49b2-b28c-451212330774",
+     "pluginName": "",
+     "status": "",
+     "name": "RiskBandSegmentations",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mber6qs19cfcbs3g1fj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberf2dylh97sh74i8",
+    "type": "rule",
+    "data": {
+     "input": {
+      "credit_score": {
+ "value": null,
+ "executedValue": null,
+ "name": "credit_score",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "creditScore",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "4fa5c041-7148-494a-ac45-77709060cae6"
+},
+      "monthly_income": {
+ "value": null,
+ "executedValue": null,
+ "name": "monthly_income",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "monthlyIncome",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "0d9f4b16-4adc-4ab7-8b01-f3cf97854184"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "Segment": "C1",
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 5
+ }
+],
+      "ruleId": "cd3a414b-e9b8-4e32-ab9a-47151748f8f1",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "e6a549fe-4975-4be4-bee0-ee8d87d0d343",
+     "pluginName": "",
+     "status": "",
+     "name": "CustomerBandSegmentations",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberf2dyoq10ssmw33",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbero9uvp9v3w3iahg",
+    "type": "rule",
+    "data": {
+     "input": {
+      "Segment": {
+ "value": "",
+ "executedValue": null,
+ "name": "Segment",
+ "dataType": "string",
+ "source": "CustomerBandSegmentations",
+ "attribute": "output[0].Segment",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "5733e679-675b-4045-8779-72caaa3baa68"
+},
+      "risk_band": {
+ "value": "",
+ "executedValue": null,
+ "name": "risk_band",
+ "dataType": "string",
+ "source": "RiskBandSegmentations",
+ "attribute": "output[0].risk_band",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "08c5c094-9546-489e-8045-0a9d37f6a0f1"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "pricing_tier": "P8",
+  "rowError": null,
+  "rowId": 8
+ }
+],
+      "ruleId": "f46d754e-1508-4be7-9c98-43492a3b4b79",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "1afe05ea-f72a-4274-94a3-2539d50bd6b3",
+     "pluginName": "",
+     "status": "",
+     "name": "LoanPricingSlab",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1360
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbero9uvbonthygczio",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberw928qtvj4usdecd",
+    "type": "rule",
+    "data": {
+     "input": {
+      "pricing_tier": {
+ "value": "",
+ "executedValue": null,
+ "name": "pricing_tier",
+ "dataType": "string",
+ "source": "LoanPricingSlab",
+ "attribute": "output[0].pricing_tier",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "58afc336-bf61-41b1-be89-6533f099e064"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "InterestRate": 36,
+  "MaxTenure": 24,
+  "MaxTicket": 1500000,
+  "MinTicket": 20000,
+  "ProcessingFeePerc": 5,
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 8
+ }
+],
+      "ruleId": "8da97b86-818c-49db-b6f1-badba0b68ec0",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "4b249f44-b44b-4d9a-bb16-c4ac2926cd73",
+     "pluginName": "",
+     "status": "",
+     "name": "PricingTierDetails",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberw928pkbjdbih53",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberwlucllhjraec2w",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "LoanDetails": {
+ "value": null,
+ "executedValue": null,
+ "name": "LoanDetails",
+ "dataType": "json",
+ "source": "PricingTierDetails",
+ "attribute": "output[0]",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "final_decision": {
+ "value": "Approved",
+ "executedValue": "Approved",
+ "name": "final_decision",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "728bd2b1-777d-4ddf-84c3-e3c2192d88e0"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "LoanDetails": {
+ "InterestRate": 36,
+ "MaxTenure": 24,
+ "MaxTicket": 1500000,
+ "MinTicket": 20000,
+ "ProcessingFeePerc": 5,
+ "defaultOutputData": true,
+ "rowError": null,
+ "rowId": 8
+},
+ "final_decision": "Approved"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_mberwlucllhjraec2w",
+     "pluginName": "",
+     "status": "",
+     "name": "Response1",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mberwluc93pql04fa17",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1640
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbewhvxqxe1t5kzrh8q",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "INSERT INTO loan_applications (\n    id,\n    customer_id,\n    monthly_income,\n    credit_score,\n    avg_bank_balance,\n    interest_rate,\n    max_ticket_size,\n    tenure,\n    processing_fee_percent,\n    status,\n    workflow_id,\n    pricing_slab,\n    \"approverId\",\n    \"approverName\",\n    foir_perc,\n    proposed_emi,\n    created_at,\n    edited_at,\n    enquiries_in_last_6m\n    \n) VALUES (\n    {{.Trigger.rowID}},\n    {{.Trigger.customerId}},\n    {{.Trigger.monthlyIncome}},\n    {{.Trigger.creditScore}},\n    {{.Trigger.avgBankBalance}},\n    {{.PricingTierDetails.output[0].InterestRate}},\n    {{.PricingTierDetails.output[0].MaxTicket}},\n    {{.PricingTierDetails.output[0].MaxTenure}},\n    {{.PricingTierDetails.output[0].ProcessingFeePerc}},\n    'Approved',\n    '{{.systemVar.ExecutionId}}',\n    '{{.LoanPricingSlab.output[0].pricing_tier}}',\n    0,\n    'System',\n    {{.Trigger.foirPercent}},\n    {{.Trigger.proposedEmi}},\n    '{{.systemVar.CurrentTime}}',\n    '{{.systemVar.CurrentTime}}',\n    {{.Trigger.enquiriesInLast6m}}\n)\nON CONFLICT (id) \nDO UPDATE SET\n    id = EXCLUDED.id,\n    customer_id = EXCLUDED.customer_id,\n    monthly_income = EXCLUDED.monthly_income,\n    credit_score = EXCLUDED.credit_score,\n    avg_bank_balance = EXCLUDED.avg_bank_balance,\n    interest_rate = EXCLUDED.interest_rate,\n    max_ticket_size = EXCLUDED.max_ticket_size,\n    tenure = EXCLUDED.tenure,\n    processing_fee_percent = EXCLUDED.processing_fee_percent,\n    status = EXCLUDED.status,\n    workflow_id = EXCLUDED.workflow_id,\n    workflow_version = EXCLUDED.workflow_version,\n    pricing_slab = EXCLUDED.pricing_slab,\n    \"approverId\" = {{.Trigger.approverId}},\n    \"approverName\" = '{{.Trigger.approverName}}',\n    foir_perc = EXCLUDED.foir_perc,\n    proposed_emi = EXCLUDED.proposed_emi,\n    created_at = EXCLUDED.created_at,\n    edited_at = EXCLUDED.edited_at,\n    enquiries_in_last_6m= EXCLUDED.enquiries_in_last_6m;",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "result": []
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "ff884a26-9d04-424c-9745-1e5840b444c9",
+     "pluginName": "",
+     "status": "",
+     "name": "InsertORUpdateLoanApplication",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 1770
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbewhvxqh8nz460o26",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_EgrvPO",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "key_0": {
+ "value": "\"{{.systemVar.CurrentTime}}\"",
+ "executedValue": "2025-07-25 17:12:26.637739125 +0530 IST",
+ "name": "key_0",
+ "dataType": "jsFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "key_0": "2025-09-10T11:18:36+05:30"
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "n_EgrvPO",
+     "pluginName": "",
+     "status": "",
+     "name": "SetVariable",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 598.19921875,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_1Vk8iN",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdvwxgh20ugblnyr13",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_mbdvwxghzvu4hydq2uq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzfikm8dwpdt26lrq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzfikmusf6hzcomwc",
+    "target": "node_mbdzfikmuztb56ai8l",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbeqq6psj6mt8pjcfrm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbeqq6pspscufnyjhmr",
+    "target": "node_mbeqq6psq8d5mzp0rf",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbeqq6psoo02cedgo5",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzfikmuztb56ai8l",
+    "target": "node_mbeqq6pspscufnyjhmr",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mber6qs1t3a118nu8i",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mber6qs13787bryung8",
+    "target": "node_mber6qs19cfcbs3g1fj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mber6qs1fsuogbf150a",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbeqq6psq8d5mzp0rf",
+    "target": "node_mber6qs13787bryung8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mberf2dyeuktb7eqfqd",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mberf2dylh97sh74i8",
+    "target": "node_mberf2dyoq10ssmw33",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbero9uvz2j6yx8l1r",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbero9uvp9v3w3iahg",
+    "target": "node_mbero9uvbonthygczio",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mberw928sm2ym09hmo",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mberw928qtvj4usdecd",
+    "target": "node_mberw928pkbjdbih53",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mberw928y89l8dr74na",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbero9uvbonthygczio",
+    "target": "node_mberw928qtvj4usdecd",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mberwlucdtlgxsbz3nh",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mberwlucllhjraec2w",
+    "target": "node_mberwluc93pql04fa17",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbewhvxq1woscgu59nl",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbewhvxqh8nz460o26",
+    "target": "node_mberwlucllhjraec2w",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbewhvxq2uaav5qu506",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbewhvxqxe1t5kzrh8q",
+    "target": "node_mbewhvxqh8nz460o26",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbewhvxqoovgqijow1",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mberw928pkbjdbih53",
+    "target": "node_mbewhvxqxe1t5kzrh8q",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbhm7jdrrxomzuv3eag",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mber6qs19cfcbs3g1fj",
+    "target": "node_mberf2dylh97sh74i8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj0pliwsoey9sgg8b",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mberf2dyoq10ssmw33",
+    "target": "node_mbero9uvp9v3w3iahg",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_mbj0pliwnmazvwobzid",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_yD5e4M",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_1Vk8iN",
+    "target": "node_mbdzfikmusf6hzcomwc",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_QzMrY4",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_EgrvPO",
+    "target": "n_1Vk8iN",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_ulSaMg",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdvwxghzvu4hydq2uq",
+    "target": "n_EgrvPO",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ }
+}

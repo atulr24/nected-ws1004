@@ -1,0 +1,23 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-01-19T05:50:24.51Z",
+  "updatedAt": "2026-01-19T05:50:24.51Z",
+  "isDeleted": false,
+  "entityId": "abf1ad3a-1210-4808-a003-a80b69091048",
+  "name": "jsonValue",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "json",
+  "value": {
+   "data": {
+    "sampleValue": "Subhanshu",
+    "sampleValue2": "Subhanshu"
+   },
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

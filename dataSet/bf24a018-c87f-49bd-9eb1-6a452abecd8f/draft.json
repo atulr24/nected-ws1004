@@ -1,0 +1,103 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.702Z",
+  "updatedAt": "2026-01-15T10:38:22.702Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "bf24a018-c87f-49bd-9eb1-6a452abecd8f",
+  "version": "draft",
+  "name": "loanAllocationDS",
+  "commitId": "commit-05f833e3-a6a5-4426-8e96-74cb8ec4a4ec",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-15 10:38:22",
+   "timeStamp": "2026-01-15T10:38:22.702622208Z"
+  },
+  "fields": {
+   "address": {
+ "ColumnName": "address",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": null
+},
+   "assigned_request_count": {
+ "ColumnName": "assigned_request_count",
+ "DataType": "numeric",
+ "Order": 7,
+ "ExecutedValue": null
+},
+   "bu_id": {
+ "ColumnName": "bu_id",
+ "DataType": "numeric",
+ "Order": 8,
+ "ExecutedValue": null
+},
+   "designation": {
+ "ColumnName": "designation",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "emp_order": {
+ "ColumnName": "emp_order",
+ "DataType": "numeric",
+ "Order": 9,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "level": {
+ "ColumnName": "level",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "manager_id": {
+ "ColumnName": "manager_id",
+ "DataType": "numeric",
+ "Order": 10,
+ "ExecutedValue": null
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "risk_assigned_request_count": {
+ "ColumnName": "risk_assigned_request_count",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "weightage": {
+ "ColumnName": "weightage",
+ "DataType": "numeric",
+ "Order": 11,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select * from \"loanEmployees\"\nORDER by assigned_request_count asc, emp_order asc\n",
+  "params": null,
+  "connectorId": "ff884a26-9d04-424c-9745-1e5840b444c9",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": false,
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in"
+  }
+ }
+}

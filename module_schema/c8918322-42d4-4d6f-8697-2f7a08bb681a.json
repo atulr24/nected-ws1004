@@ -1,0 +1,14 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.617Z",
+  "updatedAt": "2026-01-15T10:38:22.617Z",
+  "isDeleted": false,
+  "entityId": "c8918322-42d4-4d6f-8697-2f7a08bb681a",
+  "name": "monthly_income",
+  "moduleId": "dcac93e7-2a20-4ff3-9f24-24b73d6c390e",
+  "dataType": "numeric",
+  "usageType": "optional",
+  "options": null
+ }
+}

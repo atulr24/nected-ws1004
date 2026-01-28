@@ -1,0 +1,493 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-17T06:48:04.77Z",
+  "updatedAt": "2026-01-19T09:30:25.421006Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "469e09b1-a29b-4c9e-9254-ec8d9b2c566f",
+  "version": "draft",
+  "name": "Case Data",
+  "commitId": "commit-a981faa1-aa5c-4774-b349-06bbf42e35e7",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-19 09:30:25",
+   "timeStamp": "2026-01-19T09:30:25.370764731Z"
+  },
+  "fields": {
+   "AccidentGroupTempId": {
+ "ColumnName": "AccidentGroupTempId",
+ "DataType": "string",
+ "Order": 67,
+ "ExecutedValue": null
+},
+   "AccidentStateId": {
+ "ColumnName": "AccidentStateId",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "ApplicationLinkFlag": {
+ "ColumnName": "ApplicationLinkFlag",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "AttorneySentDate": {
+ "ColumnName": "AttorneySentDate",
+ "DataType": "string",
+ "Order": 19,
+ "ExecutedValue": null
+},
+   "BusinessReferral": {
+ "ColumnName": "BusinessReferral",
+ "DataType": "string",
+ "Order": 31,
+ "ExecutedValue": null
+},
+   "CMSClientID": {
+ "ColumnName": "CMSClientID",
+ "DataType": "string",
+ "Order": 50,
+ "ExecutedValue": null
+},
+   "CMSID": {
+ "ColumnName": "CMSID",
+ "DataType": "string",
+ "Order": 35,
+ "ExecutedValue": null
+},
+   "CareCoordinatorUserId": {
+ "ColumnName": "CareCoordinatorUserId",
+ "DataType": "string",
+ "Order": 24,
+ "ExecutedValue": null
+},
+   "CaseCoordinatorTeamId": {
+ "ColumnName": "CaseCoordinatorTeamId",
+ "DataType": "string",
+ "Order": 51,
+ "ExecutedValue": null
+},
+   "CaseCoordinatorUserId": {
+ "ColumnName": "CaseCoordinatorUserId",
+ "DataType": "string",
+ "Order": 12,
+ "ExecutedValue": null
+},
+   "CaseNoteSummary": {
+ "ColumnName": "CaseNoteSummary",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "CaseProgress": {
+ "ColumnName": "CaseProgress",
+ "DataType": "string",
+ "Order": 25,
+ "ExecutedValue": null
+},
+   "CaseProgressDate": {
+ "ColumnName": "CaseProgressDate",
+ "DataType": "string",
+ "Order": 43,
+ "ExecutedValue": null
+},
+   "CaseProgressStatusId": {
+ "ColumnName": "CaseProgressStatusId",
+ "DataType": "numeric",
+ "Order": 66,
+ "ExecutedValue": null
+},
+   "CaseStatus": {
+ "ColumnName": "CaseStatus",
+ "DataType": "string",
+ "Order": 44,
+ "ExecutedValue": null
+},
+   "CaseStatusDate": {
+ "ColumnName": "CaseStatusDate",
+ "DataType": "dateTime",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "CaseStatusId": {
+ "ColumnName": "CaseStatusId",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": null
+},
+   "CaseStatusVerificationDate": {
+ "ColumnName": "CaseStatusVerificationDate",
+ "DataType": "dateTime",
+ "Order": 10,
+ "ExecutedValue": null
+},
+   "CaseSubStatus": {
+ "ColumnName": "CaseSubStatus",
+ "DataType": "string",
+ "Order": 23,
+ "ExecutedValue": null
+},
+   "CaseSubStatusDate": {
+ "ColumnName": "CaseSubStatusDate",
+ "DataType": "string",
+ "Order": 20,
+ "ExecutedValue": null
+},
+   "CaseSubStatusId": {
+ "ColumnName": "CaseSubStatusId",
+ "DataType": "string",
+ "Order": 45,
+ "ExecutedValue": null
+},
+   "CaseSubStatusSortIndex": {
+ "ColumnName": "CaseSubStatusSortIndex",
+ "DataType": "numeric",
+ "Order": 36,
+ "ExecutedValue": null
+},
+   "Comments": {
+ "ColumnName": "Comments",
+ "DataType": "string",
+ "Order": 13,
+ "ExecutedValue": null
+},
+   "CreatedByUserId": {
+ "ColumnName": "CreatedByUserId",
+ "DataType": "numeric",
+ "Order": 46,
+ "ExecutedValue": null
+},
+   "CurrentUnderwritingLimit": {
+ "ColumnName": "CurrentUnderwritingLimit",
+ "DataType": "string",
+ "Order": 37,
+ "ExecutedValue": null
+},
+   "DateCreated": {
+ "ColumnName": "DateCreated",
+ "DataType": "dateTime",
+ "Order": 70,
+ "ExecutedValue": null
+},
+   "DateMappedWithCashtrax": {
+ "ColumnName": "DateMappedWithCashtrax",
+ "DataType": "string",
+ "Order": 71,
+ "ExecutedValue": null
+},
+   "DateOfLoss": {
+ "ColumnName": "DateOfLoss",
+ "DataType": "dateTime",
+ "Order": 32,
+ "ExecutedValue": null
+},
+   "DebtorId": {
+ "ColumnName": "DebtorId",
+ "DataType": "numeric",
+ "Order": 54,
+ "ExecutedValue": null
+},
+   "DocketNumber": {
+ "ColumnName": "DocketNumber",
+ "DataType": "string",
+ "Order": 63,
+ "ExecutedValue": null
+},
+   "ExternalID": {
+ "ColumnName": "ExternalID",
+ "DataType": "string",
+ "Order": 47,
+ "ExecutedValue": null
+},
+   "ExternalStatus": {
+ "ColumnName": "ExternalStatus",
+ "DataType": "string",
+ "Order": 14,
+ "ExecutedValue": null
+},
+   "ExternalType": {
+ "ColumnName": "ExternalType",
+ "DataType": "string",
+ "Order": 57,
+ "ExecutedValue": null
+},
+   "FirmId": {
+ "ColumnName": "FirmId",
+ "DataType": "numeric",
+ "Order": 7,
+ "ExecutedValue": null
+},
+   "FundingStatusId": {
+ "ColumnName": "FundingStatusId",
+ "DataType": "numeric",
+ "Order": 15,
+ "ExecutedValue": null
+},
+   "FundingStatusNotes": {
+ "ColumnName": "FundingStatusNotes",
+ "DataType": "string",
+ "Order": 72,
+ "ExecutedValue": null
+},
+   "FundingStatusSortIndex": {
+ "ColumnName": "FundingStatusSortIndex",
+ "DataType": "numeric",
+ "Order": 52,
+ "ExecutedValue": null
+},
+   "FundingStatusUpdatedByUserId": {
+ "ColumnName": "FundingStatusUpdatedByUserId",
+ "DataType": "string",
+ "Order": 26,
+ "ExecutedValue": null
+},
+   "FundingStatusUpdatedDate": {
+ "ColumnName": "FundingStatusUpdatedDate",
+ "DataType": "string",
+ "Order": 27,
+ "ExecutedValue": null
+},
+   "HIPAAFlag": {
+ "ColumnName": "HIPAAFlag",
+ "DataType": "string",
+ "Order": 33,
+ "ExecutedValue": null
+},
+   "Id": {
+ "ColumnName": "Id",
+ "DataType": "numeric",
+ "Order": 64,
+ "ExecutedValue": null
+},
+   "IncidentTypeId": {
+ "ColumnName": "IncidentTypeId",
+ "DataType": "string",
+ "Order": 38,
+ "ExecutedValue": null
+},
+   "IncidentTypeSortIndex": {
+ "ColumnName": "IncidentTypeSortIndex",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "IntakeManagerUserId": {
+ "ColumnName": "IntakeManagerUserId",
+ "DataType": "numeric",
+ "Order": 58,
+ "ExecutedValue": null
+},
+   "LastAttemptedStatusVerification": {
+ "ColumnName": "LastAttemptedStatusVerification",
+ "DataType": "string",
+ "Order": 39,
+ "ExecutedValue": null
+},
+   "LeadSourceFacilityId": {
+ "ColumnName": "LeadSourceFacilityId",
+ "DataType": "string",
+ "Order": 55,
+ "ExecutedValue": null
+},
+   "LeadSourceFirmId": {
+ "ColumnName": "LeadSourceFirmId",
+ "DataType": "string",
+ "Order": 28,
+ "ExecutedValue": null
+},
+   "LegalHold": {
+ "ColumnName": "LegalHold",
+ "DataType": "boolean",
+ "Order": 16,
+ "ExecutedValue": null
+},
+   "LienManagerUserId": {
+ "ColumnName": "LienManagerUserId",
+ "DataType": "string",
+ "Order": 29,
+ "ExecutedValue": null
+},
+   "LostFound": {
+ "ColumnName": "LostFound",
+ "DataType": "boolean",
+ "Order": 75,
+ "ExecutedValue": null
+},
+   "MediationDate": {
+ "ColumnName": "MediationDate",
+ "DataType": "string",
+ "Order": 48,
+ "ExecutedValue": null
+},
+   "MigSource": {
+ "ColumnName": "MigSource",
+ "DataType": "string",
+ "Order": 40,
+ "ExecutedValue": null
+},
+   "OtherCaseSubStatus": {
+ "ColumnName": "OtherCaseSubStatus",
+ "DataType": "string",
+ "Order": 68,
+ "ExecutedValue": null
+},
+   "PolicyPerPerson": {
+ "ColumnName": "PolicyPerPerson",
+ "DataType": "string",
+ "Order": 41,
+ "ExecutedValue": null
+},
+   "PreviousCaseStatusId": {
+ "ColumnName": "PreviousCaseStatusId",
+ "DataType": "string",
+ "Order": 76,
+ "ExecutedValue": null
+},
+   "PrimaryAttorneyId": {
+ "ColumnName": "PrimaryAttorneyId",
+ "DataType": "string",
+ "Order": 56,
+ "ExecutedValue": null
+},
+   "Rating": {
+ "ColumnName": "Rating",
+ "DataType": "string",
+ "Order": 11,
+ "ExecutedValue": null
+},
+   "RecoveryManagerUserId": {
+ "ColumnName": "RecoveryManagerUserId",
+ "DataType": "string",
+ "Order": 59,
+ "ExecutedValue": null
+},
+   "ReferralSourceId": {
+ "ColumnName": "ReferralSourceId",
+ "DataType": "numeric",
+ "Order": 8,
+ "ExecutedValue": null
+},
+   "Removed": {
+ "ColumnName": "Removed",
+ "DataType": "boolean",
+ "Order": 73,
+ "ExecutedValue": null
+},
+   "SYOCaseLien": {
+ "ColumnName": "SYOCaseLien",
+ "DataType": "boolean",
+ "Order": 30,
+ "ExecutedValue": null
+},
+   "ServicingManagerUserId": {
+ "ColumnName": "ServicingManagerUserId",
+ "DataType": "string",
+ "Order": 74,
+ "ExecutedValue": null
+},
+   "StatuteExpirationDate": {
+ "ColumnName": "StatuteExpirationDate",
+ "DataType": "string",
+ "Order": 60,
+ "ExecutedValue": null
+},
+   "SuitFiledOptionId": {
+ "ColumnName": "SuitFiledOptionId",
+ "DataType": "string",
+ "Order": 49,
+ "ExecutedValue": null
+},
+   "TempId": {
+ "ColumnName": "TempId",
+ "DataType": "string",
+ "Order": 17,
+ "ExecutedValue": null
+},
+   "TierValueId": {
+ "ColumnName": "TierValueId",
+ "DataType": "string",
+ "Order": 21,
+ "ExecutedValue": null
+},
+   "TrialDate": {
+ "ColumnName": "TrialDate",
+ "DataType": "string",
+ "Order": 34,
+ "ExecutedValue": null
+},
+   "TrioCaseCompleted": {
+ "ColumnName": "TrioCaseCompleted",
+ "DataType": "boolean",
+ "Order": 61,
+ "ExecutedValue": null
+},
+   "TrioCaseDateCompleted": {
+ "ColumnName": "TrioCaseDateCompleted",
+ "DataType": "string",
+ "Order": 69,
+ "ExecutedValue": null
+},
+   "TrioCaseId": {
+ "ColumnName": "TrioCaseId",
+ "DataType": "string",
+ "Order": 65,
+ "ExecutedValue": null
+},
+   "TrioCaseNumber": {
+ "ColumnName": "TrioCaseNumber",
+ "DataType": "string",
+ "Order": 62,
+ "ExecutedValue": null
+},
+   "TrioCaseNumberString": {
+ "ColumnName": "TrioCaseNumberString",
+ "DataType": "string",
+ "Order": 53,
+ "ExecutedValue": null
+},
+   "TrioCaseStatusMigrationCategoryId": {
+ "ColumnName": "TrioCaseStatusMigrationCategoryId",
+ "DataType": "string",
+ "Order": 18,
+ "ExecutedValue": null
+},
+   "TrioLegacySPVBankId": {
+ "ColumnName": "TrioLegacySPVBankId",
+ "DataType": "string",
+ "Order": 9,
+ "ExecutedValue": null
+},
+   "UnderwriterUserId": {
+ "ColumnName": "UnderwriterUserId",
+ "DataType": "string",
+ "Order": 42,
+ "ExecutedValue": null
+},
+   "UwDateLastTouched": {
+ "ColumnName": "UwDateLastTouched",
+ "DataType": "string",
+ "Order": 22,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select cps.Name as CaseProgress, cs.Name as CaseStatus, css.Name as CaseSubStatus\n  ,c.*\n  ,caseCoordTeam.TeamId as CaseCoordinatorTeamId\nfrom debtor.Cases c\njoin debtor.CaseStatuses cs on cs.id = c.CaseStatusId\nleft join debtor.CaseSubStatuses css on css.id = c.\"CaseSubStatusId\"\njoin debtor.CaseProgressStatuses cps on cps.id = c.CaseProgressStatusId\nleft join admin.\"UserTeams\" caseCoordTeam on caseCoordTeam.\"UserId\" = c.\"CaseCoordinatorUserId\"",
+  "params": null,
+  "connectorId": "f261c1e4-d4bd-4b76-890f-ad9be33a7ff3",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 5000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "America/New_York",
+   "dateFormat": "us"
+  }
+ }
+}

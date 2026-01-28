@@ -1,0 +1,30 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.848Z",
+  "updatedAt": "2026-01-15T10:38:22.848Z",
+  "isDeleted": false,
+  "entityId": "f6094bc7-95e8-4a8a-8c34-da77c7a4574b",
+  "name": "risk_band",
+  "moduleId": "46577a8b-ca9a-49bd-bbd3-38a92bf6e445",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "R1"
+   },
+   {
+    "value": "R2"
+   },
+   {
+    "value": "R3"
+   },
+   {
+    "value": "R4"
+   },
+   {
+    "value": "R5"
+   }
+  ]
+ }
+}

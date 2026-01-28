@@ -1,0 +1,115 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2026-01-13T12:06:09.649Z",
+  "updatedAt": "2026-01-13T12:06:22.546Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T12:06:17.297Z",
+  "publishedAt": "2026-01-13T12:06:22.528Z",
+  "entityId": "ee0b60e2-0ecc-4a0d-91a0-20ea85a2d41c",
+  "version": "0.10",
+  "name": "mongo",
+  "commitId": "commit-7c950d20-25ee-4f67-93b7-4daebd514500",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2026-01-13 12:06:09",
+   "description": "v1",
+   "timeStamp": "2026-01-13T12:06:22.524Z"
+  },
+  "fields": {
+   "Bool": {
+ "ColumnName": "Bool",
+ "DataType": "boolean",
+ "Order": 1,
+ "ExecutedValue": false
+},
+   "Integer": {
+ "ColumnName": "Integer",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": "100"
+},
+   "_id": {
+ "ColumnName": "_id",
+ "DataType": "objectid",
+ "Order": 2,
+ "ExecutedValue": "5a9427648b0beebeb6957b51"
+},
+   "date": {
+ "ColumnName": "date",
+ "DataType": "dateTime",
+ "Order": 7,
+ "ExecutedValue": "2025-11-01T05:49:56Z"
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "john.doe@example.com"
+},
+   "movie_id": {
+ "ColumnName": "movie_id",
+ "DataType": "objectid",
+ "Order": 5,
+ "ExecutedValue": "573a1391f29313caabcd7da6"
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "email@email.com"
+},
+   "text": {
+ "ColumnName": "text",
+ "DataType": "json",
+ "Order": 6,
+ "ExecutedValue": {
+  "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+ }
+}
+  },
+  "description": "",
+  "query": "db.comments.find({})",
+  "params": {
+   
+  },
+  "connectorId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:06:09.664162Z",
+   "updatedAt": "2026-01-13T12:06:22.540552Z",
+   "entityCommitId": "commit-7c950d20-25ee-4f67-93b7-4daebd514500",
+   "entityType": "dataSet",
+   "entityId": "ee0b60e2-0ecc-4a0d-91a0-20ea85a2d41c",
+   "entityVersion": "0.10",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+   "dependencyVersion": "live"
+  }
+ ]
+}

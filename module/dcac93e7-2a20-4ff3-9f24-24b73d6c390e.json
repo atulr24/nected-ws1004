@@ -1,0 +1,11 @@
+{
+ "entityType": "module",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.604Z",
+  "updatedAt": "2026-01-15T10:38:22.604Z",
+  "isDeleted": false,
+  "entityId": "dcac93e7-2a20-4ff3-9f24-24b73d6c390e",
+  "name": "User",
+  "description": ""
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-19T10:26:52.045Z",
+  "updatedAt": "2026-01-20T12:10:06.31373Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-20T12:10:06.313Z",
+  "publishedAt": "2026-01-19T11:49:04.941Z",
+  "entityId": "c3724a3c-0fea-4151-a2a0-586116473477",
+  "version": "draft",
+  "name": "dfs",
+  "commitId": "commit-e01edbe5-8b4a-48bf-adc1-a26513d13325",
+  "status": "tested",
+  "lastVersion": "0.10",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "timeStamp": "2026-01-19T12:01:25.514500489Z"
+  },
+  "fields": {
+   "Age": {
+ "ColumnName": "B",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "Date1": {
+ "ColumnName": "E",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "Date2": {
+ "ColumnName": "F",
+ "DataType": "date",
+ "Order": 6,
+ "ExecutedValue": "2025-11-11"
+},
+   "Last": {
+ "ColumnName": "D",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "asd"
+},
+   "Name": {
+ "ColumnName": "A",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "Salary": {
+ "ColumnName": "C",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "asd"
+}
+  },
+  "description": "",
+  "query": "",
+  "params": {
+   "file": {
+ "label": "validationSheet",
+ "value": "1nBLsNhcc3rleBvTLRCgkOTPf_utABGO5grljPu_YVDo"
+},
+   "hasHeader": true,
+   "isShared": false,
+   "sheet": {
+ "label": "Sheet1",
+ "value": 0
+}
+  },
+  "connectorId": "f80bab4b-b4eb-4ea5-a065-f770063c8267",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-19T12:01:25.527124Z",
+   "updatedAt": "2026-01-19T12:01:25.527124Z",
+   "entityCommitId": "commit-e01edbe5-8b4a-48bf-adc1-a26513d13325",
+   "entityType": "dataSet",
+   "entityId": "c3724a3c-0fea-4151-a2a0-586116473477",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "f80bab4b-b4eb-4ea5-a065-f770063c8267",
+   "dependencyVersion": "live"
+  }
+ ]
+}

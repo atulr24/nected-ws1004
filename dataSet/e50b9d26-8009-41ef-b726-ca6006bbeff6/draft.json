@@ -1,0 +1,130 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-13T12:04:34.264Z",
+  "updatedAt": "2026-01-13T12:05:14.841864Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T12:04:57.818Z",
+  "publishedAt": "2026-01-13T12:05:12.075Z",
+  "entityId": "e50b9d26-8009-41ef-b726-ca6006bbeff6",
+  "version": "draft",
+  "name": "pgdb00",
+  "commitId": "commit-e53456df-9e7f-467e-9bc1-33291d670692",
+  "status": "draft",
+  "lastVersion": "0.10",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "timeStamp": "2026-01-13T12:05:14.840870518Z"
+  },
+  "fields": {
+   "city": {
+ "ColumnName": "city",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "Lake Jamiechester"
+},
+   "country_code": {
+ "ColumnName": "country_code",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": "CO"
+},
+   "created_at": {
+ "ColumnName": "created_at",
+ "DataType": "date",
+ "Order": 7,
+ "ExecutedValue": "2022-12-18"
+},
+   "credit_limit": {
+ "ColumnName": "credit_limit",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": 851307
+},
+   "customer_score": {
+ "ColumnName": "customer_score",
+ "DataType": "numeric",
+ "Order": 8,
+ "ExecutedValue": 12
+},
+   "customer_segment": {
+ "ColumnName": "customer_segment",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "VIP"
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 9,
+ "ExecutedValue": "Jonathan_Wallace@apple.com"
+},
+   "gender": {
+ "ColumnName": "gender",
+ "DataType": "string",
+ "Order": 10,
+ "ExecutedValue": "Male"
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": 3
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 11,
+ "ExecutedValue": "Jonathan Wallace"
+},
+   "state": {
+ "ColumnName": "state",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": "Wisconsin"
+}
+  },
+  "description": "",
+  "query": "select * from ecomm.customers limit 4",
+  "params": {
+   
+  },
+  "connectorId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:05:14.849186Z",
+   "updatedAt": "2026-01-13T12:05:14.849186Z",
+   "entityCommitId": "commit-e53456df-9e7f-467e-9bc1-33291d670692",
+   "entityType": "dataSet",
+   "entityId": "e50b9d26-8009-41ef-b726-ca6006bbeff6",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+   "dependencyVersion": "live"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:04:34.296423Z",
+   "updatedAt": "2026-01-13T12:04:34.296423Z",
+   "entityType": "dataSet",
+   "entityId": "e50b9d26-8009-41ef-b726-ca6006bbeff6",
+   "tagId": "4717f74f-45ab-4da2-83fe-68624bc12ea1"
+  }
+ ]
+}

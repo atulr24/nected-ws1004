@@ -3,20 +3,20 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2026-01-12T13:43:33.606Z",
-  "updatedAt": "2026-01-13T06:44:38.615617Z",
+  "updatedAt": "2026-01-13T12:31:53.678866Z",
   "isDeleted": false,
-  "testedAt": "2026-01-13T06:44:38.614Z",
-  "publishedAt": "0001-01-01T00:00:00Z",
+  "testedAt": "2026-01-13T12:31:53.677Z",
+  "publishedAt": "2026-01-13T12:18:43.616Z",
   "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
   "version": "draft",
   "name": "nm1",
-  "commitId": "commit-30e4dca1-a3fe-4ba1-8617-a5ce537fee27",
+  "commitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
   "status": "tested",
-  "lastVersion": "",
+  "lastVersion": "0.30",
   "isLive": false,
   "commitInfo": {
-   "title": "Created at 2026-01-12 13:43:33",
-   "timeStamp": "2026-01-12T13:43:33.606871503Z"
+   "title": "Forked from 0.30",
+   "timeStamp": "2026-01-13T12:23:50.490813184Z"
   },
   "customInput": {
    "Case": {
@@ -28,7 +28,9 @@
  "attribute": "Case",
  "sourceType": "dataSet",
  "executedValue": "TC1",
- "config": null,
+ "config": {
+  
+ },
  "value": "",
  "next": "",
  "previous": "deci",
@@ -36,13 +38,13 @@
 },
    "deci": {
  "name": "deci",
- "dataType": "numeric",
+ "dataType": "string",
  "isOptional": false,
  "isNullable": false,
  "isCaseSensitive": false,
  "attribute": "",
  "sourceType": "jsFormula",
- "executedValue": 2,
+ "executedValue": "abcd",
  "config": {
   
  },
@@ -83,11 +85,46 @@
      
     },
     "actionNode": {
+     "actionData_action_2": {
+ "name": "action_2",
+ "connectorId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+ "entity": "",
+ "entityId": "",
+ "pluginName": "",
+ "config": {
+  "query": ""
+ },
+ "input": null,
+ "next": "actionData_action_3"
+},
+     "actionData_action_3": {
+ "name": "action_3",
+ "connectorId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+ "entity": "",
+ "entityId": "",
+ "pluginName": "mongodb",
+ "config": {
+  "query": "db.comments.insertOne({})",
+  "settings": {
+ "cache": {
+ "cacheKeys": "",
+ "duration": {
+ "unit": "d",
+ "value": 0
+},
+ "enabled": false
+}
+}
+ },
+ "input": null,
+ "next": ""
+},
      "actionData_wf": {
  "name": "wf",
  "connectorId": "",
  "entity": "workflow",
  "entityId": "9df002b5-462b-41a2-908d-116b4e8c00d6",
+ "pluginName": "",
  "config": {
   "query": ""
  },
@@ -111,7 +148,7 @@
  "notSend": false
 }
  },
- "next": ""
+ "next": "actionData_action_2"
 }
     },
     "firstOutputData": "",
@@ -196,7 +233,7 @@
    "event": null,
    "api": {
     "isEnabled": true,
-    "isPrivate": true
+    "isPrivate": false
    },
    "isEnabled": true,
    "auditIO": false,
@@ -204,7 +241,7 @@
     "Enabled": false,
     "Duration": {
      "Value": 0,
-     "Unit": ""
+     "Unit": "d"
     },
     "CacheKeys": ""
    },
@@ -223,22 +260,9 @@
  "dependencies": [
   {
    "isDeleted": false,
-   "createdAt": "2026-01-13T06:43:45.889996Z",
-   "updatedAt": "2026-01-13T06:44:36.047498Z",
-   "entityCommitId": "commit-30e4dca1-a3fe-4ba1-8617-a5ce537fee27",
-   "entityType": "rule",
-   "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
-   "entityVersion": "draft",
-   "entityNodeId": "dataSet",
-   "dependencyType": "dataSet",
-   "dependencyId": "07676a8c-792d-4d4f-a952-37d9d4e8f0f3",
-   "dependencyVersion": "live"
-  },
-  {
-   "isDeleted": false,
-   "createdAt": "2026-01-12T13:45:14.874163Z",
-   "updatedAt": "2026-01-13T06:44:36.045138Z",
-   "entityCommitId": "commit-30e4dca1-a3fe-4ba1-8617-a5ce537fee27",
+   "createdAt": "2026-01-13T12:23:50.520458Z",
+   "updatedAt": "2026-01-13T12:31:46.486524Z",
+   "entityCommitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
    "entityType": "rule",
    "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
    "entityVersion": "draft",
@@ -249,15 +273,54 @@
   },
   {
    "isDeleted": false,
-   "createdAt": "2026-01-13T06:44:36.041571Z",
-   "updatedAt": "2026-01-13T06:44:36.041571Z",
-   "entityCommitId": "commit-30e4dca1-a3fe-4ba1-8617-a5ce537fee27",
+   "createdAt": "2026-01-13T12:23:50.516938Z",
+   "updatedAt": "2026-01-13T12:31:46.484168Z",
+   "entityCommitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
    "entityType": "rule",
    "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
    "entityVersion": "draft",
    "entityNodeId": "then-actionData_wf",
    "dependencyType": "workflow",
    "dependencyId": "9df002b5-462b-41a2-908d-116b4e8c00d6",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:29:42.180873Z",
+   "updatedAt": "2026-01-13T12:31:46.481842Z",
+   "entityCommitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
+   "entityType": "rule",
+   "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_3",
+   "dependencyType": "connector",
+   "dependencyId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:29:32.144739Z",
+   "updatedAt": "2026-01-13T12:31:46.479772Z",
+   "entityCommitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
+   "entityType": "rule",
+   "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_2",
+   "dependencyType": "connector",
+   "dependencyId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:23:50.522681Z",
+   "updatedAt": "2026-01-13T12:31:46.477545Z",
+   "entityCommitId": "commit-0701cd20-1d10-4d0f-941f-3573bd8c7aa0",
+   "entityType": "rule",
+   "entityId": "38df0fa3-a744-468e-b5e8-f8b09c8b8b02",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "07676a8c-792d-4d4f-a952-37d9d4e8f0f3",
    "dependencyVersion": "live"
   }
  ]

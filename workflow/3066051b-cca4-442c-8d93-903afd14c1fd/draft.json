@@ -1,0 +1,1030 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.723Z",
+  "updatedAt": "2026-01-15T10:38:22.723Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "3066051b-cca4-442c-8d93-903afd14c1fd",
+  "version": "draft",
+  "name": "loanRequestAllocationForManualReview",
+  "commitId": "commit-15097085-e0e3-41f7-8439-9377b4861a83",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-15 10:38:22",
+   "timeStamp": "2026-01-15T10:38:22.723189011Z"
+  },
+  "startNode": "node_mbjbi171dz09t7c20wu",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "avgBankBalance": {
+ "value": null,
+ "executedValue": 100000,
+ "name": "avgBankBalance",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "creditScore": {
+ "value": null,
+ "executedValue": 710,
+ "name": "creditScore",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "customerId": {
+ "value": null,
+ "executedValue": 777,
+ "name": "customerId",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enquiries": {
+ "value": null,
+ "executedValue": 1,
+ "name": "enquiries",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "foir": {
+ "value": null,
+ "executedValue": 100,
+ "name": "foir",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthlyIncome": {
+ "value": null,
+ "executedValue": 51800,
+ "name": "monthlyIncome",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "proposedEmi": {
+ "value": null,
+ "executedValue": 100000,
+ "name": "proposedEmi",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "rowID": {
+ "value": null,
+ "executedValue": 93,
+ "name": "rowID",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "avgBankBalance": 100000,
+      "creditScore": 710,
+      "customerId": 777,
+      "enquiries": 1,
+      "foir": 100,
+      "monthlyIncome": 51800,
+      "proposedEmi": 100000,
+      "rowID": 93
+     },
+     "settings": {
+      "authType": "none",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma3x5uixyrpkysx187",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma5ddqg5varvl2u10b",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 1,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "INSERT INTO loan_applications (\n    id,\n    customer_id,\n    monthly_income,\n    credit_score,\n    avg_bank_balance,\n    status,\n    workflow_id,\n    \"approverId\",\n    \"approverName\",\n    foir_perc,\n    proposed_emi,\n    created_at,\n    edited_at,\n    enquiries_in_last_6m\n) VALUES (\n    {{.Trigger.rowID}},\n    {{.Trigger.customerId}},\n    {{.Trigger.monthlyIncome}},\n    {{.Trigger.creditScore}},\n    {{.Trigger.avgBankBalance}},\n    'Manual Review',\n    '{{.systemVar.ExecutionId}}',\n    {{.loanRequestAllocationToEmp.output.id}},\n    '{{.loanRequestAllocationToEmp.output.name}}',\n    {{.Trigger.foir}},\n    {{.Trigger.proposedEmi}},\n    '{{.systemVar.CurrentTime}}',\n    '{{.systemVar.CurrentTime}}',\n    {{.Trigger.enquiries}}\n)\nON CONFLICT (id) \nDO UPDATE SET\n    customer_id = {{.Trigger.customerId}},\n    monthly_income = {{.Trigger.monthlyIncome}},\n    credit_score = {{.Trigger.creditScore}},\n    avg_bank_balance = {{.Trigger.avgBankBalance}},\n    status = 'Manual Review',\n    \"approverId\" = {{.loanRequestAllocationToEmp.output.id}},\n    \"approverName\" = '{{.loanRequestAllocationToEmp.output.name}}',\n    foir_perc = {{.Trigger.foir}},\n    proposed_emi = {{.Trigger.proposedEmi}},\n    created_at = '{{.systemVar.CurrentTime}}',\n    edited_at = '{{.systemVar.CurrentTime}}',\n    enquiries_in_last_6m = {{.Trigger.enquiries}};\n",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "result": []
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 30
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "ff884a26-9d04-424c-9745-1e5840b444c9",
+     "pluginName": "",
+     "status": "",
+     "name": "empIdAndempNameUpdate",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_ma5ddqg5dhzcpgk65a4",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbjbi171dz09t7c20wu",
+    "type": "rule",
+    "data": {
+     "input": {
+      "avgBankBalance": {
+ "value": null,
+ "executedValue": null,
+ "name": "avgBankBalance",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "avgBankBalance",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "proposedEmi": {
+ "value": null,
+ "executedValue": null,
+ "name": "proposedEmi",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "proposedEmi",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "action": {
+ "request_count_update": {
+ "error": "",
+ "executionId": "action:2136:34a8406d-449b-4427-aeef-b4559a9ac877:257c7288-199c-42ca-bedf-0da4441b4cce/request_count_update",
+ "name": "request_count_update",
+ "nodeId": "action#then#actionData_1",
+ "output": {
+ "Result": [],
+ "error": null,
+ "name": "request_count_update"
+}
+}
+},
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "output": [
+ {
+  "allEmployees": [
+ {
+  "address": "Gurugram",
+  "assigned_request_count": 19,
+  "bu_id": 2,
+  "designation": "junior manager",
+  "emp_order": 4,
+  "id": 4,
+  "level": 2,
+  "manager_id": 6,
+  "name": "Rob Stark",
+  "risk_assigned_request_count": 0,
+  "weightage": 50
+ },
+ {
+  "address": "Gurugram",
+  "assigned_request_count": 19,
+  "bu_id": 1,
+  "designation": "junior manager",
+  "emp_order": 5,
+  "id": 5,
+  "level": 2,
+  "manager_id": 6,
+  "name": "Ned Stark",
+  "risk_assigned_request_count": 0,
+  "weightage": 50
+ },
+ {
+  "address": "Gurugram",
+  "assigned_request_count": 19,
+  "bu_id": 2,
+  "designation": "senior manager",
+  "emp_order": 6,
+  "id": 6,
+  "level": 3,
+  "manager_id": 8,
+  "name": "Brandon King",
+  "risk_assigned_request_count": 0,
+  "weightage": 60
+ },
+ {
+  "address": "Gurugram",
+  "assigned_request_count": 19,
+  "bu_id": 1,
+  "designation": "senior manager",
+  "emp_order": 7,
+  "id": 7,
+  "level": 3,
+  "manager_id": 8,
+  "name": "Morgan Freeman",
+  "risk_assigned_request_count": 0,
+  "weightage": 60
+ },
+ {
+  "address": "Gurugram",
+  "assigned_request_count": 19,
+  "bu_id": 0,
+  "designation": " CEO",
+  "emp_order": 8,
+  "id": 8,
+  "level": 4,
+  "manager_id": 0,
+  "name": "Walter White",
+  "risk_assigned_request_count": 0,
+  "weightage": 80
+ }
+],
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "34a8406d-449b-4427-aeef-b4559a9ac877",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": true,
+      "errorContinue": false,
+      "runAction": true,
+      "timeout": 30
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "3cae1449-30be-418a-98c0-861710635ac2",
+     "pluginName": "",
+     "status": "",
+     "name": "eligibleEmployeesForLoanAllocation",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbjbi171vl4l1jxcb19",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkl30ndgplzc1h9l5",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "allocatedResponse": {
+ "value": "Loan Request Approver Assigned . Please check the approve loans screen on the UI.",
+ "executedValue": "Loan Request Approver Assigned . Please check the approve loans screen on the UI.",
+ "name": "allocatedResponse",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "approverId": {
+ "value": null,
+ "executedValue": 0,
+ "name": "approverId",
+ "dataType": "numeric",
+ "source": "loanRequestAllocationToEmp",
+ "attribute": "output.id",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "approverName": {
+ "value": null,
+ "executedValue": "Value",
+ "name": "approverName",
+ "dataType": "string",
+ "source": "loanRequestAllocationToEmp",
+ "attribute": "output.name",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "allocatedResponse": "Loan Request Approver Assigned . Please check the approve loans screen on the UI.",
+ "approverId": 8,
+ "approverName": "Walter White"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_mbkl30ndgplzc1h9l5",
+     "pluginName": "",
+     "status": "",
+     "name": "Response",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkl30nda1qy58h8hwm",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbrklgm7hv9d68lt6r",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "let eligible = {{.eligibleEmployeesForLoanAllocation.output[0].allEmployees}};\n\neligible = SORT(eligible, 'ASC', 'assigned_request_count','emp_order');\n\nlet result = {};\n\nif (eligible.length === 0 || eligible[0].id == 7 || eligible[0].id == 6) {\n  result = {\n  \"id\" : 0,\n  \"name\" : \"System\"\n    };\n  }\n  else{\n    result = {\n  \"id\" : eligible[0].id,\n  \"name\" : eligible[0].name\n}\n\n  }\n\nresult;",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "id": 8,
+ "name": "Walter White"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "node_mbrklgm7hv9d68lt6r",
+     "pluginName": "",
+     "status": "",
+     "name": "loanRequestAllocationToEmp",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 690.6666870117188,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbrklgm7ooo40fivvbm",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma3x5uixm29jxz7enkm",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_ma3x5uixyrpkysx187",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_ma5ddqg5di91pdp0e2t",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma5ddqg5varvl2u10b",
+    "target": "node_ma5ddqg5dhzcpgk65a4",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_manxvjupama1wx6i5sv",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma3x5uixyrpkysx187",
+    "target": "node_mbjbi171dz09t7c20wu",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbjbi172xqo8piwops",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbjbi171dz09t7c20wu",
+    "target": "node_mbjbi171vl4l1jxcb19",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkl30ndqfmf1t6523",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkl30ndgplzc1h9l5",
+    "target": "node_mbkl30nda1qy58h8hwm",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbrklgm8m6yl6a3b8r",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbrklgm7hv9d68lt6r",
+    "target": "node_mbrklgm7ooo40fivvbm",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbsy9fmfu05zdbdelof",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbjbi171vl4l1jxcb19",
+    "target": "node_mbrklgm7hv9d68lt6r",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbsz4x4p5wqtzpm251f",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbrklgm7ooo40fivvbm",
+    "target": "node_ma5ddqg5varvl2u10b",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mc4g1vreez1mocowe2e",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_ma5ddqg5dhzcpgk65a4",
+    "target": "node_mbkl30ndgplzc1h9l5",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_mc4g1vref64j8u202ln",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": true,
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ }
+}

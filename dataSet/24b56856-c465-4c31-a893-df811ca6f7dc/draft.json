@@ -1,0 +1,53 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-14T10:57:53.461Z",
+  "updatedAt": "2026-01-14T10:57:53.461Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "24b56856-c465-4c31-a893-df811ca6f7dc",
+  "version": "draft",
+  "name": "DS1k.",
+  "commitId": "commit-6929314e-b721-42fa-b7eb-736fb60d0eba",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-14 10:57:53",
+   "timeStamp": "2026-01-14T10:57:53.46177661Z"
+  },
+  "fields": null,
+  "description": "",
+  "query": "",
+  "params": {
+   
+  },
+  "connectorId": "e25ccab6-9677-4eeb-8a03-0641319186ea",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-14T10:57:53.46858Z",
+   "updatedAt": "2026-01-14T10:57:53.46858Z",
+   "entityCommitId": "commit-6929314e-b721-42fa-b7eb-736fb60d0eba",
+   "entityType": "dataSet",
+   "entityId": "24b56856-c465-4c31-a893-df811ca6f7dc",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "e25ccab6-9677-4eeb-8a03-0641319186ea",
+   "dependencyVersion": "live"
+  }
+ ]
+}

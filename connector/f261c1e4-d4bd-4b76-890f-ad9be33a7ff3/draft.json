@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "sqlserver",
+ "data": {
+  "createdAt": "2026-01-17T06:47:27.793Z",
+  "updatedAt": "2026-01-17T06:49:27.386477Z",
+  "isDeleted": false,
+  "entityId": "f261c1e4-d4bd-4b76-890f-ad9be33a7ff3",
+  "name": "C3 QA DB -- by URI",
+  "isDemo": false,
+  "category": "database",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

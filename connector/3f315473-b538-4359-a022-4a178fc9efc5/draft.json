@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "restAPI",
+ "data": {
+  "createdAt": "2026-01-17T06:47:27.841Z",
+  "updatedAt": "2026-01-17T06:47:27.841Z",
+  "isDeleted": false,
+  "entityId": "3f315473-b538-4359-a022-4a178fc9efc5",
+  "name": "C3/MD test-- by URI",
+  "isDemo": false,
+  "category": "api",
+  "isSource": false,
+  "isAction": true,
+  "isTrigger": true
+ }
+}
