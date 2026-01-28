@@ -1,0 +1,297 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-12-19T06:33:41.353Z",
+  "updatedAt": "2026-01-12T10:55:43.560598Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-12T10:55:43.56Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+  "version": "draft",
+  "name": "nm",
+  "commitId": "commit-4daa8793-7158-4145-8d66-59313c246971",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-12-19 06:33:41",
+   "timeStamp": "2025-12-19T06:33:41.353931709Z"
+  },
+  "customInput": {
+   "nmkl": {
+ "name": "nmkl",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "name",
+ "sourceType": "dataSet",
+ "executedValue": "select * from asd;",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "",
+ "prevId": "",
+ "firstOutputData": "output_n5zsZW",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "param_PM0ynG": {
+ "nextId": "",
+ "prevId": "rule_03",
+ "type": "simpleCondition"
+},
+    "rule_03": {
+ "nextId": "param_PM0ynG",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_plcp1h": {
+ "nextId": "result_uCewJl",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "keyName1",
+ "schemaId": ""
+},
+    "result_uCewJl": {
+ "nextId": "",
+ "prevId": "result_plcp1h",
+ "dataType": "string",
+ "keyName": "keyName2",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_plcp1h",
+   "firstAggOutputData": "aggData_untitled"
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "aggData_untitled": {
+ "name": "untitled",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Jonathan_Wallace@apple.com",
+ "attribute": "nmkl",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "output_OuWLPB": {
+ "name": "keyName2",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Jonathan_Wallace@apple.com",
+ "attribute": "nmkl",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "output_n5zsZW": {
+ "name": "keyName1",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "output_OuWLPB",
+ "executedValue": "select * from asd;",
+ "attribute": "nmkl",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_sW2xvj": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "param_PM0ynG"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "param_PM0ynG": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "nmkl",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "c_sW2xvj"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "excelCondition",
+ "nodeType": "excelCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "excelCondition",
+ "nodeType": "params",
+ "attribute": "excel",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "nmkl",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "b212a055-ee7f-4b39-8d05-a63456112dfd",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [
+   "Dataset is attached in rule input but not used inside any condition or used only with Any operator."
+  ],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-12T07:32:43.672436Z",
+   "updatedAt": "2026-01-12T10:54:08.871079Z",
+   "entityCommitId": "commit-4daa8793-7158-4145-8d66-59313c246971",
+   "entityType": "rule",
+   "entityId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "b212a055-ee7f-4b39-8d05-a63456112dfd",
+   "dependencyVersion": "draft"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-19T06:44:25.488758Z",
+   "updatedAt": "2025-12-19T06:44:25.488758Z",
+   "entityType": "rule",
+   "entityId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+   "tagId": "1f2b7fd1-a191-4b06-b591-eb6dc583fb69"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-19T06:33:51.773016Z",
+   "updatedAt": "2025-12-19T06:44:25.481827Z",
+   "entityType": "rule",
+   "entityId": "f96366d9-5943-4d1e-bdf9-63a3ecee9499",
+   "tagId": "7a28afa2-1456-4053-91f4-6a16b405d9cc"
+  }
+ ]
+}

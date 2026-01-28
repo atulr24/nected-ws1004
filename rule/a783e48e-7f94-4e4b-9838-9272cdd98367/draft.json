@@ -1,0 +1,229 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-01-12T13:54:18.169Z",
+  "updatedAt": "2026-01-12T14:06:18.509117Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-12T14:06:18.508Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "a783e48e-7f94-4e4b-9838-9272cdd98367",
+  "version": "draft",
+  "name": "nm2",
+  "commitId": "commit-bd4d9f5a-0407-4b3a-a054-5df9c15156ca",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-12 13:54:18",
+   "timeStamp": "2026-01-12T13:54:18.169251498Z"
+  },
+  "customInput": {
+   "Case": {
+ "name": "Case",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "TC1",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "deci",
+ "previous": "",
+ "schemaId": ""
+},
+   "deci": {
+ "name": "deci",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": true,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": true,
+ "config": {
+  
+ },
+ "value": "let num ;\nif(\"{{.customInput.Case}}\"==\"TC1\"){\n  num=true\n}\nelse if(\"{{.customInput.Case}}\"==\"TC2\"){\n  num=\"true\";\n}\nnum",
+ "next": "",
+ "previous": "Case",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "",
+ "prevId": "",
+ "firstOutputData": "",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     
+    },
+    "actionNode": {
+     "actionData_action_1": {
+ "name": "action_1",
+ "connectorId": "",
+ "entity": "workflow",
+ "entityId": "14163ca1-4318-437c-a11d-15ed2fb64069",
+ "config": {
+  "query": ""
+ },
+ "input": {
+  "isTrue": {
+ "name": "isTrue",
+ "dataType": "boolean",
+ "source": "customInput",
+ "attribute": "deci",
+ "value": true,
+ "sendNull": false,
+ "notSend": false
+}
+ },
+ "next": ""
+}
+    },
+    "firstOutputData": "",
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "Case",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-12T13:54:18.193619Z",
+   "updatedAt": "2026-01-12T14:06:12.629911Z",
+   "entityCommitId": "commit-bd4d9f5a-0407-4b3a-a054-5df9c15156ca",
+   "entityType": "rule",
+   "entityId": "a783e48e-7f94-4e4b-9838-9272cdd98367",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "workflow",
+   "dependencyId": "14163ca1-4318-437c-a11d-15ed2fb64069",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

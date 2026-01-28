@@ -1,0 +1,867 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2026-01-12T13:42:06.565Z",
+  "updatedAt": "2026-01-12T13:42:06.565Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "f44b9d82-e849-4c14-8d05-bc83c3d8f954",
+  "version": "draft",
+  "name": "testCI",
+  "commitId": "commit-ebf38867-cded-4d62-9beb-2dd3d5717ab1",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-12 13:42:06",
+   "timeStamp": "2026-01-12T13:42:06.565489389Z"
+  },
+  "customInput": {
+   "bl": {
+ "name": "bl",
+ "dataType": "boolean",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": true,
+ "config": null,
+ "value": "",
+ "next": "num",
+ "previous": "",
+ "schemaId": ""
+},
+   "dt": {
+ "name": "dt",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "2026-01-09",
+ "config": null,
+ "value": "",
+ "next": "dtime",
+ "previous": "str",
+ "schemaId": ""
+},
+   "dtime": {
+ "name": "dtime",
+ "dataType": "dateTime",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "2026-01-09T19:09:10+05:30",
+ "config": null,
+ "value": "",
+ "next": "ls",
+ "previous": "dt",
+ "schemaId": ""
+},
+   "js": {
+ "name": "js",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": 4,
+ "config": null,
+ "value": "if ({{.customInput.num}} == 1) {\n \"10\";\n} else if ({{.customInput.num}} == 0) {\n \"a\";\n} else {\n {{.customInput.num}}+{{.customInput.ls}}.length+Object.keys({{.customInput.obj}}).length\n}",
+ "next": "",
+ "previous": "obj",
+ "schemaId": ""
+},
+   "ls": {
+ "name": "ls",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": [
+  1
+ ],
+ "config": null,
+ "value": "",
+ "next": "obj",
+ "previous": "dtime",
+ "schemaId": ""
+},
+   "num": {
+ "name": "num",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 2,
+ "config": null,
+ "value": "",
+ "next": "str",
+ "previous": "bl",
+ "schemaId": ""
+},
+   "obj": {
+ "name": "obj",
+ "dataType": "json",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": {
+  "k": 1
+ },
+ "config": null,
+ "value": "",
+ "next": "js",
+ "previous": "ls",
+ "schemaId": ""
+},
+   "str": {
+ "name": "str",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Mukul",
+ "config": null,
+ "value": "",
+ "next": "dt",
+ "previous": "num",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "actionA": {
+ "name": "actionA",
+ "dataType": "excelFormula",
+ "returnType": "array",
+ "value": "if({{.outputData.bl}} == false) {\n  [{\"a\":1}];\n} else {\n  1\n}",
+ "next": "",
+ "executedValue": [
+  {
+   "a": 1
+  }
+ ],
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "bl": {
+ "name": "bl",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": null,
+ "next": "num",
+ "executedValue": false,
+ "attribute": "bl",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "dt": {
+ "name": "dt",
+ "dataType": "date",
+ "returnType": "",
+ "value": null,
+ "next": "dtime",
+ "executedValue": "2026-01-12",
+ "attribute": "dt",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "dtime": {
+ "name": "dtime",
+ "dataType": "dateTime",
+ "returnType": "",
+ "value": null,
+ "next": "ls",
+ "executedValue": "2026-01-12T18:58:58+05:30",
+ "attribute": "dtime",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "js": {
+ "name": "js",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.js}}",
+ "next": "actionA",
+ "executedValue": 3,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "ls": {
+ "name": "ls",
+ "dataType": "list",
+ "returnType": "",
+ "value": null,
+ "next": "obj",
+ "executedValue": null,
+ "attribute": "ls",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "num": {
+ "name": "num",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": null,
+ "next": "str",
+ "executedValue": 0,
+ "attribute": "num",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "obj": {
+ "name": "obj",
+ "dataType": "json",
+ "returnType": "",
+ "value": null,
+ "next": "js",
+ "executedValue": null,
+ "attribute": "obj",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "str": {
+ "name": "str",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "dt",
+ "executedValue": "Value",
+ "attribute": "str",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     "actionData_action_1": {
+ "name": "action_1",
+ "connectorId": "",
+ "entity": "workflow",
+ "entityId": "7d819d3c-7232-4714-8966-cd065633aa9a",
+ "config": {
+  "query": ""
+ },
+ "input": {
+  "a": {
+ "name": "a",
+ "dataType": "list",
+ "source": "outputData",
+ "attribute": "actionA",
+ "value": [
+  {
+   "a": 1
+  }
+ ],
+ "sendNull": false,
+ "notSend": false
+},
+  "b": {
+ "name": "b",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "value": {
+  "b": 1
+ },
+ "sendNull": false,
+ "notSend": false
+}
+ },
+ "next": ""
+}
+    },
+    "firstOutputData": "bl",
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    "outputData": {
+     "bll": {
+ "name": "bll",
+ "dataType": "boolean",
+ "returnType": "",
+ "value": null,
+ "next": "num",
+ "executedValue": false,
+ "attribute": "bl",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "dt": {
+ "name": "dt",
+ "dataType": "date",
+ "returnType": "",
+ "value": null,
+ "next": "dtime",
+ "executedValue": "2026-01-12",
+ "attribute": "dt",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "dtime": {
+ "name": "dtime",
+ "dataType": "dateTime",
+ "returnType": "",
+ "value": null,
+ "next": "ls",
+ "executedValue": "2026-01-12T18:58:58+05:30",
+ "attribute": "dtime",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "js": {
+ "name": "js",
+ "dataType": "excelFormula",
+ "returnType": "number",
+ "value": "{{.customInput.js}}",
+ "next": "",
+ "executedValue": 3,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "ls": {
+ "name": "ls",
+ "dataType": "list",
+ "returnType": "",
+ "value": null,
+ "next": "obj",
+ "executedValue": null,
+ "attribute": "ls",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "num": {
+ "name": "num",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": null,
+ "next": "str",
+ "executedValue": 0,
+ "attribute": "num",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "obj": {
+ "name": "obj",
+ "dataType": "json",
+ "returnType": "",
+ "value": null,
+ "next": "js",
+ "executedValue": null,
+ "attribute": "obj",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "str": {
+ "name": "str",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "dt",
+ "executedValue": "Value",
+ "attribute": "str",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     "actionData_action_1": {
+ "name": "action_1",
+ "connectorId": "",
+ "entity": "workflow",
+ "entityId": "7d819d3c-7232-4714-8966-cd065633aa9a",
+ "config": {
+  "query": ""
+ },
+ "input": {
+  "a": {
+ "name": "a",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "value": [
+  {
+   "a": 1
+  }
+ ],
+ "sendNull": false,
+ "notSend": false
+},
+  "b": {
+ "name": "b",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "value": {
+  "b": 1
+ },
+ "sendNull": false,
+ "notSend": false
+}
+ },
+ "next": ""
+}
+    },
+    "firstOutputData": "bll",
+    "firstActionNode": "actionData_action_1"
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_CgtEbI": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "nempty",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_Ab9BG7"
+ ],
+ "rightNode": null,
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "c_Ghwrx1": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "lte",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_vC8tii"
+ ],
+ "rightNode": [
+  "rhs_SpuTqk"
+ ],
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "c_JcTnH6": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "gt",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_jtFnQF"
+ ],
+ "rightNode": [
+  "rhs_NSfOlk"
+ ],
+ "siblingIndex": 8,
+ "returnType": ""
+},
+    "c_RTm9hw": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_gO6syJ"
+ ],
+ "rightNode": [
+  "rhs_sMmJWb"
+ ],
+ "siblingIndex": 7,
+ "returnType": ""
+},
+    "c_bKMALo": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "gte",
+ "dataType": "numeric",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_3ft8j4"
+ ],
+ "rightNode": [
+  "rhs_v94FUM"
+ ],
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "c_r4BWhI": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "nempty",
+ "dataType": "list",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_Pib7J5"
+ ],
+ "rightNode": null,
+ "siblingIndex": 6,
+ "returnType": ""
+},
+    "c_x28OoA": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "lte",
+ "dataType": "dateTime",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_Lpgitg"
+ ],
+ "rightNode": [
+  "rhs_Cu3JRi"
+ ],
+ "siblingIndex": 5,
+ "returnType": ""
+},
+    "lhs_3ft8j4": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "num",
+ "query": "",
+ "parent": "c_bKMALo",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "lhs_Ab9BG7": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "str",
+ "query": "",
+ "parent": "c_CgtEbI",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 3,
+ "returnType": ""
+},
+    "lhs_Lpgitg": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "dateTime",
+ "nodeType": "params",
+ "attribute": "dtime",
+ "query": "",
+ "parent": "c_x28OoA",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 5,
+ "returnType": ""
+},
+    "lhs_Pib7J5": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "list",
+ "nodeType": "params",
+ "attribute": "ls",
+ "query": "",
+ "parent": "c_r4BWhI",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 6,
+ "returnType": ""
+},
+    "lhs_gO6syJ": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "obj.k",
+ "query": "",
+ "parent": "c_RTm9hw",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 7,
+ "returnType": ""
+},
+    "lhs_jtFnQF": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "attribute": "js",
+ "query": "",
+ "parent": "c_JcTnH6",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 8,
+ "returnType": ""
+},
+    "lhs_vC8tii": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "dt",
+ "query": "",
+ "parent": "c_Ghwrx1",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "rhs_Cu3JRi": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "dateTime",
+ "nodeType": "params",
+ "attribute": "CurrentTime",
+ "query": "",
+ "parent": "c_x28OoA",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 5,
+ "returnType": ""
+},
+    "rhs_NSfOlk": {
+ "value": 1,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_JcTnH6",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_SpuTqk": {
+ "value": null,
+ "sourceType": "systemVar",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Today",
+ "query": "",
+ "parent": "c_Ghwrx1",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "rhs_sMmJWb": {
+ "value": 0,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_RTm9hw",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_v94FUM": {
+ "value": 0,
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "numeric",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_bKMALo",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "c_bKMALo",
+  "c_CgtEbI",
+  "c_Ghwrx1",
+  "c_x28OoA",
+  "c_r4BWhI",
+  "c_RTm9hw",
+  "c_JcTnH6"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "t",
+ "dataType": "boolean",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "boolean",
+ "nodeType": "params",
+ "attribute": "bl",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "bl",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": false
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-01-12T09:38:58.593Z",
+  "updatedAt": "2026-01-12T09:44:50.804407Z",
+  "isDeleted": false,
+  "entityId": "65d2be96-abf2-4850-88c2-f90c6cf90662",
+  "name": "Query",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "select name from ecomm.customers where id=1",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

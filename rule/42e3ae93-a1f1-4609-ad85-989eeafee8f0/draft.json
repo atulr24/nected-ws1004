@@ -1,0 +1,228 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-01-12T12:12:25.64Z",
+  "updatedAt": "2026-01-12T12:16:36.846966Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-12T12:15:24.362Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "42e3ae93-a1f1-4609-ad85-989eeafee8f0",
+  "version": "draft",
+  "name": "mjk",
+  "commitId": "commit-8bfc1a3a-36a6-4ae9-bdcc-67a6dba3f35c",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-12 12:12:25",
+   "timeStamp": "2026-01-12T12:12:25.640877917Z"
+  },
+  "customInput": {
+   "mj": {
+ "name": "mj",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": "AAtul Raiada",
+ "config": null,
+ "value": "\"AAtul Raiada\"",
+ "next": "",
+ "previous": "nm",
+ "schemaId": ""
+},
+   "nm": {
+ "name": "nm",
+ "dataType": "list",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "jsFormula",
+ "executedValue": "[]",
+ "config": {
+  
+ },
+ "value": "[]",
+ "next": "mj",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "",
+ "prevId": "",
+ "firstOutputData": "output_AEdlgs",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_9TO0nJ": {
+ "nextId": "result_JSULlA",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "keyName",
+ "schemaId": ""
+},
+    "result_JSULlA": {
+ "nextId": "",
+ "prevId": "result_9TO0nJ",
+ "dataType": "json",
+ "keyName": "keyNmame",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_9TO0nJ",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_67g53d": {
+ "name": "keyNmame",
+ "dataType": "json",
+ "returnType": "object",
+ "value": "{\"name\":\"{{.customInput.mj}}\"}",
+ "next": "",
+ "executedValue": {
+  "name": "AAtul Raiada"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_AEdlgs": {
+ "name": "keyName",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Val\nue",
+ "next": "output_67g53d",
+ "executedValue": "Val\nue",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "any",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "mj",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "nm",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "entityType": "tag",
+ "data": {
+  "createdAt": "2025-12-19T06:41:47.052Z",
+  "updatedAt": "2025-12-19T06:41:47.052Z",
+  "isDeleted": false,
+  "entityId": "286ff4ea-d13c-4d9a-946e-15beb506b038",
+  "name": "Technology",
+  "color": "#FFB3C0",
+  "type": "InformationTech"
+ }
+}

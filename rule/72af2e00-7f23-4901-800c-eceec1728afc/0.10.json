@@ -1,0 +1,196 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "live": true,
+ "data": {
+  "createdAt": "2025-12-12T13:27:15.159Z",
+  "updatedAt": "2025-12-12T13:31:23.933Z",
+  "isDeleted": false,
+  "testedAt": "2025-12-12T13:31:16.286Z",
+  "publishedAt": "2025-12-12T13:31:23.923Z",
+  "entityId": "72af2e00-7f23-4901-800c-eceec1728afc",
+  "version": "0.10",
+  "name": "RuleB",
+  "commitId": "commit-65e93797-2616-470c-ad2c-1cb580d681c1",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-12-12 13:27:15",
+   "description": "v2",
+   "timeStamp": "2025-12-12T13:31:23.921Z"
+  },
+  "customInput": null,
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+ "nextId": "",
+ "prevId": "",
+ "firstOutputData": "",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     
+    },
+    "actionNode": {
+     "actionData_rule": {
+ "name": "rule",
+ "connectorId": "",
+ "entity": "rule",
+ "entityId": "a612aef5-48eb-48e8-9002-7c627ee18dec",
+ "config": {
+  "query": ""
+ },
+ "input": null,
+ "next": ""
+}
+    },
+    "firstOutputData": "",
+    "firstActionNode": "actionData_rule"
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "excelCondition",
+ "nodeType": "excelCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "excelCondition",
+ "nodeType": "params",
+ "attribute": "excel",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-12T13:31:05.533668Z",
+   "updatedAt": "2025-12-12T13:31:23.929031Z",
+   "entityCommitId": "commit-65e93797-2616-470c-ad2c-1cb580d681c1",
+   "entityType": "rule",
+   "entityId": "72af2e00-7f23-4901-800c-eceec1728afc",
+   "entityVersion": "0.10",
+   "entityNodeId": "then-actionData_rule",
+   "dependencyType": "rule",
+   "dependencyId": "a612aef5-48eb-48e8-9002-7c627ee18dec",
+   "dependencyVersion": "0.10"
+  }
+ ],
+ "entityTags": [
+  {
+   "isDeleted": false,
+   "createdAt": "2025-12-19T06:46:33.029645Z",
+   "updatedAt": "2025-12-23T07:47:13.388032Z",
+   "entityType": "rule",
+   "entityId": "72af2e00-7f23-4901-800c-eceec1728afc",
+   "tagId": "1f2b7fd1-a191-4b06-b591-eb6dc583fb69"
+  }
+ ]
+}

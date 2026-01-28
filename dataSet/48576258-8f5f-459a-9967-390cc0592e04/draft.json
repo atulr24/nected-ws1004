@@ -1,0 +1,85 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-12T13:41:17.146Z",
+  "updatedAt": "2026-01-12T13:41:17.146Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "48576258-8f5f-459a-9967-390cc0592e04",
+  "version": "draft",
+  "name": "withPG",
+  "commitId": "commit-4da0eb9a-8293-4cc9-8a44-a3a72c8f1d0f",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-12 13:41:17",
+   "timeStamp": "2026-01-12T13:41:17.146944576Z"
+  },
+  "fields": {
+   "achieved_value": {
+ "ColumnName": "achieved_value",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "achievement_percentage": {
+ "ColumnName": "achievement_percentage",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": null
+},
+   "created_at": {
+ "ColumnName": "created_at",
+ "DataType": "dateTime",
+ "Order": 7,
+ "ExecutedValue": null
+},
+   "date": {
+ "ColumnName": "date",
+ "DataType": "dateTime",
+ "Order": 8,
+ "ExecutedValue": null
+},
+   "employee_id": {
+ "ColumnName": "employee_id",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "incentive": {
+ "ColumnName": "incentive",
+ "DataType": "numeric",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "kpi_id": {
+ "ColumnName": "kpi_id",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "with kpiT as (select id from kpi)\nselect * from incentive_data,kpiT where kpiT.id=1",
+  "params": null,
+  "connectorId": "0c9620b7-6ce7-4a80-8d6b-e6abfba7cc6b",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in"
+  }
+ }
+}
