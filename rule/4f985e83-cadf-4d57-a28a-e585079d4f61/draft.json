@@ -1,0 +1,448 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-01-21T08:23:56.579Z",
+  "updatedAt": "2026-01-21T08:24:42.647573Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-21T08:24:42.646Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "4f985e83-cadf-4d57-a28a-e585079d4f61",
+  "version": "draft",
+  "name": "ByApiResultsDT",
+  "commitId": "commit-3dd05996-2f38-4c92-b03d-813a6966c659",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-21 08:23:56",
+   "timeStamp": "2026-01-21T08:23:56.579637312Z"
+  },
+  "customInput": null,
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "g_Q9zMEk": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "output_oT8LxB",
+ "isEnabled": true
+},
+    "rule_01": {
+ "nextId": "g_Q9zMEk",
+ "prevId": "",
+ "firstOutputData": "output_L4lwEl",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    "result_6LcfBd": {
+ "nextId": "result_NMIgbu",
+ "prevId": "",
+ "dataType": "string",
+ "keyName": "string",
+ "schemaId": ""
+},
+    "result_6rS7JZ": {
+ "nextId": "",
+ "prevId": "result_KLwElf",
+ "dataType": "jsFormula",
+ "keyName": "jsCode",
+ "schemaId": ""
+},
+    "result_KLwElf": {
+ "nextId": "result_6rS7JZ",
+ "prevId": "result_nMmATq",
+ "dataType": "json",
+ "keyName": "json",
+ "schemaId": ""
+},
+    "result_NMIgbu": {
+ "nextId": "result_PIKSEz",
+ "prevId": "result_6LcfBd",
+ "dataType": "numeric",
+ "keyName": "age",
+ "schemaId": ""
+},
+    "result_PIKSEz": {
+ "nextId": "result_ll3vzA",
+ "prevId": "result_NMIgbu",
+ "dataType": "date",
+ "keyName": "date",
+ "schemaId": ""
+},
+    "result_ll3vzA": {
+ "nextId": "result_nMmATq",
+ "prevId": "result_PIKSEz",
+ "dataType": "dateTime",
+ "keyName": "dateTime",
+ "schemaId": ""
+},
+    "result_nMmATq": {
+ "nextId": "result_KLwElf",
+ "prevId": "result_ll3vzA",
+ "dataType": "list",
+ "keyName": "list",
+ "schemaId": ""
+}
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_6LcfBd",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_54h7ga": {
+ "name": "date",
+ "dataType": "date",
+ "returnType": "",
+ "value": null,
+ "next": "output_DcHjDF",
+ "executedValue": "2026-01-21",
+ "attribute": "Today",
+ "source": "systemVar",
+ "schemaId": ""
+},
+     "output_DcHjDF": {
+ "name": "dateTime",
+ "dataType": "dateTime",
+ "returnType": "",
+ "value": null,
+ "next": "output_mYD2by",
+ "executedValue": "2026-01-21T13:43:02+05:30",
+ "attribute": "CurrentTime",
+ "source": "systemVar",
+ "schemaId": ""
+},
+     "output_JDFYKD": {
+ "name": "list",
+ "dataType": "list",
+ "returnType": "array",
+ "value": "[1,2,3,4,5]",
+ "next": "output_lnVBtI",
+ "executedValue": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_L4lwEl": {
+ "name": "string",
+ "dataType": "string",
+ "returnType": "",
+ "value": "Value1",
+ "next": "output_rHSzMo",
+ "executedValue": "Value1",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_dtwmYG": {
+ "name": "jsCode",
+ "dataType": "jsFormula",
+ "returnType": "number",
+ "value": "var b=1;\nb",
+ "next": "",
+ "executedValue": 1,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_gvxnyC": {
+ "name": "json",
+ "dataType": "json",
+ "returnType": "",
+ "value": null,
+ "next": "output_dtwmYG",
+ "executedValue": {
+  "sampleValue": "Subhanshu",
+  "sampleValue2": "Subhanshu"
+ },
+ "attribute": "jsonValue",
+ "source": "globalVar",
+ "schemaId": ""
+},
+     "output_iGpVa8": {
+ "name": "dateTime",
+ "dataType": "dateTime",
+ "returnType": "",
+ "value": "2026-01-21T13:46:32+05:30",
+ "next": "output_JDFYKD",
+ "executedValue": "2026-01-21T13:46:32+05:30",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_jZg2ne": {
+ "name": "jsCode",
+ "dataType": "jsFormula",
+ "returnType": "string",
+ "value": "var a=\"arul\";\na;",
+ "next": "",
+ "executedValue": "arul",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_lnVBtI": {
+ "name": "json",
+ "dataType": "json",
+ "returnType": "object",
+ "value": "{\"name\":\"ds\",\n\"asd\":3}",
+ "next": "output_jZg2ne",
+ "executedValue": {
+  "asd": 3,
+  "name": "ds"
+ },
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_mYD2by": {
+ "name": "list",
+ "dataType": "list",
+ "returnType": "",
+ "value": null,
+ "next": "output_gvxnyC",
+ "executedValue": [
+  12,
+  3,
+  [
+   2
+  ]
+ ],
+ "attribute": "list",
+ "source": "globalVar",
+ "schemaId": ""
+},
+     "output_oT8LxB": {
+ "name": "string",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "output_qjqp06",
+ "executedValue": "Value",
+ "attribute": "jsonValue.sampleValue",
+ "source": "globalVar",
+ "schemaId": ""
+},
+     "output_qjqp06": {
+ "name": "age",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": null,
+ "next": "output_54h7ga",
+ "executedValue": 0,
+ "attribute": "list[0]",
+ "source": "globalVar",
+ "schemaId": ""
+},
+     "output_rHSzMo": {
+ "name": "age",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": 23,
+ "next": "output_ucqroa",
+ "executedValue": 23,
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+},
+     "output_ucqroa": {
+ "name": "date",
+ "dataType": "date",
+ "returnType": "",
+ "value": "2026-01-21",
+ "next": "output_iGpVa8",
+ "executedValue": "2026-01-21",
+ "attribute": "",
+ "source": "",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_LF0oFw": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "1===1",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "g_Q9zMEk",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_Q9zMEk": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_LF0oFw"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "Any",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "jsCondition",
+ "attribute": "",
+ "query": "1===1",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "custom",
+ "name": "",
+ "operator": "",
+ "dataType": "jsCondition",
+ "nodeType": "params",
+ "attribute": "sql",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "By api",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": [],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-21T08:23:56.5893Z",
+   "updatedAt": "2026-01-21T08:23:56.5893Z",
+   "entityCommitId": "commit-3dd05996-2f38-4c92-b03d-813a6966c659",
+   "entityType": "rule",
+   "entityId": "4f985e83-cadf-4d57-a28a-e585079d4f61",
+   "entityVersion": "draft",
+   "entityNodeId": "jsonValue",
+   "dependencyType": "variable",
+   "dependencyId": "abf1ad3a-1210-4808-a003-a80b69091048",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-21T08:23:56.588162Z",
+   "updatedAt": "2026-01-21T08:23:56.588162Z",
+   "entityCommitId": "commit-3dd05996-2f38-4c92-b03d-813a6966c659",
+   "entityType": "rule",
+   "entityId": "4f985e83-cadf-4d57-a28a-e585079d4f61",
+   "entityVersion": "draft",
+   "entityNodeId": "list",
+   "dependencyType": "variable",
+   "dependencyId": "2db3642c-6c8e-4b02-bcea-54bef62af521",
+   "dependencyVersion": "live"
+  }
+ ]
+}

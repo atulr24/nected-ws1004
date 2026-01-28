@@ -1,0 +1,256 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2026-01-19T12:07:06.96Z",
+  "updatedAt": "2026-01-19T12:09:27.870579Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-19T12:09:27.869Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "94d296e0-3d68-442a-8ae7-cc2a888308db",
+  "version": "draft",
+  "name": "dtqa",
+  "commitId": "commit-d5d24836-f53d-4875-bfdf-5eddfeb15f59",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-19 12:07:06",
+   "timeStamp": "2026-01-19T12:07:06.960611582Z"
+  },
+  "customInput": {
+   "DateTime1": {
+ "name": "DateTime1",
+ "dataType": "dateTime",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "2026-01-13T17:38:01+05:30",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "name",
+ "schemaId": ""
+},
+   "name": {
+ "name": "name",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Atul",
+ "config": null,
+ "value": "",
+ "next": "DateTime1",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": {
+    "g_0Cuiz7": {
+ "nextId": "",
+ "prevId": "rule_01",
+ "firstOutputData": "",
+ "isEnabled": true
+},
+    "rule_01": {
+ "nextId": "g_0Cuiz7",
+ "prevId": "",
+ "firstOutputData": "",
+ "isEnabled": true
+}
+   },
+   "properties": {
+    "rule_03": {
+ "nextId": "",
+ "prevId": "",
+ "type": "simpleCondition"
+}
+   },
+   "results": {
+    
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_rT8Gon": {
+ "value": null,
+ "sourceType": "",
+ "name": "Any",
+ "operator": "any",
+ "dataType": "dateTime",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "g_0Cuiz7",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "g_0Cuiz7": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_rT8Gon"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_B4JVsA": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 1,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.customInput.DateTime1}}"
+ },
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "dateTime",
+ "nodeType": "noCodeFunc",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": "",
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "dateTime",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_B4JVsA"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "dateTime",
+ "nodeType": "params",
+ "attribute": "DateTime1",
+ "query": "",
+ "parent": "",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": ""
+  },
+  "firstCustomInput": "name",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "first",
+  "comment": "",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

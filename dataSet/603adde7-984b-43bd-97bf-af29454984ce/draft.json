@@ -1,0 +1,53 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-28T07:50:54.707Z",
+  "updatedAt": "2026-01-28T07:50:54.707Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "603adde7-984b-43bd-97bf-af29454984ce",
+  "version": "draft",
+  "name": "newPgDB",
+  "commitId": "commit-25ce6ca4-4b78-449a-9355-7a540bf26273",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-28 07:50:54",
+   "timeStamp": "2026-01-28T07:50:54.707337274Z"
+  },
+  "fields": null,
+  "description": "",
+  "query": "",
+  "params": {
+   
+  },
+  "connectorId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-28T07:50:54.713432Z",
+   "updatedAt": "2026-01-28T07:50:54.713432Z",
+   "entityCommitId": "commit-25ce6ca4-4b78-449a-9355-7a540bf26273",
+   "entityType": "dataSet",
+   "entityId": "603adde7-984b-43bd-97bf-af29454984ce",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+   "dependencyVersion": "live"
+  }
+ ]
+}

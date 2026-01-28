@@ -1,0 +1,415 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2026-01-17T06:48:04.8Z",
+  "updatedAt": "2026-01-19T09:42:15.685599Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "0ded3432-feff-4793-9607-f1fcb1d72184",
+  "version": "draft",
+  "name": "Dupe Case Coordinator Underwriting Task_copy",
+  "commitId": "commit-bbb3819c-3847-4894-b3bf-bb9374877bda",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-19 09:30:25",
+   "timeStamp": "2026-01-19T09:30:25.450924416Z"
+  },
+  "customInput": {
+   "asdb": {
+ "name": "asdb",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 34,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "",
+ "previous": "gn",
+ "schemaId": ""
+},
+   "caseId": {
+ "name": "caseId",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "Id",
+ "sourceType": "dataSet",
+ "executedValue": 10421087,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "gn",
+ "previous": "newCaseStatusValue",
+ "schemaId": ""
+},
+   "gn": {
+ "name": "gn",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 78,
+ "config": {
+  
+ },
+ "value": "",
+ "next": "asdb",
+ "previous": "caseId",
+ "schemaId": ""
+},
+   "newCaseStatusValue": {
+ "name": "newCaseStatusValue",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "caseId",
+ "previous": "oldCaseStatusValue",
+ "schemaId": ""
+},
+   "oldCaseStatusValue": {
+ "name": "oldCaseStatusValue",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": "",
+ "next": "newCaseStatusValue",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "caseId": {
+ "name": "caseId",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": null,
+ "next": "ccId",
+ "executedValue": 0,
+ "attribute": "caseId",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "ccId": {
+ "name": "ccId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorUserId",
+ "source": "dataSet",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "caseId",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": {
+     "ccId": {
+ "name": "ccId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorUserId",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "newCaseStat": {
+ "name": "newCaseStat",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "ccId",
+ "executedValue": "Value",
+ "attribute": "newCaseStatusValue",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "newCaseStat",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_LvhcQ0": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_YqnA6v"
+ ],
+ "rightNode": [
+  "rhs_A6EyEy"
+ ],
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "c_N9cHoT": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "sw",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_UabbjI"
+ ],
+ "rightNode": [
+  "rhs_95Lbkm"
+ ],
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "lhs_UabbjI": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "asd",
+ "query": "",
+ "parent": "c_N9cHoT",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "lhs_YqnA6v": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "BusinessReferral",
+ "query": "",
+ "parent": "c_LvhcQ0",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "rhs_95Lbkm": {
+ "value": "asd",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_N9cHoT",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_A6EyEy": {
+ "value": "test",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "c_LvhcQ0",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rhs_WjW10F": {
+ "value": "Underwriting",
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "constant",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "rule_02",
+  "c_LvhcQ0",
+  "c_N9cHoT"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_02": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "rule_03"
+ ],
+ "rightNode": [
+  "rhs_WjW10F"
+ ],
+ "siblingIndex": 1,
+ "returnType": ""
+},
+    "rule_03": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "newCaseStatusValue",
+ "query": "",
+ "parent": "rule_02",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "oldCaseStatusValue",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Create Task for Case Coordinator when account is put into Underwriting status ",
+  "policy": "",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "469e09b1-a29b-4c9e-9254-ec8d9b2c566f",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "America/New_York",
+   "dateFormat": "us",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-19T09:30:25.526235Z",
+   "updatedAt": "2026-01-19T09:42:15.694152Z",
+   "entityCommitId": "commit-bbb3819c-3847-4894-b3bf-bb9374877bda",
+   "entityType": "rule",
+   "entityId": "0ded3432-feff-4793-9607-f1fcb1d72184",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "469e09b1-a29b-4c9e-9254-ec8d9b2c566f",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

@@ -1,0 +1,1244 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-01-21T12:18:32.357Z",
+  "updatedAt": "2026-01-21T12:22:42.760346Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-21T12:22:42.759Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "6946b067-4c92-436b-a847-f3bff79b9173",
+  "version": "draft",
+  "name": "wf14",
+  "commitId": "commit-aa52e32a-5e69-4622-8840-1137ad889a9a",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-21 12:18:32",
+   "timeStamp": "2026-01-21T12:18:32.357807929Z"
+  },
+  "startNode": "n_BP5tlo",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 640,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "age": {
+ "value": null,
+ "executedValue": 20,
+ "name": "age",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "dob": {
+ "value": null,
+ "executedValue": "2026-01-20",
+ "name": "dob",
+ "dataType": "date",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "json": {
+ "value": null,
+ "executedValue": {
+  "ads": 12,
+  "asd": "asd",
+  "num": 23
+ },
+ "name": "json",
+ "dataType": "json",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "lsit": {
+ "value": null,
+ "executedValue": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "name": "lsit",
+ "dataType": "list",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "name": {
+ "value": null,
+ "executedValue": "Athl",
+ "name": "name",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "age": 20,
+      "dob": "2026-01-20",
+      "json": {
+ "ads": 12,
+ "asd": "asd",
+ "num": 23
+},
+      "lsit": [
+ 1,
+ 2,
+ 3,
+ 4,
+ 5
+],
+      "name": "Athl"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_dN6Ryq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_BP5tlo",
+    "type": "rule",
+    "data": {
+     "input": {
+      "name": {
+ "value": "",
+ "executedValue": null,
+ "name": "name",
+ "dataType": "string",
+ "source": "Trigger",
+ "attribute": "name",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "entity version is missing for rule:n_BP5tlo",
+      "executionTime": "0ns",
+      "output": null
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "srNode",
+     "entity": "rule",
+     "entityId": "2181d596-291b-4a53-82b9-c3c8a1c451ad",
+     "pluginName": "",
+     "status": "error",
+     "name": "sr1232",
+     "rootId": "",
+     "sourceId": [
+      "source_AbsROX",
+      "source_cGop3x"
+     ],
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "simpleRule",
+     "testedAt": "2026-01-21T12:22:42.759Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 525,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_95THMU",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_BP5tlo",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 755,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_e0wI9H",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_BP5tlo",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_ELTbYh",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_BP5tlo",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 690
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_iSLXEC",
+    "type": "rule",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": {
+      "action": null,
+      "additionalOutput": {
+ 
+},
+      "error": "",
+      "executionTime": "688µs",
+      "name": "settingsDT",
+      "output": [
+ {
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 1
+ }
+],
+      "ruleId": "ddb29a48-74af-498d-84e8-24292efe1df2",
+      "version": "draft",
+      "warnings": []
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "ddb29a48-74af-498d-84e8-24292efe1df2",
+     "pluginName": "",
+     "status": "success",
+     "name": "settingsDT",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_Dvcwlj",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 485
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_GMWz1k",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "language": {
+ "value": "JS",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "snippet": {
+ "value": "var a=\"Atul\";\na+\"{{.globalVar.Date}}\"",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "526µs",
+      "output": "Atul2026-01-16"
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "n_GMWz1k",
+     "pluginName": "",
+     "status": "success",
+     "name": "Code",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "code",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_7W1Zt7",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 895
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_M8cYFV",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": true,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "0ns",
+      "output": {
+ "path": "Path1"
+}
+     },
+     "settings": null,
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "n_M8cYFV",
+     "pluginName": "",
+     "status": "success",
+     "name": "SwitchBlock",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "Path1",
+       "pathId": "g_bg3GnT"
+      },
+      {
+       "name": "Path2",
+       "pathId": "g_BuwOEx"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "c_IXiuU8": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_Ye4xFB"
+],
+ "nodeType": "condition",
+ "operator": "any",
+ "parent": "g_BuwOEx",
+ "rightNode": []
+},
+ "c_tQWcHy": {
+ "dataType": "numeric",
+ "leftNode": [
+ "lhs_PQmvwj"
+],
+ "nodeType": "condition",
+ "operator": "any",
+ "parent": "g_bg3GnT",
+ "rightNode": []
+},
+ "g_BuwOEx": {
+ "children": [
+ "c_IXiuU8"
+],
+ "name": "Path2",
+ "nodeType": "group",
+ "operator": ""
+},
+ "g_bg3GnT": {
+ "children": [
+ "c_tQWcHy"
+],
+ "name": "Path1",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_PQmvwj": {
+ "attribute": "json.num",
+ "dataType": "numeric",
+ "nodeType": "params",
+ "parent": "c_tQWcHy",
+ "sourceType": "Trigger",
+ "value": null
+},
+ "lhs_Ye4xFB": {
+ "attribute": "ruleId",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "c_IXiuU8",
+ "sourceType": "settingsDT",
+ "value": null
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 410,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_bclhkO",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_M8cYFV",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_ZKM5Bu",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_M8cYFV",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 640,
+     "y": 1100
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_tIBjZt",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_M8cYFV",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 870,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_8uSKIg",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "n_M8cYFV",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_AcvMU2",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "n_dN6Ryq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_j2XeB3",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_dN6Ryq",
+    "target": "n_BP5tlo",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_AbsROX",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_NeGINv",
+    "markerEnd": "",
+    "label": "True",
+    "source": "n_BP5tlo",
+    "target": "n_95THMU",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_AbsROX",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_hBMMOx",
+    "markerEnd": "",
+    "label": "False",
+    "source": "n_BP5tlo",
+    "target": "n_e0wI9H",
+    "data": {
+     "edgeType": "else",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_cGop3x",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_EyglDR",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_95THMU",
+    "target": "n_ELTbYh",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "source_AbsROX",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Tn8lKF",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_e0wI9H",
+    "target": "n_ELTbYh",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_O9DAJi",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_iSLXEC",
+    "target": "n_Dvcwlj",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_6na7EE",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_7W1Zt7",
+    "target": "n_iSLXEC",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_7ySOZ8",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_GMWz1k",
+    "target": "n_7W1Zt7",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_S7Xk4q",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_ELTbYh",
+    "target": "n_GMWz1k",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_VPd5Vf",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_Dvcwlj",
+    "target": "n_M8cYFV",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_bScnr4",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_M8cYFV",
+    "target": "n_bclhkO",
+    "data": {
+     "edgeType": "case",
+     "pathId": "g_bg3GnT"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_YLxrAP",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_M8cYFV",
+    "target": "n_ZKM5Bu",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_06FC0Y",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_bclhkO",
+    "target": "n_tIBjZt",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_DlD1Go",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_ZKM5Bu",
+    "target": "n_tIBjZt",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_EmulXO",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_M8cYFV",
+    "target": "n_8uSKIg",
+    "data": {
+     "edgeType": "case",
+     "pathId": "g_BuwOEx"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_5aC04C",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_8uSKIg",
+    "target": "n_tIBjZt",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-21T12:18:32.373299Z",
+   "updatedAt": "2026-01-21T12:18:32.373299Z",
+   "entityCommitId": "commit-aa52e32a-5e69-4622-8840-1137ad889a9a",
+   "entityType": "workflow",
+   "entityId": "6946b067-4c92-436b-a847-f3bff79b9173",
+   "entityVersion": "draft",
+   "entityNodeId": "Date",
+   "dependencyType": "variable",
+   "dependencyId": "413498c7-6fb9-4b16-9a20-4b2b8100c9a8",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-21T12:18:32.37068Z",
+   "updatedAt": "2026-01-21T12:18:32.372074Z",
+   "entityCommitId": "commit-aa52e32a-5e69-4622-8840-1137ad889a9a",
+   "entityType": "workflow",
+   "entityId": "6946b067-4c92-436b-a847-f3bff79b9173",
+   "entityVersion": "draft",
+   "entityNodeId": "",
+   "dependencyType": "rule",
+   "dependencyId": "2181d596-291b-4a53-82b9-c3c8a1c451ad",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

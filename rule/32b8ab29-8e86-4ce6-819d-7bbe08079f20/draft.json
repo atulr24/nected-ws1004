@@ -1,0 +1,324 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2026-01-17T06:47:27.851Z",
+  "updatedAt": "2026-01-19T05:41:54.152804Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "32b8ab29-8e86-4ce6-819d-7bbe08079f20",
+  "version": "draft",
+  "name": "Case Coordinator Underwriting Task - Ex Rule 15",
+  "commitId": "commit-c3a1c4c1-6257-4be6-a8cb-8285e52f2e17",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-17 06:47:49",
+   "timeStamp": "2026-01-17T06:47:49.219361981Z"
+  },
+  "customInput": {
+   "caseId": {
+ "name": "caseId",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "CaseId",
+ "sourceType": "dataSet",
+ "executedValue": 1496,
+ "config": {
+  
+ },
+ "value": null,
+ "next": "",
+ "previous": "newAccountStatusValue",
+ "schemaId": ""
+},
+   "newAccountStatusValue": {
+ "name": "newAccountStatusValue",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "Underwriting",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "caseId",
+ "previous": "oldAccountStatusValue",
+ "schemaId": ""
+},
+   "oldAccountStatusValue": {
+ "name": "oldAccountStatusValue",
+ "dataType": "string",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": {
+  
+ },
+ "value": null,
+ "next": "newAccountStatusValue",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "caseId": {
+ "name": "caseId",
+ "dataType": "numeric",
+ "returnType": "",
+ "value": null,
+ "next": "ccId",
+ "executedValue": 0,
+ "attribute": "caseId",
+ "source": "customInput",
+ "schemaId": ""
+},
+     "ccId": {
+ "name": "ccId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "ccTeamId",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorUserId",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "ccTeamId": {
+ "name": "ccTeamId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorTeamId",
+ "source": "dataSet",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     "actionData_action_1": {
+ "name": "action_1",
+ "connectorId": "3f315473-b538-4359-a022-4a178fc9efc5",
+ "entity": "",
+ "entityId": "",
+ "pluginName": "",
+ "config": {
+  "body": "{\n  \"taskCategoryId\": 17,\n  \"taskStatus\": \"Pending\",\n  \"assignedToUserId\": \"{{.outputData.ccId}}\",\n  \"assignedToTeamId\": \"{{.outputData.ccTeamId}}\", \n  \"dueBy\": \"{{.systemVar.Today}}\",\n  \"scheduledFor\": \"{{.systemVar.Today}}\",\n  \"summary\": \"Review Case - Account in Underwriting Status\",\n  \"relatedToType\": \"Case\",\n  \"relatedItemId\": {{.customInput.caseId}}\n}",
+  "contentType": "application/json",
+  "headers": [
+ {
+  "key": "OnBehalfOf",
+  "value": "NectedAPI"
+ }
+],
+  "method": "POST",
+  "path": "api/tasks",
+  "query": "",
+  "queryParams": [],
+  "settings": {
+ "cache": {
+ "cacheKeys": "",
+ "duration": {
+ "unit": "d",
+ "value": 0
+},
+ "enabled": false
+}
+}
+ },
+ "input": null,
+ "next": ""
+}
+    },
+    "firstOutputData": "caseId",
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    "outputData": {
+     "ccId": {
+ "name": "ccId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "ccTeamId",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorUserId",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "ccTeamId": {
+ "name": "ccTeamId",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "newCaseStatus",
+ "executedValue": "Value",
+ "attribute": "CaseCoordinatorTeamId",
+ "source": "dataSet",
+ "schemaId": ""
+},
+     "newCaseStatus": {
+ "name": "newCaseStatus",
+ "dataType": "string",
+ "returnType": "",
+ "value": null,
+ "next": "",
+ "executedValue": "Value",
+ "attribute": "newAccountStatusValue",
+ "source": "customInput",
+ "schemaId": ""
+}
+    },
+    "actionNode": {
+     
+    },
+    "firstOutputData": "ccId",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_Ntui7Y": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "notNull",
+ "dataType": "string",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_1Ouhr6"
+ ],
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "lhs_1Ouhr6": {
+ "value": null,
+ "sourceType": "dataSet",
+ "name": "",
+ "operator": "",
+ "dataType": "string",
+ "nodeType": "params",
+ "attribute": "CaseCoordinatorUserId",
+ "query": "",
+ "parent": "c_Ntui7Y",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 2,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_Ntui7Y"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "oldAccountStatusValue",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "Create Task for Case Coordinator when account is put into Underwriting status ",
+  "policy": "",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "2c64f83b-a893-4977-86cc-0ded33a4ad93",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "2026-01-17T00:00:00-05:00",
+   "endAt": "2026-01-17T00:00:00-05:00",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "America/New_York",
+   "dateFormat": "us",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-17T06:47:49.264787Z",
+   "updatedAt": "2026-01-19T05:41:54.169473Z",
+   "entityCommitId": "commit-c3a1c4c1-6257-4be6-a8cb-8285e52f2e17",
+   "entityType": "rule",
+   "entityId": "32b8ab29-8e86-4ce6-819d-7bbe08079f20",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "connector",
+   "dependencyId": "3f315473-b538-4359-a022-4a178fc9efc5",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-17T06:47:49.262048Z",
+   "updatedAt": "2026-01-19T05:41:54.167742Z",
+   "entityCommitId": "commit-c3a1c4c1-6257-4be6-a8cb-8285e52f2e17",
+   "entityType": "rule",
+   "entityId": "32b8ab29-8e86-4ce6-819d-7bbe08079f20",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "2c64f83b-a893-4977-86cc-0ded33a4ad93",
+   "dependencyVersion": "draft"
+  }
+ ]
+}

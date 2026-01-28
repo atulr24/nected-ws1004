@@ -1,0 +1,21 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.784Z",
+  "updatedAt": "2026-01-15T10:38:22.784Z",
+  "isDeleted": false,
+  "entityId": "d19f17a2-bd54-4fcd-a9f1-fe45fe7618d1",
+  "name": "current_status",
+  "moduleId": "7ed1264e-30f5-4158-8360-8cc00101681a",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Approved"
+   },
+   {
+    "value": "Required"
+   }
+  ]
+ }
+}

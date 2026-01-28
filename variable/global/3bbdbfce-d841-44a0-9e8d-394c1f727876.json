@@ -1,0 +1,20 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2026-01-20T13:20:16.441Z",
+  "updatedAt": "2026-01-20T13:20:16.441Z",
+  "isDeleted": false,
+  "entityId": "3bbdbfce-d841-44a0-9e8d-394c1f727876",
+  "name": "TestName",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "string",
+  "value": {
+   "data": "Asf",
+   "isSecret": false,
+   "canReset": false
+  },
+  "isFunction": false,
+  "functionName": ""
+ }
+}

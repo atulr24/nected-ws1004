@@ -1,0 +1,201 @@
+{
+ "entityType": "rule",
+ "category": "simpleRule",
+ "data": {
+  "createdAt": "2026-01-14T12:00:33.027Z",
+  "updatedAt": "2026-01-15T10:11:24.397917Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-14T12:26:16.901Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "23db420e-f034-4550-a862-ee4220694bf3",
+  "version": "draft",
+  "name": "sr4",
+  "commitId": "commit-81afe87a-8241-4388-921a-5317cd6537cf",
+  "status": "inreview",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-14 12:00:33",
+   "approvers": [
+    {
+     "hasApproved": false,
+     "createdAt": "2026-01-15T10:11:24.397Z"
+    }
+   ],
+   "timeStamp": "2026-01-15T10:11:24.397Z"
+  },
+  "customInput": {
+   "Date": {
+ "name": "Date",
+ "dataType": "date",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "2026-01-14",
+ "config": null,
+ "value": "",
+ "next": "DateTime1",
+ "previous": "",
+ "schemaId": ""
+},
+   "DateTime1": {
+ "name": "DateTime1",
+ "dataType": "dateTime",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "2026-01-21T17:30:50+05:30",
+ "config": null,
+ "value": "",
+ "next": "",
+ "previous": "Date",
+ "schemaId": ""
+}
+  },
+  "ruleChain": null,
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_lgxYnG": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "eq",
+ "dataType": "date",
+ "nodeType": "condition",
+ "attribute": "",
+ "query": "",
+ "parent": "rule_01",
+ "children": null,
+ "leftNode": [
+  "lhs_sDpxyc"
+ ],
+ "rightNode": [
+  "rhs_Mv2Il1"
+ ],
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "lhs_sDpxyc": {
+ "value": null,
+ "sourceType": "customInput",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "params",
+ "attribute": "Date",
+ "query": "",
+ "parent": "c_lgxYnG",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "rhs_Mv2Il1": {
+ "value": {
+  "FUNC_NAME": "relativeDate",
+  "duration": 1,
+  "subOp": "next",
+  "unit": "d",
+  "value": "{{.customInput.Date}}"
+ },
+ "sourceType": "",
+ "name": "",
+ "operator": "",
+ "dataType": "date",
+ "nodeType": "noCodeFunc",
+ "attribute": "",
+ "query": "",
+ "parent": "c_lgxYnG",
+ "children": null,
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 4,
+ "returnType": ""
+},
+    "rule_01": {
+ "value": null,
+ "sourceType": "",
+ "name": "",
+ "operator": "and",
+ "dataType": "",
+ "nodeType": "group",
+ "attribute": "",
+ "query": "",
+ "parent": "",
+ "children": [
+  "c_lgxYnG"
+ ],
+ "leftNode": null,
+ "rightNode": null,
+ "siblingIndex": 1,
+ "returnType": ""
+}
+   },
+   "startNode": "rule_01"
+  },
+  "firstCustomInput": "Date",
+  "firstRuleChain": "",
+  "ruleSetPolicy": "",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "simpleRule",
+  "dataSetId": "",
+  "ruleSet": null,
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": [],
+  "schemaVersion": "0.1.1"
+ }
+}

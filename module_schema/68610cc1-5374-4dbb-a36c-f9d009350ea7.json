@@ -1,0 +1,14 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.739Z",
+  "updatedAt": "2026-01-15T10:38:22.739Z",
+  "isDeleted": false,
+  "entityId": "68610cc1-5374-4dbb-a36c-f9d009350ea7",
+  "name": "points",
+  "moduleId": "46577a8b-ca9a-49bd-bbd3-38a92bf6e445",
+  "dataType": "numeric",
+  "usageType": "optional",
+  "options": null
+ }
+}

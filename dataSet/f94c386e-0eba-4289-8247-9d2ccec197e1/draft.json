@@ -1,0 +1,76 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-13T12:10:49.94Z",
+  "updatedAt": "2026-01-13T12:11:33.811558Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T12:11:26.701Z",
+  "publishedAt": "2026-01-13T12:11:33.784Z",
+  "entityId": "f94c386e-0eba-4289-8247-9d2ccec197e1",
+  "version": "0.10",
+  "name": "oracledb001",
+  "commitId": "commit-a68235c5-755e-453e-ae18-3bac41b8ee5e",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2026-01-13 12:10:49",
+   "description": "v2",
+   "timeStamp": "2026-01-13T12:11:33.781Z"
+  },
+  "fields": {
+   "EMAIL": {
+ "ColumnName": "EMAIL",
+ "DataType": "string",
+ "Order": 1,
+ "ExecutedValue": "mukul@nected.ai"
+},
+   "EMP_ID": {
+ "ColumnName": "EMP_ID",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": 28
+},
+   "EMP_NAME": {
+ "ColumnName": "EMP_NAME",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "MUKUL BHATI"
+},
+   "HIRE_DATE": {
+ "ColumnName": "HIRE_DATE",
+ "DataType": "dateTime",
+ "Order": 4,
+ "ExecutedValue": "2025-01-01T00:00:00Z"
+},
+   "IS_ACTIVE": {
+ "ColumnName": "IS_ACTIVE",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "Y"
+},
+   "SALARY": {
+ "ColumnName": "SALARY",
+ "DataType": "numeric",
+ "Order": 6,
+ "ExecutedValue": 10000
+}
+  },
+  "description": "",
+  "query": "select * from admin.employees",
+  "params": {
+   
+  },
+  "connectorId": "e25ccab6-9677-4eeb-8a03-0641319186ea",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}

@@ -1,0 +1,1046 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-01-13T12:27:46.127Z",
+  "updatedAt": "2026-01-13T12:29:18.654502Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T12:29:18.653Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "79de0337-3536-4b40-9dad-728b3c278698",
+  "version": "draft",
+  "name": "TEst123",
+  "commitId": "commit-538b393b-cd45-41d5-9fcb-777d4ff043b1",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-13 12:27:46",
+   "timeStamp": "2026-01-13T12:27:46.127386454Z"
+  },
+  "startNode": "n_YS5FVc",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "name": {
+ "value": null,
+ "executedValue": "Atul",
+ "name": "name",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "name": "Atul"
+     },
+     "settings": {
+      "authType": "private",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_FcvoJ0",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_YS5FVc",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 0,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "db.comments.find({})",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "556ms",
+      "output": [
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957b51",
+  "date": "2025-11-01T05:49:56Z",
+  "email": "john.doe@example.com",
+  "movie_id": "573a1391f29313caabcd7da6",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb69579f5",
+  "date": "1975-01-21T00:31:22Z",
+  "email": "john_bishop@fakegmail.com",
+  "movie_id": "573a1390f29313caabcd446f",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957a4b",
+  "date": "2015-02-08T01:28:23Z",
+  "email": "hafthór_júlíus_björnsson@gameofthron.es",
+  "movie_id": "573a1390f29313caabcd5b9a",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957aa3",
+  "date": "1980-07-13T06:41:13Z",
+  "email": "yolanda_owen@fakegmail.com",
+  "movie_id": "573a1391f29313caabcd6d40",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957a38",
+  "date": "2012-11-26T11:00:57Z",
+  "email": "gemma_whelan@gameofthron.es",
+  "movie_id": "573a1390f29313caabcd587d",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957b44",
+  "date": "1982-07-06T15:10:41Z",
+  "email": "owen_teale@gameofthron.es",
+  "movie_id": "573a1391f29313caabcd7c9e",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "_id": "5a9427648b0beebeb6957ba7",
+  "date": "2011-08-11T22:12:38Z",
+  "email": "ron_donachie@gameofthron.es",
+  "movie_id": "573a1391f29313caabcd8543",
+  "name": "Rodrik Cassel",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "_id": "5a9427648b0beebeb6957bb6",
+  "date": "1985-02-24T20:04:25Z",
+  "email": "indira_varma@gameofthron.es",
+  "movie_id": "573a1391f29313caabcd8780",
+  "name": "Ellaria Sand",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957b1a",
+  "date": "2001-02-09T20:18:49Z",
+  "email": "roxanne_mckee@gameofthron.es",
+  "movie_id": "573a1391f29313caabcd7850",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ },
+ {
+  "Bool": false,
+  "Integer": "100",
+  "_id": "5a9427648b0beebeb6957a22",
+  "date": "1970-11-15T05:54:02Z",
+  "email": "taylor_scott@fakegmail.com",
+  "movie_id": "573a1390f29313caabcd4eaf",
+  "name": "email@email.com",
+  "text": {
+ "$cond": {
+ "else": "NegativeReview",
+ "if": {
+ "$eq": [
+ "$Bool",
+ true
+]
+},
+ "then": "PositiveReview"
+}
+}
+ }
+]
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+     "pluginName": "",
+     "status": "success",
+     "name": "mongodb",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "mongodb",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_eMvmds",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_DpOE5u",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 0,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "select * from admin.employees",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "564ms",
+      "output": [
+ {
+  "EMAIL": "mukul@nected.ai",
+  "EMP_ID": 28,
+  "EMP_NAME": "MUKUL BHATI",
+  "HIRE_DATE": "2025-01-01T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 10000
+ },
+ {
+  "EMAIL": "atul@nected.ai",
+  "EMP_ID": 29,
+  "EMP_NAME": "Atul",
+  "HIRE_DATE": "2025-01-02T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 20000
+ },
+ {
+  "EMAIL": "atul+1@nected.ai",
+  "EMP_ID": 30,
+  "EMP_NAME": "aa",
+  "HIRE_DATE": "2025-01-01T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 100003
+ },
+ {
+  "EMAIL": "amit@example.com",
+  "EMP_ID": 1,
+  "EMP_NAME": "Amit Sharma",
+  "HIRE_DATE": "2023-01-15T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 60000
+ },
+ {
+  "EMAIL": "neha@example.com",
+  "EMP_ID": 2,
+  "EMP_NAME": "Neha Verma",
+  "HIRE_DATE": "2022-08-10T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 55000
+ },
+ {
+  "EMAIL": "rahul@example.com",
+  "EMP_ID": 3,
+  "EMP_NAME": "Rahul Singh",
+  "HIRE_DATE": "2021-05-20T00:00:00Z",
+  "IS_ACTIVE": "N",
+  "SALARY": 70000
+ },
+ {
+  "EMAIL": "arjun.m@example.com",
+  "EMP_ID": 8,
+  "EMP_NAME": "Arjun Malhotra",
+  "HIRE_DATE": "2019-02-11T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 72000
+ },
+ {
+  "EMAIL": "pooja.n@example.com",
+  "EMP_ID": 9,
+  "EMP_NAME": "Pooja Nair",
+  "HIRE_DATE": "2020-06-25T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 58000
+ },
+ {
+  "EMAIL": "rohit.k@example.com",
+  "EMP_ID": 10,
+  "EMP_NAME": "Rohit Khanna",
+  "HIRE_DATE": "2021-09-14T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 64000
+ },
+ {
+  "EMAIL": "ananya.g@example.com",
+  "EMP_ID": 11,
+  "EMP_NAME": "Ananya Gupta",
+  "HIRE_DATE": "2018-12-03T00:00:00Z",
+  "IS_ACTIVE": "Y",
+  "SALARY": 70000
+ }
+]
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "e25ccab6-9677-4eeb-8a03-0641319186ea",
+     "pluginName": "",
+     "status": "success",
+     "name": "oracle",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "oracle",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_ZvgrBN",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_jNAxaP",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+ "value": 0,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "query": {
+ "value": "select * from ecomm.customers limit 6",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "41ms",
+      "output": [
+ {
+  "city": "Lake Jamiechester",
+  "country_code": "CO",
+  "created_at": "2022-12-18",
+  "credit_limit": 851307,
+  "customer_score": 12,
+  "customer_segment": "VIP",
+  "email": "Jonathan_Wallace@apple.com",
+  "gender": "Male",
+  "id": 3,
+  "name": "Jonathan Wallace",
+  "state": "Wisconsin"
+ },
+ {
+  "city": "Donnaberg",
+  "country_code": "LU",
+  "created_at": "2022-09-29",
+  "credit_limit": 840400,
+  "customer_score": 74,
+  "customer_segment": "VIP",
+  "email": "Lauren_Morris@hotmail.us",
+  "gender": "Male",
+  "id": 4,
+  "name": "Lauren Morris",
+  "state": "New Hampshire"
+ },
+ {
+  "city": "East Paul",
+  "country_code": "TO",
+  "created_at": "2023-06-23",
+  "credit_limit": 390708,
+  "customer_score": 98,
+  "customer_segment": "Regular",
+  "email": "Erica_Lopez@rediffmail.us",
+  "gender": "Male",
+  "id": 5,
+  "name": "Erica Lopez",
+  "state": "Oregon"
+ },
+ {
+  "city": "Garciaberg",
+  "country_code": "SV",
+  "created_at": "2023-02-09",
+  "credit_limit": 578295,
+  "customer_score": 30,
+  "customer_segment": "VIP",
+  "email": "Candice_Jackson@rediffmail.us",
+  "gender": "Male",
+  "id": 7,
+  "name": "Candice Jackson",
+  "state": "Vermont"
+ },
+ {
+  "city": "Lake Sarahside",
+  "country_code": "SO",
+  "created_at": "2023-04-26",
+  "credit_limit": 613098,
+  "customer_score": 31,
+  "customer_segment": "Regular",
+  "email": "Jonathan_Fox@apple.com",
+  "gender": "Female",
+  "id": 8,
+  "name": "Jonathan Fox",
+  "state": "Illinois"
+ },
+ {
+  "city": "Hansenhaven",
+  "country_code": "PU",
+  "created_at": "2023-06-08",
+  "credit_limit": 411873,
+  "customer_score": 13,
+  "customer_segment": "VIP",
+  "email": "Taylor_Daniels@facebook.com",
+  "gender": "Female",
+  "id": 10,
+  "name": "Taylor Daniels",
+  "state": "Arizona"
+ }
+]
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "durationValue": 5,
+      "errorContinue": false,
+      "rowLimit": 1000,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+     "pluginName": "postgres",
+     "status": "success",
+     "name": "postgres",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "postgres",
+     "testedAt": "2026-01-13T12:29:18.653Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_hAINvo",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_8scdFB",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "n_FcvoJ0",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_TRBtSV",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_YS5FVc",
+    "target": "n_eMvmds",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_21oy7j",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_FcvoJ0",
+    "target": "n_YS5FVc",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_5f6fQW",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_DpOE5u",
+    "target": "n_ZvgrBN",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_mdtRHf",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_eMvmds",
+    "target": "n_DpOE5u",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_VwpaoY",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_jNAxaP",
+    "target": "n_hAINvo",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_nu60PM",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_ZvgrBN",
+    "target": "n_jNAxaP",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": null,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:29:18.10044Z",
+   "updatedAt": "2026-01-13T12:29:18.10044Z",
+   "entityCommitId": "commit-538b393b-cd45-41d5-9fcb-777d4ff043b1",
+   "entityType": "workflow",
+   "entityId": "79de0337-3536-4b40-9dad-728b3c278698",
+   "entityVersion": "draft",
+   "entityNodeId": "n_jNAxaP",
+   "dependencyType": "connector",
+   "dependencyId": "13237f89-18ad-44f4-b03d-91007c1986e0",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:28:43.079819Z",
+   "updatedAt": "2026-01-13T12:29:18.097853Z",
+   "entityCommitId": "commit-538b393b-cd45-41d5-9fcb-777d4ff043b1",
+   "entityType": "workflow",
+   "entityId": "79de0337-3536-4b40-9dad-728b3c278698",
+   "entityVersion": "draft",
+   "entityNodeId": "n_DpOE5u",
+   "dependencyType": "connector",
+   "dependencyId": "e25ccab6-9677-4eeb-8a03-0641319186ea",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T12:28:19.163939Z",
+   "updatedAt": "2026-01-13T12:29:18.094197Z",
+   "entityCommitId": "commit-538b393b-cd45-41d5-9fcb-777d4ff043b1",
+   "entityType": "workflow",
+   "entityId": "79de0337-3536-4b40-9dad-728b3c278698",
+   "entityVersion": "draft",
+   "entityNodeId": "n_YS5FVc",
+   "dependencyType": "connector",
+   "dependencyId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+   "dependencyVersion": "live"
+  }
+ ]
+}

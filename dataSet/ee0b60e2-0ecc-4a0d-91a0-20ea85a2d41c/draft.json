@@ -1,0 +1,87 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-13T12:06:09.649Z",
+  "updatedAt": "2026-01-22T12:22:21.506678Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T12:06:17.297Z",
+  "publishedAt": "2026-01-13T12:06:22.528Z",
+  "entityId": "ee0b60e2-0ecc-4a0d-91a0-20ea85a2d41c",
+  "version": "draft",
+  "name": "mongo",
+  "commitId": "commit-b5d71249-822c-4fe6-8b23-4816a3468c0f",
+  "status": "draft",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2026-01-22 12:22:21",
+   "timeStamp": "2026-01-22T12:22:21.503325676Z"
+  },
+  "fields": {
+   "Bool": {
+ "ColumnName": "Bool",
+ "DataType": "boolean",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "Integer": {
+ "ColumnName": "Integer",
+ "DataType": "string",
+ "Order": 8,
+ "ExecutedValue": null
+},
+   "_id": {
+ "ColumnName": "_id",
+ "DataType": "objectid",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "date": {
+ "ColumnName": "date",
+ "DataType": "dateTime",
+ "Order": 7,
+ "ExecutedValue": null
+},
+   "email": {
+ "ColumnName": "email",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+},
+   "movie_id": {
+ "ColumnName": "movie_id",
+ "DataType": "objectid",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "text": {
+ "ColumnName": "text",
+ "DataType": "json",
+ "Order": 6,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "db.comments.find({})",
+  "params": {
+   
+  },
+  "connectorId": "b655b827-7a0d-4bf4-8a89-2f7eadc0113d",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ }
+}

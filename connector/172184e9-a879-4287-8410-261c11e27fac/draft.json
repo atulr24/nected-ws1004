@@ -1,0 +1,16 @@
+{
+ "entityType": "connector",
+ "category": "postgres",
+ "data": {
+  "createdAt": "2026-01-13T06:57:10.971Z",
+  "updatedAt": "2026-01-13T12:03:23.808519Z",
+  "isDeleted": false,
+  "entityId": "172184e9-a879-4287-8410-261c11e27fac",
+  "name": "neon",
+  "isDemo": false,
+  "category": "database",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": true
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-13T06:59:28.912Z",
+  "updatedAt": "2026-01-13T07:05:07.318129Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-13T07:05:07.317Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "7d57cf9b-9c71-4ee3-8d79-9cd0eca7cad4",
+  "version": "draft",
+  "name": "neondb",
+  "commitId": "commit-c36c715a-b7f7-4220-885f-f72f67b363ba",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-13 06:59:28",
+   "timeStamp": "2026-01-13T06:59:28.912561544Z"
+  },
+  "fields": {
+   "age": {
+ "ColumnName": "age",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": 28
+},
+   "id": {
+ "ColumnName": "id",
+ "DataType": "numeric",
+ "Order": 2,
+ "ExecutedValue": 1
+},
+   "name": {
+ "ColumnName": "name",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": "Atul"
+},
+   "scores": {
+ "ColumnName": "scores",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": "{80,90,85}"
+},
+   "tags": {
+ "ColumnName": "tags",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": "{admin,tester}"
+}
+  },
+  "description": "",
+  "query": "select * from dummy_data1;",
+  "params": {
+   
+  },
+  "connectorId": "172184e9-a879-4287-8410-261c11e27fac",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T06:59:28.926307Z",
+   "updatedAt": "2026-01-13T07:05:04.927475Z",
+   "entityCommitId": "commit-c36c715a-b7f7-4220-885f-f72f67b363ba",
+   "entityType": "dataSet",
+   "entityId": "7d57cf9b-9c71-4ee3-8d79-9cd0eca7cad4",
+   "entityVersion": "draft",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "172184e9-a879-4287-8410-261c11e27fac",
+   "dependencyVersion": "live"
+  }
+ ]
+}

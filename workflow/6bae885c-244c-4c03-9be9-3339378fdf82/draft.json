@@ -2,7 +2,7 @@
  "entityType": "workflow",
  "data": {
   "createdAt": "2026-01-12T13:42:06.589Z",
-  "updatedAt": "2026-01-12T13:42:06.589Z",
+  "updatedAt": "2026-01-13T09:58:03.15345Z",
   "isDeleted": false,
   "testedAt": "0001-01-01T00:00:00Z",
   "publishedAt": "0001-01-01T00:00:00Z",
@@ -26,7 +26,7 @@
   "nodes": [
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 0
     },
     "style": null,
@@ -236,7 +236,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 130
     },
     "style": null,
@@ -273,7 +273,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 820
     },
     "style": null,
@@ -288,8 +288,8 @@
  "executedValue": null,
  "name": "bl",
  "dataType": "boolean",
- "source": "Trigger",
- "attribute": "bl",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -306,8 +306,8 @@
  "executedValue": null,
  "name": "dt",
  "dataType": "date",
- "source": "Trigger",
- "attribute": "dt",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -324,8 +324,8 @@
  "executedValue": null,
  "name": "dtime",
  "dataType": "dateTime",
- "source": "Trigger",
- "attribute": "dtime",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -360,8 +360,8 @@
  "executedValue": null,
  "name": "ls",
  "dataType": "list",
- "source": "Trigger",
- "attribute": "ls",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -378,8 +378,8 @@
  "executedValue": null,
  "name": "num",
  "dataType": "numeric",
- "source": "Code1",
- "attribute": "output",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -398,8 +398,8 @@
  "executedValue": null,
  "name": "obj",
  "dataType": "json",
- "source": "Trigger",
- "attribute": "obj",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -416,8 +416,8 @@
  "executedValue": null,
  "name": "str",
  "dataType": "string",
- "source": "Trigger",
- "attribute": "str",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -431,33 +431,7 @@
 }
      },
      "output": null,
-     "executedValue": {
-      "action": null,
-      "error": "",
-      "executionTime": "2ms",
-      "name": "testCI",
-      "output": [
- {
-  "actionA": 1,
-  "bl": true,
-  "defaultOutputData": true,
-  "dt": "2026-01-10",
-  "dtime": "2026-01-10T22:08:47+05:30",
-  "js": 4,
-  "ls": [
- 1
-],
-  "num": 2,
-  "obj": {
- "k": 1
-},
-  "str": "Mukul"
- }
-],
-      "ruleId": "dca2b5e7-2cc4-444f-82ca-e0a01d05a409",
-      "version": "draft",
-      "warnings": []
-     },
+     "executedValue": null,
      "settings": {
       "actionInSync": false,
       "errorContinue": false,
@@ -492,7 +466,7 @@
    },
    {
     "position": {
-     "x": 483.19921875,
+     "x": 445.60186767578125,
      "y": 950
     },
     "style": null,
@@ -529,7 +503,7 @@
    },
    {
     "position": {
-     "x": 713.19921875,
+     "x": 675.6018676757812,
      "y": 950
     },
     "style": null,
@@ -566,7 +540,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 1025
     },
     "style": null,
@@ -603,7 +577,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 1305
     },
     "style": null,
@@ -696,7 +670,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 1435
     },
     "style": null,
@@ -733,7 +707,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 1100
     },
     "style": null,
@@ -816,7 +790,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 1230
     },
     "style": null,
@@ -853,7 +827,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 410
     },
     "style": null,
@@ -935,7 +909,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 540
     },
     "style": null,
@@ -972,7 +946,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 615
     },
     "style": null,
@@ -1054,7 +1028,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 745
     },
     "style": null,
@@ -1091,7 +1065,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 205
     },
     "style": null,
@@ -1106,8 +1080,8 @@
  "executedValue": null,
  "name": "a",
  "dataType": "numeric",
- "source": "Trigger",
- "attribute": "num",
+ "source": "",
+ "attribute": "",
  "keySource": "",
  "keyAttribute": "",
  "mapping": false,
@@ -1120,7 +1094,7 @@
  "schemaId": ""
 },
       "str": {
- "value": "Mukul",
+ "value": "",
  "executedValue": null,
  "name": "str",
  "dataType": "string",
@@ -1174,7 +1148,7 @@
    },
    {
     "position": {
-     "x": 598.19921875,
+     "x": 560.6018676757812,
      "y": 335
     },
     "style": null,
@@ -1510,5 +1484,46 @@
   },
   "comment": "",
   "isDemo": false
- }
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T09:58:00.808576Z",
+   "updatedAt": "2026-01-13T09:58:03.175503Z",
+   "entityCommitId": "commit-0258c553-28cf-4a69-9f0a-c0d90fa441e0",
+   "entityType": "workflow",
+   "entityId": "6bae885c-244c-4c03-9be9-3339378fdf82",
+   "entityVersion": "draft",
+   "entityNodeId": "n_wL31t9",
+   "dependencyType": "workflow",
+   "dependencyId": "7d819d3c-7232-4714-8966-cd065633aa9a",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T09:58:00.806352Z",
+   "updatedAt": "2026-01-13T09:58:03.173216Z",
+   "entityCommitId": "commit-0258c553-28cf-4a69-9f0a-c0d90fa441e0",
+   "entityType": "workflow",
+   "entityId": "6bae885c-244c-4c03-9be9-3339378fdf82",
+   "entityVersion": "draft",
+   "entityNodeId": "n_0NJLeq",
+   "dependencyType": "rule",
+   "dependencyId": "682176aa-e435-4d1b-ac94-25e16ce33baa",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-13T09:58:00.799386Z",
+   "updatedAt": "2026-01-13T09:58:03.170938Z",
+   "entityCommitId": "commit-0258c553-28cf-4a69-9f0a-c0d90fa441e0",
+   "entityType": "workflow",
+   "entityId": "6bae885c-244c-4c03-9be9-3339378fdf82",
+   "entityVersion": "draft",
+   "entityNodeId": "n_Vw0FoE",
+   "dependencyType": "rule",
+   "dependencyId": "f44b9d82-e849-4c14-8d05-bc83c3d8f954",
+   "dependencyVersion": "draft"
+  }
+ ]
 }

@@ -2,7 +2,7 @@
  "entityType": "variable",
  "data": {
   "createdAt": "2025-09-25T10:05:50.998Z",
-  "updatedAt": "2026-01-12T12:14:16.226496Z",
+  "updatedAt": "2026-01-15T13:48:04.159655Z",
   "isDeleted": false,
   "entityId": "ea76967e-0fac-4d4f-bb02-5bd29d98f10b",
   "name": "Name",
@@ -10,7 +10,7 @@
   "scope": "workspace",
   "dataType": "string",
   "value": {
-   "data": "Atul   ",
+   "data": "Atul",
    "isSecret": false,
    "canReset": true
   },

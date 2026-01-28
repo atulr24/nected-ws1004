@@ -3,9 +3,9 @@
  "category": "dataSet",
  "data": {
   "createdAt": "2026-01-12T06:29:06.243Z",
-  "updatedAt": "2026-01-12T09:35:26.58073Z",
+  "updatedAt": "2026-01-13T06:55:19.546434Z",
   "isDeleted": false,
-  "testedAt": "2026-01-12T09:35:26.58Z",
+  "testedAt": "2026-01-13T06:55:19.545Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "entityId": "f3531c77-273a-4f04-babe-7f9826b6466b",
   "version": "draft",
@@ -19,75 +19,45 @@
    "timeStamp": "2026-01-12T06:29:06.243068001Z"
   },
   "fields": {
-   "city": {
- "ColumnName": "city",
- "DataType": "string",
- "Order": 1,
- "ExecutedValue": "Bengaluru"
-},
-   "country_code": {
- "ColumnName": "country_code",
- "DataType": "string",
- "Order": 7,
- "ExecutedValue": "IN"
-},
    "created_at": {
  "ColumnName": "created_at",
  "DataType": "date",
+ "Order": 1,
+ "ExecutedValue": "2025-11-11"
+},
+   "customer_id": {
+ "ColumnName": "customer_id",
+ "DataType": "numeric",
  "Order": 2,
- "ExecutedValue": "2026-01-12"
-},
-   "credit_limit": {
- "ColumnName": "credit_limit",
- "DataType": "numeric",
- "Order": 3,
- "ExecutedValue": 8000
-},
-   "customer_score": {
- "ColumnName": "customer_score",
- "DataType": "numeric",
- "Order": 4,
- "ExecutedValue": 92
-},
-   "customer_segment": {
- "ColumnName": "customer_segment",
- "DataType": "string",
- "Order": 8,
- "ExecutedValue": "Gold"
-},
-   "email": {
- "ColumnName": "email",
- "DataType": "string",
- "Order": 5,
- "ExecutedValue": "UPDATE ecomm.customers SET email=updated.email@example.coml WHERE id=147"
-},
-   "gender": {
- "ColumnName": "gender",
- "DataType": "string",
- "Order": 6,
- "ExecutedValue": "Female"
+ "ExecutedValue": 21
 },
    "id": {
  "ColumnName": "id",
  "DataType": "numeric",
- "Order": 9,
- "ExecutedValue": 152
+ "Order": 3,
+ "ExecutedValue": 103
 },
-   "name": {
- "ColumnName": "name",
- "DataType": "string",
- "Order": 10,
- "ExecutedValue": "Jane Smith"
+   "order_fee": {
+ "ColumnName": "order_fee",
+ "DataType": "numeric",
+ "Order": 4,
+ "ExecutedValue": 210
 },
-   "state": {
- "ColumnName": "state",
+   "order_volume": {
+ "ColumnName": "order_volume",
+ "DataType": "numeric",
+ "Order": 5,
+ "ExecutedValue": 2100
+},
+   "status": {
+ "ColumnName": "status",
  "DataType": "string",
- "Order": 11,
- "ExecutedValue": "KA"
+ "Order": 6,
+ "ExecutedValue": "Pending"
 }
   },
   "description": "",
-  "query": "SELECT * from ecomm.customers order by id desc",
+  "query": "SELECT * from ecomm.orders order by id desc",
   "params": {
    
   },
@@ -106,7 +76,7 @@
   {
    "isDeleted": false,
    "createdAt": "2026-01-12T06:29:06.252652Z",
-   "updatedAt": "2026-01-12T09:35:24.114767Z",
+   "updatedAt": "2026-01-13T06:55:18.603499Z",
    "entityCommitId": "commit-5c0def2f-6d52-4fa1-9f88-cc5edcfb4aee",
    "entityType": "dataSet",
    "entityId": "f3531c77-273a-4f04-babe-7f9826b6466b",

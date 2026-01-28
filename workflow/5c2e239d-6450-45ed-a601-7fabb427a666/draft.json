@@ -1,0 +1,8224 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.99Z",
+  "updatedAt": "2026-01-15T13:05:22.806899Z",
+  "isDeleted": false,
+  "testedAt": "2026-01-15T13:04:58.782Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+  "version": "draft",
+  "name": "LoanApprovalFlow_new",
+  "commitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-15 10:38:22",
+   "timeStamp": "2026-01-15T10:38:22.990737629Z"
+  },
+  "startNode": "n_T358xk",
+  "description": "",
+  "trigger": {
+   "apiNode": "1",
+   "cronNode": ""
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 0
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "customer_id": {
+ "value": null,
+ "executedValue": 42,
+ "name": "customer_id",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthly_income": {
+ "value": null,
+ "executedValue": 51000,
+ "name": "monthly_income",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "rowID": {
+ "value": null,
+ "executedValue": 0,
+ "name": "rowID",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "customer_id": 42,
+      "monthly_income": 51000,
+      "rowID": 0
+     },
+     "settings": {
+      "authType": "none",
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "Trigger",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 130
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdvwxghzvu4hydq2uq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1025
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdwubmu6jnydqh0zou",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "FOIR": {
+ "value": "({{.GetDetailFromTransUnion.output.Body.data.output.creditdetails.tradeline_imputed_emi}} + {{.Trigger.proposed_emi}})*100/ {{.GetDetailFromTransUnion.output.Body.data.output.creditdetails.monthly_income}}",
+ "executedValue": 48.66595479313863,
+ "name": "FOIR",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 2,
+ "schemaId": ""
+},
+      "OpenLoans_inlast6m": {
+ "value": "COUNT(FILTER({{.GetDetailFromTransUnion.output.Body.data.output.creditdetails.tradelines}},\"($item.$AccountTypeRaw == 5 || $item.$AccountTypeRaw == 9 || $item.$AccountTypeRaw == 10 || $item.$AccountTypeRaw == 31 || $item.$AccountTypeRaw == 35 || $item.$AccountTypeRaw == 36 || $item.$AccountTypeRaw == 37) && $item.$ClosingDate == null && DATEDIFF(TODAY(), $item.$openDate, 'month') < 6 && $item.$sancitonedAmount == 0\"))",
+ "executedValue": 0,
+ "name": "OpenLoans_inlast6m",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "OverdueLoans": {
+ "value": "COUNT(FILTER({{.GetDetailFromTransUnion.output.Body.data.output.creditdetails.tradelines}},\"$item.$overdue > 0 && DATEDIFF(TODAY(), $item.$reportedDate, 'month') <=12\"))",
+ "executedValue": 0,
+ "name": "OverdueLoans",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enquiries_six_months": {
+ "value": "parseInt(\"{{.GetDetailFromTransUnion.output.Body.data.output.creditdetails.enquiries_six_months}}\")",
+ "executedValue": 10,
+ "name": "enquiries_six_months",
+ "dataType": "excelFormula",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 3,
+ "schemaId": ""
+},
+      "points": {
+ "value": 0,
+ "executedValue": 0,
+ "name": "points",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 4,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "0ns",
+      "output": {
+ "FOIR": 48.66595479313863,
+ "OpenLoans_inlast6m": 0,
+ "OverdueLoans": 0,
+ "enquiries_six_months": 10,
+ "points": 0
+},
+      "resetOutput": {
+ 
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 30
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "node_mbdwubmu6jnydqh0zou",
+     "pluginName": "",
+     "status": "",
+     "name": "AggregatedInputs",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "setVariable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1155
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdwubmuq3nznqe5r3",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1230
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdz5600ktf958ogh3",
+    "type": "rule",
+    "data": {
+     "input": {
+      "Date": {
+ "value": null,
+ "executedValue": null,
+ "name": "Date",
+ "dataType": "date",
+ "source": "systemVar",
+ "attribute": "Today",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "customer_id": {
+ "value": null,
+ "executedValue": null,
+ "name": "customer_id",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.points",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "existing_emi": {
+ "value": null,
+ "executedValue": null,
+ "name": "existing_emi",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.points",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "foir": {
+ "value": null,
+ "executedValue": null,
+ "name": "foir",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.points",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "90539575-244b-4eef-9c01-454c5fe47698"
+},
+      "lastexception": {
+ "value": "",
+ "executedValue": null,
+ "name": "lastexception",
+ "dataType": "string",
+ "source": "AggregatedInputs",
+ "attribute": "executionTime",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthly_income": {
+ "value": null,
+ "executedValue": null,
+ "name": "monthly_income",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.OpenLoans_inlast6m",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "c8918322-42d4-4d6f-8697-2f7a08bb681a"
+},
+      "proposed_emi": {
+ "value": null,
+ "executedValue": null,
+ "name": "proposed_emi",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.enquiries_six_months",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "a10f36c6-64f6-4696-9480-d637af3677e2"
+}
+     },
+     "output": null,
+     "executedValue": null,
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 30,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "686f854f-8a5f-47fc-bf4a-3cc7244acbd1",
+     "pluginName": "",
+     "status": "",
+     "name": "FOIR_Eligibility",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1360
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdz5600xneuofp8uj7",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 1435
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzc6dbhli87gda4o8",
+    "type": "switchNode",
+    "data": {
+     "input": {
+      "defaultPath": {
+ "value": false,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "0ns",
+      "output": {
+ "path": "Passed"
+}
+     },
+     "settings": {
+      "timeout": 30
+     },
+     "nodeType": "switchNode",
+     "entity": "switch",
+     "entityId": "node_mbdzc6dbhli87gda4o8",
+     "pluginName": "",
+     "status": "",
+     "name": "FOIREligibilityBranch",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": [
+      {
+       "name": "Passed",
+       "pathId": "group_mbdzc6dbfbkmx9kdxd5"
+      },
+      {
+       "name": "Rejected",
+       "pathId": "group_mbdzcllc80yq50t579l"
+      },
+      {
+       "name": "manualAllocation",
+       "pathId": "group_mbj0kk9bjr2ezzjg6e"
+      }
+     ],
+     "conditions": {
+      "nodes": {
+ "condition_mbdzc6db28faip2xquk": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_mbdzc6dblvkkly6hfw"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_mbdzc6dbfbkmx9kdxd5",
+ "rightNode": [
+ "rhs_mbdzcex2nrdroxs7vwc"
+]
+},
+ "condition_mbdzcllc7uupopstvwo": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_mbdzcllcbqse78j4qse"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_mbdzcllc80yq50t579l",
+ "rightNode": [
+ "rhs_mbdzctfdxcnhk6bgagf"
+]
+},
+ "condition_mbj0kk9bvk6mq4c47q9": {
+ "dataType": "string",
+ "leftNode": [
+ "lhs_mbj0kk9bi0ex6umyxuc"
+],
+ "nodeType": "condition",
+ "operator": "eq",
+ "parent": "group_mbj0kk9bjr2ezzjg6e",
+ "rightNode": [
+ "rhs_mbj0lcwql2bzl2rc7r"
+]
+},
+ "group_mbdzc6dbfbkmx9kdxd5": {
+ "children": [
+ "condition_mbdzc6db28faip2xquk"
+],
+ "name": "Passed",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_mbdzcllc80yq50t579l": {
+ "children": [
+ "condition_mbdzcllc7uupopstvwo"
+],
+ "name": "Rejected",
+ "nodeType": "group",
+ "operator": ""
+},
+ "group_mbj0kk9bjr2ezzjg6e": {
+ "children": [
+ "condition_mbj0kk9bvk6mq4c47q9"
+],
+ "name": "manualAllocation",
+ "nodeType": "group",
+ "operator": ""
+},
+ "lhs_mbdzc6dblvkkly6hfw": {
+ "attribute": "output[0].final_decision",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_mbdzc6db28faip2xquk",
+ "sourceType": "FOIR_Eligibility",
+ "value": null
+},
+ "lhs_mbdzcllcbqse78j4qse": {
+ "attribute": "output[0].final_decision",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_mbdzcllc7uupopstvwo",
+ "sourceType": "FOIR_Eligibility",
+ "value": null
+},
+ "lhs_mbj0kk9bi0ex6umyxuc": {
+ "attribute": "output[0].final_decision",
+ "dataType": "string",
+ "nodeType": "params",
+ "parent": "condition_mbj0kk9bvk6mq4c47q9",
+ "sourceType": "FOIR_Eligibility",
+ "value": null
+},
+ "rhs_mbdzcex2nrdroxs7vwc": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Eligible",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_mbdzc6db28faip2xquk",
+ "source": null,
+ "sourceType": null,
+ "value": "Eligible"
+},
+ "rhs_mbdzctfdxcnhk6bgagf": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "Reject",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_mbdzcllc7uupopstvwo",
+ "source": null,
+ "sourceType": null,
+ "value": "Reject"
+},
+ "rhs_mbj0lcwql2bzl2rc7r": {
+ "attribute": null,
+ "dataType": "string",
+ "executedValue": "ManualReview",
+ "nodeType": "constant",
+ "otherFields": {
+ 
+},
+ "parent": "condition_mbj0kk9bvk6mq4c47q9",
+ "source": null,
+ "sourceType": null,
+ "value": "ManualReview"
+}
+}
+     },
+     "blockName": "switchBlock",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 215.60186767578125,
+     "y": 1565
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzc6dbo57zmvo5isq",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 445.60186767578125,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzc6dbm0k4kayslac",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 2050
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzc6dboh969w9tqqn",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": true,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 675.6018676757812,
+     "y": 1770
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzd2y0p5r6pv6lum8",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 675.6018676757812,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzerwqibuzqtaaeh",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "final_decision": {
+ "value": "Reject",
+ "executedValue": "Reject",
+ "name": "final_decision",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "728bd2b1-777d-4ddf-84c3-e3c2192d88e0"
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "final_decision": "Reject"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_mbdzerwqibuzqtaaeh",
+     "pluginName": "",
+     "status": "",
+     "name": "rejectedResponse",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 675.6018676757812,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbdzerwqjknqvatj9ln",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 905.6018676757812,
+     "y": 1770
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbj0lmfi9wjltivzbl",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 215.60186767578125,
+     "y": 1640
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbj1olajgtlmx12uv9o",
+    "type": "workflowNode",
+    "data": {
+     "input": {
+      "approverId": {
+ "value": null,
+ "executedValue": null,
+ "name": "approverId",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": true,
+ "order": 0,
+ "schemaId": ""
+},
+      "approverName": {
+ "value": "",
+ "executedValue": null,
+ "name": "approverName",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": true,
+ "order": 0,
+ "schemaId": ""
+},
+      "avgBankBalance": {
+ "value": null,
+ "executedValue": null,
+ "name": "avgBankBalance",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "avg_bank_balance",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "bankb": {
+ "value": 1000,
+ "executedValue": null,
+ "name": "bankb",
+ "dataType": "numeric",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "creditScore": {
+ "value": null,
+ "executedValue": null,
+ "name": "creditScore",
+ "dataType": "numeric",
+ "source": "GetDetailFromTransUnion",
+ "attribute": "output.Body.data.output.creditdetails.bureau_score",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "customerId": {
+ "value": null,
+ "executedValue": null,
+ "name": "customerId",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "customer_id",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enquiriesInLast6m": {
+ "value": null,
+ "executedValue": null,
+ "name": "enquiriesInLast6m",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.enquiries_six_months",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "foirPercent": {
+ "value": null,
+ "executedValue": null,
+ "name": "foirPercent",
+ "dataType": "numeric",
+ "source": "FOIR_Eligibility",
+ "attribute": "output[0].foir",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthlyIncome": {
+ "value": null,
+ "executedValue": null,
+ "name": "monthlyIncome",
+ "dataType": "numeric",
+ "source": "GetDetailFromTransUnion",
+ "attribute": "output.Body.data.output.creditdetails.imputed_income",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "proposedEmi": {
+ "value": null,
+ "executedValue": null,
+ "name": "proposedEmi",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "proposed_emi",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "rowID": {
+ "value": null,
+ "executedValue": null,
+ "name": "rowID",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "rowID",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "325ms",
+      "name": "approvedLoanCalculation",
+      "output": {
+ "LoanDetails": {
+ "InterestRate": 36,
+ "MaxTenure": 24,
+ "MaxTicket": 1500000,
+ "MinTicket": 20000,
+ "ProcessingFeePerc": 5,
+ "defaultOutputData": true,
+ "rowError": null,
+ "rowId": 8
+},
+ "final_decision": "Approved"
+},
+      "version": "0.10"
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "workflowNode",
+     "entity": "workflow",
+     "entityId": "d8544672-280c-4b88-b510-1d0e496580eb",
+     "pluginName": "",
+     "status": "",
+     "name": "approvedLoanCalculation",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "workflow",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 215.60186767578125,
+     "y": 1770
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbj1olajnhaqvgeu4p",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 215.60186767578125,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbj1xqzqtzq8on4h04",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "LoanDetails": {
+ "value": null,
+ "executedValue": {
+  "InterestRate": 22,
+  "MaxTenure": 60,
+  "MaxTicket": 5500000,
+  "MinTicket": 50000,
+  "ProcessingFeePerc": 3,
+  "defaultOutputData": true,
+  "rowError": null,
+  "rowId": 3
+ },
+ "name": "LoanDetails",
+ "dataType": "json",
+ "source": "approvedLoanCalculation",
+ "attribute": "output.LoanDetails",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 1,
+ "schemaId": ""
+},
+      "final_decision": {
+ "value": "Approved",
+ "executedValue": "Approved",
+ "name": "final_decision",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "LoanDetails": {
+ "InterestRate": 36,
+ "MaxTenure": 24,
+ "MaxTicket": 1500000,
+ "MinTicket": 20000,
+ "ProcessingFeePerc": 5,
+ "defaultOutputData": true,
+ "rowError": null,
+ "rowId": 8
+},
+ "final_decision": "Approved"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "node_mbj1xqzqtzq8on4h04",
+     "pluginName": "",
+     "status": "",
+     "name": "autoApprovedResponse",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "response",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 215.60186767578125,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbj1xqzqfjcsqq81w8k",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 905.6018676757812,
+     "y": 1845
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkkzjw9ol6r1qk18s",
+    "type": "workflowNode",
+    "data": {
+     "input": {
+      "avgBankBalance": {
+ "value": null,
+ "executedValue": null,
+ "name": "avgBankBalance",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "avg_bank_balance",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "creditScore": {
+ "value": null,
+ "executedValue": null,
+ "name": "creditScore",
+ "dataType": "numeric",
+ "source": "GetDetailFromTransUnion",
+ "attribute": "output.Body.data.output.creditdetails.bureau_score",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "customerId": {
+ "value": null,
+ "executedValue": null,
+ "name": "customerId",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "customer_id",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "enquiries": {
+ "value": null,
+ "executedValue": null,
+ "name": "enquiries",
+ "dataType": "numeric",
+ "source": "AggregatedInputs",
+ "attribute": "output.enquiries_six_months",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "foir": {
+ "value": null,
+ "executedValue": null,
+ "name": "foir",
+ "dataType": "numeric",
+ "source": "FOIR_Eligibility",
+ "attribute": "output[0].foir",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "monthlyIncome": {
+ "value": null,
+ "executedValue": null,
+ "name": "monthlyIncome",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "monthly_income",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "proposedEmi": {
+ "value": null,
+ "executedValue": null,
+ "name": "proposedEmi",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "proposed_emi",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "rowID": {
+ "value": null,
+ "executedValue": null,
+ "name": "rowID",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "rowID",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "output": {
+ "allocatedResponse": "Loan Request Approver Assigned . Please check the approve loans screen on the UI.",
+ "approverId": 0,
+ "approverName": "System"
+}
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 60
+     },
+     "nodeType": "workflowNode",
+     "entity": "workflow",
+     "entityId": "3066051b-cca4-442c-8d93-903afd14c1fd",
+     "pluginName": "",
+     "status": "",
+     "name": "loanRequestAllocationForManualReview",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "workflow",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 905.6018676757812,
+     "y": 1975
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "node_mbkkzjw9cm25990uul",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "node_mbdzc6dbhli87gda4o8",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 820
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_xaP7VZ",
+    "type": "restApiNode",
+    "data": {
+     "input": {
+      "authentication": {
+ "value": "Private",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "baseUrl": {
+ "value": "https://nected-KoO5Q.nected.io/nected/workflow/24ed9443-46ac-431c-9d48-a3e97a264d9a",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "body": {
+ "value": "{\n  \"environment\": \"{{.systemVar.Environment}}\",\n  \"params\": {}\n}",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "contentType": {
+ "value": "application/json",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "headers": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "method": {
+ "value": "POST",
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "path": {
+ "value": null,
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+},
+      "queryParams": {
+ "value": [],
+ "executedValue": null,
+ "name": "",
+ "dataType": "",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "",
+      "executionTime": "509ms",
+      "output": {
+ "Body": {
+ "code": "success",
+ "data": {
+ "error": "",
+ "executionId": "workflow:2136:24ed9443-46ac-431c-9d48-a3e97a264d9a:draft:b0dbfb68-9559-4617-82de-ca3c79533531",
+ "executionTime": "7ms",
+ "name": "CreditBureauAPI",
+ "output": {
+ "creditdetails": {
+ "account_type_arr": {
+ "al": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 1,
+ "count": 1,
+ "exists": true
+}
+},
+ "cc": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 5,
+ "count": 6,
+ "exists": true
+}
+},
+ "cl": {
+ "enquiries": {
+ "count": 1,
+ "exists": true
+},
+ "tradeline": {
+ "active": 0,
+ "count": 1,
+ "exists": true
+}
+},
+ "cvl": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 0,
+ "exists": false
+}
+},
+ "el": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 0,
+ "exists": false
+}
+},
+ "gl": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 0,
+ "exists": false
+}
+},
+ "hl": {
+ "enquiries": {
+ "count": 8,
+ "exists": true
+},
+ "tradeline": {
+ "active": 1,
+ "count": 2,
+ "exists": true
+}
+},
+ "pl": {
+ "enquiries": {
+ "count": 13,
+ "exists": true
+},
+ "tradeline": {
+ "active": 4,
+ "count": 22,
+ "exists": true
+}
+},
+ "trl": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 0,
+ "exists": false
+}
+},
+ "twl": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 1,
+ "exists": true
+}
+},
+ "ucl": {
+ "enquiries": {
+ "count": 0,
+ "exists": false
+},
+ "tradeline": {
+ "active": 0,
+ "count": 0,
+ "exists": false
+}
+}
+},
+ "age": 37,
+ "amount_closed_6m": 4773000,
+ "amt_cl_closed_two_years": 0,
+ "amt_cl_total": 5844000,
+ "bad_pincode": "No",
+ "bureau": "Transunion",
+ "bureau_score": 782,
+ "cc_balance_by_salary": 0.3078,
+ "cc_or_bl_in_60_days": 1,
+ "cc_util": 19.8571,
+ "city_name": "Korattur",
+ "city_tier": "TIER1",
+ "credit_history": 188,
+ "credit_line_udf1": "10",
+ "credit_line_udf10": "",
+ "credit_line_udf10_numeric": null,
+ "credit_line_udf2": "",
+ "credit_line_udf3": "",
+ "credit_line_udf4": "",
+ "credit_line_udf5": "",
+ "credit_line_udf6": "",
+ "credit_line_udf6_numeric": null,
+ "credit_line_udf7": "",
+ "credit_line_udf7_numeric": null,
+ "credit_line_udf8": "",
+ "credit_line_udf8_numeric": null,
+ "credit_line_udf9": "",
+ "credit_line_udf9_numeric": null,
+ "dealer_approved_amount": "",
+ "dealer_approved_dealer_id": "",
+ "dealer_id": "1852",
+ "dpd_30": 35,
+ "dpd_30_12_month": 0,
+ "dpd_30_12_month_max": 16,
+ "dpd_30_12_month_min": 0,
+ "dpd_30_24_month": 0,
+ "dpd_30_24_month_max": 16,
+ "dpd_30_24_month_min": 0,
+ "dpd_30_36_month": 0,
+ "dpd_30_36_month_max": 16,
+ "dpd_30_36_month_min": 0,
+ "dpd_30_6_month": 0,
+ "dpd_30_6_month_max": 16,
+ "dpd_30_6_month_min": 0,
+ "dpd_30_max": 0,
+ "dpd_30_min": 0,
+ "dpd_60": 35,
+ "dpd_60_12_month": 0,
+ "dpd_60_12_month_max": 16,
+ "dpd_60_12_month_min": 0,
+ "dpd_60_36_month": 0,
+ "dpd_60_36_month_max": 16,
+ "dpd_60_36_month_min": 0,
+ "dpd_60_60_month": 0,
+ "dpd_60_60_month_max": 16,
+ "dpd_60_60_month_min": 0,
+ "dpd_60_max": 0,
+ "dpd_60_min": 0,
+ "dpd_7": 1,
+ "dpd_7_6_month": 0,
+ "dpd_7_6_month_max": 16,
+ "dpd_7_6_month_min": 0,
+ "dpd_7_max": 16,
+ "dpd_7_min": 0,
+ "dpd_90": 35,
+ "dpd_90_96_month": 0,
+ "dpd_90_96_month_max": 16,
+ "dpd_90_96_month_min": 0,
+ "dpd_90_max": 0,
+ "dpd_90_min": 0,
+ "dpd_ever": 2,
+ "dpd_ever_max": 16,
+ "dpd_ever_min": 0,
+ "employment_age": 0,
+ "employment_type": "Salaried",
+ "enquiries": [
+ {
+  "amount": 2900000,
+  "dateOfEnquiry": "14-05-2024",
+  "dateOfEnquiryParsed": "2024-05-14",
+  "dateOfEnquiryRaw": "14052024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I001"
+ },
+ {
+  "amount": 800000,
+  "dateOfEnquiry": "23-04-2024",
+  "dateOfEnquiryParsed": "2024-04-23",
+  "dateOfEnquiryRaw": "23042024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I002"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "12-04-2024",
+  "dateOfEnquiryParsed": "2024-04-12",
+  "dateOfEnquiryRaw": "12042024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I003"
+ },
+ {
+  "amount": 2500000,
+  "dateOfEnquiry": "28-03-2024",
+  "dateOfEnquiryParsed": "2024-03-28",
+  "dateOfEnquiryRaw": "28032024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I004"
+ },
+ {
+  "amount": 2500000,
+  "dateOfEnquiry": "27-03-2024",
+  "dateOfEnquiryParsed": "2024-03-27",
+  "dateOfEnquiryRaw": "27032024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I005"
+ },
+ {
+  "amount": 2500000,
+  "dateOfEnquiry": "11-03-2024",
+  "dateOfEnquiryParsed": "2024-03-11",
+  "dateOfEnquiryRaw": "11032024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I006"
+ },
+ {
+  "amount": 3500000,
+  "dateOfEnquiry": "04-03-2024",
+  "dateOfEnquiryParsed": "2024-03-04",
+  "dateOfEnquiryRaw": "04032024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I007"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "03-03-2024",
+  "dateOfEnquiryParsed": "2024-03-03",
+  "dateOfEnquiryRaw": "03032024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I008"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "30-01-2024",
+  "dateOfEnquiryParsed": "2024-01-30",
+  "dateOfEnquiryRaw": "30012024",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I009"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "22-12-2023",
+  "dateOfEnquiryParsed": "2023-12-22",
+  "dateOfEnquiryRaw": "22122023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I010"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "31-07-2023",
+  "dateOfEnquiryParsed": "2023-07-31",
+  "dateOfEnquiryRaw": "31072023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I011"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "01-06-2023",
+  "dateOfEnquiryParsed": "2023-06-01",
+  "dateOfEnquiryRaw": "01062023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I012"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "24-04-2023",
+  "dateOfEnquiryParsed": "2023-04-24",
+  "dateOfEnquiryRaw": "24042023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I013"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "21-03-2023",
+  "dateOfEnquiryParsed": "2023-03-21",
+  "dateOfEnquiryRaw": "21032023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I014"
+ },
+ {
+  "amount": 1000000,
+  "dateOfEnquiry": "16-03-2023",
+  "dateOfEnquiryParsed": "2023-03-16",
+  "dateOfEnquiryRaw": "16032023",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I015"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "30-12-2022",
+  "dateOfEnquiryParsed": "2022-12-30",
+  "dateOfEnquiryRaw": "30122022",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I016"
+ },
+ {
+  "amount": 1600000,
+  "dateOfEnquiry": "28-09-2022",
+  "dateOfEnquiryParsed": "2022-09-28",
+  "dateOfEnquiryRaw": "28092022",
+  "memberName": "CEASE-TERMINATED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I017"
+ },
+ {
+  "amount": 2500000,
+  "dateOfEnquiry": "27-09-2022",
+  "dateOfEnquiryParsed": "2022-09-27",
+  "dateOfEnquiryRaw": "27092022",
+  "memberName": "CEASE-TERMINATED",
+  "purpose": "Housing Loan (SECURED)",
+  "purposeRaw": "02",
+  "segmentTag": "I018"
+ },
+ {
+  "amount": 1,
+  "dateOfEnquiry": "23-08-2022",
+  "dateOfEnquiryParsed": "2022-08-23",
+  "dateOfEnquiryRaw": "23082022",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "",
+  "purposeRaw": "00",
+  "segmentTag": "I019"
+ },
+ {
+  "amount": 1,
+  "dateOfEnquiry": "19-07-2022",
+  "dateOfEnquiryParsed": "2022-07-19",
+  "dateOfEnquiryRaw": "19072022",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I020"
+ },
+ {
+  "amount": 5000,
+  "dateOfEnquiry": "30-05-2022",
+  "dateOfEnquiryParsed": "2022-05-30",
+  "dateOfEnquiryRaw": "30052022",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I021"
+ },
+ {
+  "amount": 10000,
+  "dateOfEnquiry": "08-09-2021",
+  "dateOfEnquiryParsed": "2021-09-08",
+  "dateOfEnquiryRaw": "08092021",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Consumer Loan (UNSECURED)",
+  "purposeRaw": "06",
+  "segmentTag": "I022"
+ },
+ {
+  "amount": 500000,
+  "dateOfEnquiry": "19-08-2021",
+  "dateOfEnquiryParsed": "2021-08-19",
+  "dateOfEnquiryRaw": "19082021",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "",
+  "purposeRaw": "00",
+  "segmentTag": "I023"
+ },
+ {
+  "amount": 500000,
+  "dateOfEnquiry": "12-08-2021",
+  "dateOfEnquiryParsed": "2021-08-12",
+  "dateOfEnquiryRaw": "12082021",
+  "memberName": "NOT DISCLOSED",
+  "purpose": "Personal Loan (UNSECURED)",
+  "purposeRaw": "05",
+  "segmentTag": "I024"
+ }
+],
+ "enquiries_six_months": 10,
+ "enquiries_two_months": 3,
+ "enquiry_count": 24,
+ "gender": "Male",
+ "highest_auto_housing_sanction_6_months": 2645845,
+ "highest_cl_sanctioned": 100000,
+ "highest_pl_sanctioned": 1000000,
+ "house_ownership": "Current",
+ "imputed_income": 43800,
+ "line_created_date": "2024-06-01",
+ "max_dpd_ever": "16",
+ "min_credit_history": 5351589.5,
+ "min_credit_history_by_income": 26.7579,
+ "monthly_income": "200000",
+ "months_since_recent_tr_closed": 0,
+ "months_since_recent_tradeline": 0,
+ "months_since_recent_unsecured_tr_closed": 0,
+ "months_since_recent_unsecured_tr_opened": 0,
+ "new_cc_12_months": 0,
+ "new_cc_24_months": 0,
+ "new_tradelines_12_months": 7,
+ "new_tradelines_24_months": 13,
+ "overdue_amount": 0,
+ "pa_dpd": {
+ "1_12m": 0,
+ "1_1m": 0,
+ "30_12m": 0,
+ "30_6m": 0,
+ "30_9m": 0,
+ "5_1m": 0,
+ "60_12m": 0,
+ "60_24m": 0,
+ "90_12m": 0,
+ "90_36m": 0
+},
+ "pb_dpd": {
+ "1_12m": 0,
+ "1_1m": 0,
+ "30_12m": 0,
+ "30_6m": 0,
+ "30_9m": 0,
+ "5_1m": 0,
+ "60_12m": 0,
+ "60_24m": 0,
+ "90_12m": 0,
+ "90_36m": 0
+},
+ "pincode": "600099",
+ "pre_approval_entries_created_at": "2024-05-08",
+ "pre_approval_entries_max_drawdown": 750000,
+ "pre_approval_entries_max_tenure": 36,
+ "pre_approval_entries_min_drawdown": 10000,
+ "pre_approval_entries_min_tenure": 1,
+ "pre_approval_entries_roi": 17.99,
+ "pre_approval_entries_roi_type": "Declining",
+ "pre_approval_entries_updated_at": "2024-05-08",
+ "pre_approval_entries_upper_limit": 750000,
+ "sanction_amount_secured": 1860000,
+ "sanction_amount_unsecured": 5917000,
+ "sanction_amount_without_cc": 11233953,
+ "seasoning": 186,
+ "seasoningArr": [
+ 0,
+ 0,
+ 0,
+ 0,
+ 1,
+ 4,
+ 4,
+ 3,
+ 5,
+ 13,
+ 2,
+ 6,
+ 6,
+ 6,
+ 0,
+ 19,
+ 42,
+ 50,
+ 18,
+ 57,
+ 24,
+ 36,
+ 60,
+ 135,
+ 59,
+ 142,
+ 5,
+ 151,
+ 10,
+ 19,
+ 6,
+ 9,
+ 186,
+ 2,
+ 57
+],
+ "secured_debt": 5.93,
+ "secured_tradeline_count": 4,
+ "small_loans_count": 1,
+ "top_of_wallet_age": 137,
+ "total_cc_limit_6_months": 383005,
+ "total_cl_sanction_6_months": 100000,
+ "total_clean_unsecured": 5087005,
+ "total_indebtness": 12.78,
+ "total_pl_sanction_6_months": 4604000,
+ "total_settled_loans": 0,
+ "total_settlements_12_months": 0,
+ "tr_closed_12m": 9,
+ "tr_closed_24m": 14,
+ "tradeline_count": 35,
+ "tradeline_imputed_emi": 37331.909586277274,
+ "tradeline_imputed_unsecured_emi": 11874.179292691571,
+ "tradelines": [
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 1000000,
+  "creditLimit": 0,
+  "currentBalance": 1000000,
+  "emi": 29900,
+  "highestCredit": 1000000,
+  "lastpaymentDate": null,
+  "loanAmount": 1000000,
+  "openDate": "2024-05-03",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2024"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "03-05-2024",
+  "responsibility": null,
+  "sancitonedAmount": 1000000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 307500,
+  "creditLimit": 0,
+  "currentBalance": 307500,
+  "emi": 8248,
+  "highestCredit": 307500,
+  "lastpaymentDate": "2024-04-29",
+  "loanAmount": 307500,
+  "openDate": "2024-04-28",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 307500,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2024-04-23",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 100000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 4897,
+  "highestCredit": 100000,
+  "lastpaymentDate": "2024-04-23",
+  "loanAmount": 100000,
+  "openDate": "2024-04-23",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 100000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 2,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 886608,
+  "creditLimit": 0,
+  "currentBalance": 886608,
+  "emi": 0,
+  "highestCredit": 886608,
+  "lastpaymentDate": "2024-03-29",
+  "loanAmount": 886608,
+  "openDate": "2024-03-29",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 886608,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Housing Loan (SECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2024-01-30",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 1200000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 32800,
+  "highestCredit": 1200000,
+  "lastpaymentDate": "2024-01-30",
+  "loanAmount": 1200000,
+  "openDate": "2023-12-28",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 1200000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-12-22",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 458400,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 458400,
+  "lastpaymentDate": null,
+  "loanAmount": 458400,
+  "openDate": "2023-08-16",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-12-2023",
+  "responsibility": null,
+  "sancitonedAmount": 458400,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-12-22",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 114600,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 3334,
+  "highestCredit": 114600,
+  "lastpaymentDate": "2023-12-22",
+  "loanAmount": 114600,
+  "openDate": "2023-08-11",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "29-02-2024",
+  "responsibility": null,
+  "sancitonedAmount": 114600,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-08-11",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 300000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 9452,
+  "highestCredit": 300000,
+  "lastpaymentDate": "2023-08-11",
+  "loanAmount": 300000,
+  "openDate": "2023-05-08",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-10-2023",
+  "responsibility": null,
+  "sancitonedAmount": 300000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 0,
+  "Closed": "Yes",
+  "ClosingDate": "2023-10-31",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 240000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 7561,
+  "highestCredit": 240000,
+  "lastpaymentDate": null,
+  "loanAmount": 240000,
+  "openDate": "2023-05-08",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 240000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": ""
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2024-05-22",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 1000000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 21618,
+  "highestCredit": 1000000,
+  "lastpaymentDate": "2024-05-05",
+  "loanAmount": 1000000,
+  "openDate": "2023-03-21",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "24-05-2024",
+  "responsibility": null,
+  "sancitonedAmount": 1000000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-03-21",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 112000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 5273,
+  "highestCredit": 112000,
+  "lastpaymentDate": "2023-03-21",
+  "loanAmount": 112000,
+  "openDate": "2023-01-02",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-05-2023",
+  "responsibility": null,
+  "sancitonedAmount": 112000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-01-03",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 100000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 13639,
+  "highestCredit": 100000,
+  "lastpaymentDate": "2023-01-03",
+  "loanAmount": 100000,
+  "openDate": "2022-06-11",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-03-2023",
+  "responsibility": null,
+  "sancitonedAmount": 100000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 6,
+  "Closed": "Yes",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 100000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 100000,
+  "lastpaymentDate": "2022-11-01",
+  "loanAmount": 100000,
+  "openDate": "2022-04-30",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 100000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Consumer Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 0,
+  "creditLimit": 50000,
+  "currentBalance": -1,
+  "emi": 0,
+  "highestCredit": 0,
+  "lastpaymentDate": null,
+  "loanAmount": 0,
+  "openDate": "2021-10-04",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "12-04-2022",
+  "responsibility": null,
+  "sancitonedAmount": 50000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2022-09-25",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 1000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 1000,
+  "lastpaymentDate": "2021-09-08",
+  "loanAmount": 1000,
+  "openDate": "2021-09-08",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-09-2022",
+  "responsibility": null,
+  "sancitonedAmount": 1000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-03-30",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 500000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 500000,
+  "lastpaymentDate": "2023-03-28",
+  "loanAmount": 500000,
+  "openDate": "2021-08-25",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-03-2023",
+  "responsibility": null,
+  "sancitonedAmount": 500000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 80000,
+  "creditLimit": 0,
+  "currentBalance": 424,
+  "emi": 0,
+  "highestCredit": 80000,
+  "lastpaymentDate": "2023-08-05",
+  "loanAmount": 80000,
+  "openDate": "2020-01-26",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2020"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-08-2023",
+  "responsibility": null,
+  "sancitonedAmount": 80000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 80000,
+  "creditLimit": 0,
+  "currentBalance": 474,
+  "emi": 0,
+  "highestCredit": 80000,
+  "lastpaymentDate": "2024-04-06",
+  "loanAmount": 80000,
+  "openDate": "2020-01-26",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 80000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2021-04-02",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 400000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 8998,
+  "highestCredit": 400000,
+  "lastpaymentDate": "2021-03-05",
+  "loanAmount": 400000,
+  "openDate": "2019-08-16",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2019"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2021",
+  "responsibility": null,
+  "sancitonedAmount": 400000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 1,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 785845,
+  "creditLimit": 0,
+  "currentBalance": 299570,
+  "emi": 12838,
+  "highestCredit": 785845,
+  "lastpaymentDate": "2024-04-15",
+  "loanAmount": 785845,
+  "openDate": "2019-06-17",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 785845,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Auto Loan (Personal) (SECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2019-08-17",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 300000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 300000,
+  "lastpaymentDate": "2019-08-17",
+  "loanAmount": 300000,
+  "openDate": "2017-07-21",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2019"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2017"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-11-2019",
+  "responsibility": null,
+  "sancitonedAmount": 300000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 7505,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 7505,
+  "lastpaymentDate": "2017-04-29",
+  "loanAmount": 7505,
+  "openDate": "2014-04-27",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2020"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2020"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-10-2023",
+  "responsibility": null,
+  "sancitonedAmount": 7505,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2018-10-06",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 101000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 101000,
+  "lastpaymentDate": "2018-10-06",
+  "loanAmount": 101000,
+  "openDate": "2013-09-30",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2018"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2015"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-10-2018",
+  "responsibility": null,
+  "sancitonedAmount": 101000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 51688,
+  "creditLimit": 50000,
+  "currentBalance": 32061,
+  "emi": 0,
+  "highestCredit": 51688,
+  "lastpaymentDate": "2024-03-23",
+  "loanAmount": 51688,
+  "openDate": "2012-12-11",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "02-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 50000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2017-08-06",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 289000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 289000,
+  "lastpaymentDate": "2017-08-06",
+  "loanAmount": 289000,
+  "openDate": "2012-08-14",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2017"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2014"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-08-2017",
+  "responsibility": null,
+  "sancitonedAmount": 289000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 2,
+  "Closed": "Yes",
+  "ClosingDate": "2024-04-29",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 1800000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 18274,
+  "highestCredit": 1800000,
+  "lastpaymentDate": "2024-04-10",
+  "loanAmount": 1800000,
+  "openDate": "2012-05-18",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 16,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "03-05-2024",
+  "responsibility": null,
+  "sancitonedAmount": 1800000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Housing Loan (SECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2012-08-29",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 100000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 100000,
+  "lastpaymentDate": "2012-08-29",
+  "loanAmount": 100000,
+  "openDate": "2012-03-12",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2012"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-06-2014",
+  "responsibility": null,
+  "sancitonedAmount": 100000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 105894,
+  "creditLimit": 109500,
+  "currentBalance": 25827,
+  "emi": 0,
+  "highestCredit": 105894,
+  "lastpaymentDate": "2024-04-30",
+  "loanAmount": 105894,
+  "openDate": "2011-09-12",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "24-05-2024",
+  "responsibility": null,
+  "sancitonedAmount": 109500,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 13,
+  "Closed": "Yes",
+  "ClosingDate": "2012-07-30",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 60000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 60000,
+  "lastpaymentDate": "2012-07-07",
+  "loanAmount": 60000,
+  "openDate": "2011-08-08",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2011"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-07-2012",
+  "responsibility": null,
+  "sancitonedAmount": 60000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Two wheeler Loan (SECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2012-08-29",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 300000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 300000,
+  "lastpaymentDate": "2012-07-05",
+  "loanAmount": 300000,
+  "openDate": "2010-12-01",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2012"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2011"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2010"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-06-2014",
+  "responsibility": null,
+  "sancitonedAmount": 300000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2010-12-06",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 200000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 200000,
+  "lastpaymentDate": "2010-12-06",
+  "loanAmount": 200000,
+  "openDate": "2010-05-07",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2010"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2010"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-06-2014",
+  "responsibility": null,
+  "sancitonedAmount": 200000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 9,
+  "Closed": "Yes",
+  "ClosingDate": "2010-02-08",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 150000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 3943,
+  "highestCredit": 150000,
+  "lastpaymentDate": null,
+  "loanAmount": 150000,
+  "openDate": "2009-04-15",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2014"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-12-2016",
+  "responsibility": null,
+  "sancitonedAmount": 150000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Loan to Professional (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "No",
+  "ClosingDate": null,
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 115487,
+  "creditLimit": 93000,
+  "currentBalance": 3671,
+  "emi": 0,
+  "highestCredit": 115487,
+  "lastpaymentDate": "2024-03-28",
+  "loanAmount": 115487,
+  "openDate": "2008-09-23",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2024"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2022"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2021"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2021"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-04-2024",
+  "responsibility": null,
+  "sancitonedAmount": 93000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 5,
+  "Closed": "Yes",
+  "ClosingDate": "2023-03-21",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "creditExtended": 168000,
+  "creditLimit": 0,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 168000,
+  "lastpaymentDate": null,
+  "loanAmount": 168000,
+  "openDate": "2023-01-02",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2023"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2023"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "30-11-2023",
+  "responsibility": null,
+  "sancitonedAmount": 168000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Personal Loan (UNSECURED)"
+ },
+ {
+  "AccountTypeRaw": 10,
+  "Closed": "Yes",
+  "ClosingDate": "2016-08-08",
+  "SettledWrittenOff": "No",
+  "accountName": "NOT DISCLOSED",
+  "accountNo": null,
+  "amountRequested": 250000,
+  "creditExtended": 72323,
+  "creditLimit": 73000,
+  "currentBalance": 0,
+  "emi": 0,
+  "highestCredit": 72323,
+  "lastpaymentDate": "2016-07-02",
+  "loanAmount": 72323,
+  "openDate": "2011-09-12",
+  "overdue": 0,
+  "ownershipTypeRaw": "1",
+  "paymentHistory": [
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2016"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 1,
+  "month": "10",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "08",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "06",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2015"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "10",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 1,
+  "month": "08",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "07",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 1,
+  "month": "06",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "05",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "04",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "03",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "02",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "01",
+  "month_str": null,
+  "year": "2014"
+ },
+ {
+  "dpd": 0,
+  "month": "12",
+  "month_str": null,
+  "year": "2013"
+ },
+ {
+  "dpd": 0,
+  "month": "11",
+  "month_str": null,
+  "year": "2013"
+ },
+ {
+  "dpd": 1,
+  "month": "10",
+  "month_str": null,
+  "year": "2013"
+ },
+ {
+  "dpd": 0,
+  "month": "09",
+  "month_str": null,
+  "year": "2013"
+ }
+],
+  "paymentStatus": null,
+  "reportedDate": "31-10-2020",
+  "responsibility": null,
+  "sancitonedAmount": 73000,
+  "status": null,
+  "suitFiledRaw": null,
+  "type": "Credit Card (UNSECURED)"
+ }
+],
+ "unsecured_debt": 6.85,
+ "unsecured_tradeline_count": 29
+}
+},
+ "resumeInfo": [],
+ "version": "draft",
+ "workflowId": "24ed9443-46ac-431c-9d48-a3e97a264d9a"
+},
+ "message": "Success"
+},
+ "Headers": {
+ "Access-Control-Allow-Credentials": "true",
+ "Access-Control-Allow-Headers": "Authorization, *",
+ "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+ "Access-Control-Allow-Origin": "*",
+ "Access-Control-Expose-Headers": "Content-Length",
+ "Access-Control-Max-Age": "86400",
+ "Cache-Control": "no-cache",
+ "Content-Type": "application/json; charset=utf-8",
+ "Date": "Mon, 12 Jan 2026 09:19:42 GMT",
+ "Strict-Transport-Security": "max-age=315360000; includeSubdomains"
+},
+ "StatusCode": 200
+}
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "cacheKeys": "",
+      "durationUnit": "d",
+      "durationValue": 0,
+      "errorContinue": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "restApiNode",
+     "entity": "connector",
+     "entityId": "29b593b8-ea2d-4184-bfa5-663e69f45acf",
+     "pluginName": "",
+     "status": "",
+     "name": "GetDetailFromTransUnion",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "restAPI",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 950
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_eHnSKT",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 615
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_bzxYFr",
+    "type": "rule",
+    "data": {
+     "input": {
+      "current_status": {
+ "value": "",
+ "executedValue": null,
+ "name": "current_status",
+ "dataType": "string",
+ "source": "globalVar",
+ "attribute": "Name",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": "d19f17a2-bd54-4fcd-a9f1-fe45fe7618d1"
+}
+     },
+     "output": null,
+     "executedValue": null,
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "1fd02687-bf69-4768-8411-6199bc69a276",
+     "pluginName": "",
+     "status": "",
+     "name": "ruleWIthNumericIP",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 745
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_9u4opn",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 410
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_z72xSR",
+    "type": "rule",
+    "data": {
+     "input": {
+      "asfe": {
+ "value": null,
+ "executedValue": null,
+ "name": "asfe",
+ "dataType": "numeric",
+ "source": "Trigger",
+ "attribute": "monthly_income",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": {
+      "error": "error found in row_#1, invalid_value_rhs_hE0oSR",
+      "executionTime": "2ms"
+     },
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "6e433fe7-3be4-4d07-a01f-99c431923baa",
+     "pluginName": "",
+     "status": "error",
+     "name": "rule3",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 540
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_0cYXsg",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 205
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_T358xk",
+    "type": "rule",
+    "data": {
+     "input": {
+      "name": {
+ "value": "",
+ "executedValue": null,
+ "name": "name",
+ "dataType": "string",
+ "source": "",
+ "attribute": "",
+ "keySource": "",
+ "keyAttribute": "",
+ "mapping": false,
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "sendNull": false,
+ "notSend": false,
+ "order": 0,
+ "schemaId": ""
+}
+     },
+     "output": null,
+     "executedValue": null,
+     "settings": {
+      "actionInSync": false,
+      "errorContinue": false,
+      "runAction": false,
+      "timeout": 10,
+      "timeoutAsync": 20
+     },
+     "nodeType": "dtNode",
+     "entity": "rule",
+     "entityId": "5a21ccfb-2290-4b78-ab8c-52ad849a8798",
+     "pluginName": "",
+     "status": "",
+     "name": "rule1",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "decisionTable",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   },
+   {
+    "position": {
+     "x": 560.6018676757812,
+     "y": 335
+    },
+    "style": null,
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_mlWk1Z",
+    "type": "addNode",
+    "data": {
+     "input": null,
+     "output": null,
+     "executedValue": null,
+     "settings": null,
+     "nodeType": "addNodeMd",
+     "entity": "",
+     "entityId": "",
+     "pluginName": "",
+     "status": "",
+     "name": "",
+     "rootId": "",
+     "sourceId": null,
+     "isMergeNode": false,
+     "runInLoop": {
+      "status": false,
+      "source": "",
+      "attribute": "",
+      "value": null
+     },
+     "switcher": null,
+     "conditions": null,
+     "blockName": "",
+     "testedAt": "0001-01-01T00:00:00Z"
+    },
+    "draggable": false
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdvwxgh20ugblnyr13",
+    "markerEnd": "",
+    "label": "",
+    "source": "1",
+    "target": "node_mbdvwxghzvu4hydq2uq",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdwubmu6hzhg270zhu",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdwubmu6jnydqh0zou",
+    "target": "node_mbdwubmuq3nznqe5r3",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdz5600xw3n0t7mtjj",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdz5600ktf958ogh3",
+    "target": "node_mbdz5600xneuofp8uj7",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzc6dcb4sreped905",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbhli87gda4o8",
+    "target": "node_mbdzc6dbo57zmvo5isq",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_mbdzc6dbfbkmx9kdxd5"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzc6dceqlhnc2l52",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbhli87gda4o8",
+    "target": "node_mbdzc6dbm0k4kayslac",
+    "data": {
+     "edgeType": "defaultCase",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzc6dcry9oal02ce",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbm0k4kayslac",
+    "target": "node_mbdzc6dboh969w9tqqn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzd2y0l1r7blpmpd",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbhli87gda4o8",
+    "target": "node_mbdzd2y0p5r6pv6lum8",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_mbdzcllc80yq50t579l"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzerwrdf5gxiln3pg",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzerwqjknqvatj9ln",
+    "target": "node_mbdzc6dboh969w9tqqn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbdzerwrex3tu684l05",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzerwqibuzqtaaeh",
+    "target": "node_mbdzerwqjknqvatj9ln",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbf7nl22whv9y1cp1um",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzd2y0p5r6pv6lum8",
+    "target": "node_mbdzerwqibuzqtaaeh",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj0lmficsyzudf8ai5",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbhli87gda4o8",
+    "target": "node_mbj0lmfi9wjltivzbl",
+    "data": {
+     "edgeType": "case",
+     "pathId": "group_mbj0kk9bjr2ezzjg6e"
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj1olajqw8y3ajtcm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbj1olajgtlmx12uv9o",
+    "target": "node_mbj1olajnhaqvgeu4p",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj1olajz3ltvq929ra",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdzc6dbo57zmvo5isq",
+    "target": "node_mbj1olajgtlmx12uv9o",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj1xqzrtq2skop3x39",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbj1xqzqfjcsqq81w8k",
+    "target": "node_mbdzc6dboh969w9tqqn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj1xqzr078aphvwhzxs",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbj1xqzqtzq8on4h04",
+    "target": "node_mbj1xqzqfjcsqq81w8k",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbj1xqzrv3npilck85",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbj1olajnhaqvgeu4p",
+    "target": "node_mbj1xqzqtzq8on4h04",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbkkzjw9rwwxx3cd7w",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkkzjw9ol6r1qk18s",
+    "target": "node_mbkkzjw9cm25990uul",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbor1dpw7nqfhu2o7ql",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbj0lmfi9wjltivzbl",
+    "target": "node_mbkkzjw9ol6r1qk18s",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "edge_mbqcy2k8o6r7i54yqm",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbkkzjw9cm25990uul",
+    "target": "node_mbdzc6dboh969w9tqqn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Th0D5l",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdwubmuq3nznqe5r3",
+    "target": "node_mbdz5600ktf958ogh3",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Pichnc",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdz5600xneuofp8uj7",
+    "target": "node_mbdzc6dbhli87gda4o8",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_xYqP6y",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_eHnSKT",
+    "target": "node_mbdwubmu6jnydqh0zou",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_BWlwJR",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_xaP7VZ",
+    "target": "n_eHnSKT",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_mFF1Up",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_9u4opn",
+    "target": "n_xaP7VZ",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_6vIawf",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_bzxYFr",
+    "target": "n_9u4opn",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_Jmz39I",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_0cYXsg",
+    "target": "n_bzxYFr",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_icnYL1",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_z72xSR",
+    "target": "n_0cYXsg",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_HA3sLv",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_mlWk1Z",
+    "target": "n_z72xSR",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_e6Jlvv",
+    "markerEnd": "",
+    "label": "",
+    "source": "n_T358xk",
+    "target": "n_mlWk1Z",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_etkXSq",
+    "markerEnd": "",
+    "label": "",
+    "source": "node_mbdvwxghzvu4hydq2uq",
+    "target": "n_T358xk",
+    "data": {
+     "edgeType": "then",
+     "pathId": ""
+    },
+    "type": "smoothEdge",
+    "sourceHandle": "",
+    "animated": false
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   "auditIO": true,
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0
+  },
+  "comment": "",
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T10:38:33.306178Z",
+   "updatedAt": "2026-01-15T13:05:22.856505Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "728bd2b1-777d-4ddf-84c3-e3c2192d88e0",
+   "dependencyType": "module_schema",
+   "dependencyId": "728bd2b1-777d-4ddf-84c3-e3c2192d88e0",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T10:38:33.30138Z",
+   "updatedAt": "2026-01-15T13:05:22.855327Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mbj1olajgtlmx12uv9o",
+   "dependencyType": "workflow",
+   "dependencyId": "d8544672-280c-4b88-b510-1d0e496580eb",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T10:38:33.302685Z",
+   "updatedAt": "2026-01-15T13:05:22.854167Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mbkkzjw9ol6r1qk18s",
+   "dependencyType": "workflow",
+   "dependencyId": "3066051b-cca4-442c-8d93-903afd14c1fd",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T12:09:35.458664Z",
+   "updatedAt": "2026-01-15T13:05:22.852705Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "Name",
+   "dependencyType": "variable",
+   "dependencyId": "ea76967e-0fac-4d4f-bb02-5bd29d98f10b",
+   "dependencyVersion": "live"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T10:38:33.299984Z",
+   "updatedAt": "2026-01-15T13:05:22.851548Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "node_mbdz5600ktf958ogh3",
+   "dependencyType": "rule",
+   "dependencyId": "686f854f-8a5f-47fc-bf4a-3cc7244acbd1",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T12:09:22.351883Z",
+   "updatedAt": "2026-01-15T13:05:22.850453Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "n_bzxYFr",
+   "dependencyType": "rule",
+   "dependencyId": "1fd02687-bf69-4768-8411-6199bc69a276",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T12:44:38.875644Z",
+   "updatedAt": "2026-01-15T13:05:22.849171Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "n_z72xSR",
+   "dependencyType": "rule",
+   "dependencyId": "6e433fe7-3be4-4d07-a01f-99c431923baa",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T13:05:17.178585Z",
+   "updatedAt": "2026-01-15T13:05:22.847826Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "n_T358xk",
+   "dependencyType": "rule",
+   "dependencyId": "5a21ccfb-2290-4b78-ab8c-52ad849a8798",
+   "dependencyVersion": "draft"
+  },
+  {
+   "isDeleted": false,
+   "createdAt": "2026-01-15T10:38:33.297085Z",
+   "updatedAt": "2026-01-15T13:05:22.845849Z",
+   "entityCommitId": "commit-88605ddd-b5dc-4cde-8982-82388840f18f",
+   "entityType": "workflow",
+   "entityId": "5c2e239d-6450-45ed-a601-7fabb427a666",
+   "entityVersion": "draft",
+   "entityNodeId": "n_xaP7VZ",
+   "dependencyType": "connector",
+   "dependencyId": "29b593b8-ea2d-4184-bfa5-663e69f45acf",
+   "dependencyVersion": "live"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "entityType": "rule",
+ "category": "ruleSet",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.844Z",
+  "updatedAt": "2026-01-15T10:38:22.844Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "745c16a8-a2c5-40cd-ae5f-333478112944",
+  "version": "draft",
+  "name": "ScoreBandCalculation",
+  "commitId": "commit-85632446-550b-4c79-8fa2-6e3ab4b626da",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-15 10:38:22",
+   "timeStamp": "2026-01-15T10:38:22.844819987Z"
+  },
+  "customInput": {
+   "avg_bank_balance": {
+ "name": "avg_bank_balance",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": "9294ae3d-7783-4059-95f3-00f9ca5c07c8"
+},
+   "credit_score": {
+ "name": "credit_score",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": 750,
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": "5ca03b3f-8798-4ab9-a776-83f1092a9829"
+},
+   "enquiries_in_last6m": {
+ "name": "enquiries_in_last6m",
+ "dataType": "numeric",
+ "isOptional": false,
+ "isNullable": false,
+ "isCaseSensitive": false,
+ "attribute": "",
+ "sourceType": "",
+ "executedValue": "",
+ "config": null,
+ "value": null,
+ "next": "",
+ "previous": "",
+ "schemaId": ""
+}
+  },
+  "ruleChain": {
+   "6c1889b5-cf3b-442b-99a0-3976bd296b45": {
+ "prevRuleId": "a3c340df-3c30-4a57-8e48-d0d9241a472a",
+ "nextRuleId": "",
+ "isEnabled": true
+},
+   "8ffedaf0-bfd8-4271-8f60-2c65d476c7bf": {
+ "prevRuleId": "",
+ "nextRuleId": "a3c340df-3c30-4a57-8e48-d0d9241a472a",
+ "isEnabled": true
+},
+   "a3c340df-3c30-4a57-8e48-d0d9241a472a": {
+ "prevRuleId": "8ffedaf0-bfd8-4271-8f60-2c65d476c7bf",
+ "nextRuleId": "6c1889b5-cf3b-442b-99a0-3976bd296b45",
+ "isEnabled": true
+}
+  },
+  "decisionTable": {
+   "rows": null,
+   "properties": null,
+   "results": null,
+   "firstRow": "",
+   "firstProperty": "",
+   "firstResult": "",
+   "firstAggOutputData": ""
+  },
+  "action": {
+   "then": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   },
+   "else": {
+    "outputData": null,
+    "actionNode": null,
+    "firstOutputData": "",
+    "firstActionNode": ""
+   }
+  },
+  "conditions": {
+   "nodes": null,
+   "startNode": ""
+  },
+  "firstCustomInput": "",
+  "firstRuleChain": "8ffedaf0-bfd8-4271-8f60-2c65d476c7bf",
+  "ruleSetPolicy": "collect",
+  "description": "",
+  "policy": "",
+  "comment": "",
+  "type": "ruleSet",
+  "dataSetId": null,
+  "ruleSet": [
+   "8ffedaf0-bfd8-4271-8f60-2c65d476c7bf",
+   "a3c340df-3c30-4a57-8e48-d0d9241a472a",
+   "6c1889b5-cf3b-442b-99a0-3976bd296b45"
+  ],
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "event": null,
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "auditIO": false,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Kolkata",
+   "dateFormat": "in",
+   "timeout": 0,
+   "timeoutAsync": 0,
+   "timeoutCron": 0
+  },
+  "isDemo": false,
+  "warnings": null,
+  "schemaVersion": "0.1.1"
+ }
+}

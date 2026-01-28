@@ -1,0 +1,11 @@
+{
+ "entityType": "module",
+ "data": {
+  "createdAt": "2026-01-15T10:38:22.619Z",
+  "updatedAt": "2026-01-15T10:38:22.619Z",
+  "isDeleted": false,
+  "entityId": "46577a8b-ca9a-49bd-bbd3-38a92bf6e445",
+  "name": "LoanApplication",
+  "description": ""
+ }
+}

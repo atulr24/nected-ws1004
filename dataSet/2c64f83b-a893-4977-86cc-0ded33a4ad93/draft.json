@@ -1,0 +1,73 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "data": {
+  "createdAt": "2026-01-17T06:47:27.816Z",
+  "updatedAt": "2026-01-17T06:47:49.185141Z",
+  "isDeleted": false,
+  "testedAt": "0001-01-01T00:00:00Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "2c64f83b-a893-4977-86cc-0ded33a4ad93",
+  "version": "draft",
+  "name": "Case Data - Coordinator Teams",
+  "commitId": "commit-8f397dba-27d4-4dfe-9191-5fcc816e7d67",
+  "status": "draft",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2026-01-17 06:47:49",
+   "timeStamp": "2026-01-17T06:47:49.140623456Z"
+  },
+  "fields": {
+   "CaseCoordinatorTeamId": {
+ "ColumnName": "CaseCoordinatorTeamId",
+ "DataType": "string",
+ "Order": 5,
+ "ExecutedValue": null
+},
+   "CaseCoordinatorUserId": {
+ "ColumnName": "CaseCoordinatorUserId",
+ "DataType": "string",
+ "Order": 6,
+ "ExecutedValue": null
+},
+   "CaseId": {
+ "ColumnName": "CaseId",
+ "DataType": "numeric",
+ "Order": 1,
+ "ExecutedValue": null
+},
+   "CaseProgress": {
+ "ColumnName": "CaseProgress",
+ "DataType": "string",
+ "Order": 2,
+ "ExecutedValue": null
+},
+   "CaseStatus": {
+ "ColumnName": "CaseStatus",
+ "DataType": "string",
+ "Order": 3,
+ "ExecutedValue": null
+},
+   "CaseSubStatus": {
+ "ColumnName": "CaseSubStatus",
+ "DataType": "string",
+ "Order": 4,
+ "ExecutedValue": null
+}
+  },
+  "description": "",
+  "query": "select cps.Name as CaseProgress, cs.Name as CaseStatus, css.Name as CaseSubStatus\n  ,CAST(c.\"CaseCoordinatorUserId\" AS VARCHAR(10)) as CaseCoordinatorUserId\n  ,caseCoordTeam.TeamId as CaseCoordinatorTeamId\n  ,c.\"Id\" as CaseId\nfrom debtor.Cases c\njoin debtor.CaseStatuses cs on cs.id = c.CaseStatusId\nleft join debtor.CaseSubStatuses css on css.id = c.\"CaseSubStatusId\"\njoin debtor.CaseProgressStatuses cps on cps.id = c.CaseProgressStatusId\nleft join admin.\"UserTeams\" caseCoordTeam on caseCoordTeam.\"UserId\" = c.\"CaseCoordinatorUserId\"",
+  "params": null,
+  "connectorId": "f261c1e4-d4bd-4b76-890f-ad9be33a7ff3",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "America/New_York",
+   "dateFormat": "us"
+  }
+ }
+}
