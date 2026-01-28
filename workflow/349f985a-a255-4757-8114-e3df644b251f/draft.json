@@ -5,6 +5,9 @@
   "updatedAt": "2025-12-23T07:52:35.932454Z",
   "isDeleted": false,
   "testedAt": "2025-12-23T07:51:41.183Z",
+  "updatedAt": "2025-12-08T10:16:43.465138Z",
+  "isDeleted": false,
+  "testedAt": "2025-12-02T06:38:55.323Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "entityId": "349f985a-a255-4757-8114-e3df644b251f",
   "version": "draft",
@@ -26,7 +29,7 @@
   "nodes": [
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 0
     },
     "style": null,
@@ -91,7 +94,7 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
+     "x": 700.796875,
      "y": 130
     },
     "style": null,
@@ -128,8 +131,8 @@
    },
    {
     "position": {
-     "x": 560.6018676757812,
-     "y": 485
+     "x": 700.796875,
+     "y": 205
     },
     "style": null,
     "sourcePosition": "bottom",
@@ -499,10 +502,10 @@
     "type": "setVarNode",
     "data": {
      "input": {
-      "var1": {
+      "var12": {
  "value": "atul1",
  "executedValue": "atul1",
- "name": "var1",
+ "name": "var12",
  "dataType": "string",
  "source": "",
  "attribute": "",
@@ -2516,7 +2519,7 @@
    "entityType": "workflow",
    "entityId": "349f985a-a255-4757-8114-e3df644b251f",
    "entityVersion": "draft",
-   "entityNodeId": "n_NC40Wg",
+   "entityNodeId": "n_iVcp4C",
    "dependencyType": "rule",
    "dependencyId": "8b103d8e-1e8f-45cc-8669-db588d8fe031",
    "dependencyVersion": "draft"
